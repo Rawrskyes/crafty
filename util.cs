@@ -11,7 +11,7 @@ namespace crafty
         {
             Logging.Write(reason);
             TreeRoot.Stop();
-            return RunStatus.Success
+            return RunStatus.Success;
         }
     }
 }
