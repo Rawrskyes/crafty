@@ -14,16 +14,16 @@ namespace crafty
                 Logging.Write("Order item: " + o.item + ". Qty Required: " + o.qty);
             }
             var SelectRecipe = new Action(a=>CraftingManager.SetRecipe(100));
-            var CanCraft = new Decorator(s=>CanICraftIt(), CantCraft("Can't Craft the item. Stopping!"));
+            var CanCraft = new Decorator(s=>CanICraftIt(), StopBot("Can't Craft the item. Stopping!"));
             Sequence root = new Sequence(SelectRecipe, CanCraft);
             return root;
         }
 
-       static Composite CantCraft(string n)
+       static Composite StopBot(string Reason)
         {
             return new Action(a =>
             {
-                Logging.Write(n);
+                Logging.Write(Reason);
                 ff14bot.TreeRoot.Stop();
                 return RunStatus.Success;
             });
@@ -33,6 +33,7 @@ namespace crafty
         {
             return CraftingManager.CanCraft ? false : true;
         }
+
 
     }
 }

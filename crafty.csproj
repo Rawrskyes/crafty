@@ -45,8 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ability\Mend.cs" />
+    <Compile Include="Ability\Synth.cs" />
     <Compile Include="crafty.cs" />
     <Compile Include="CraftyComposite.cs" />
+    <Compile Include="Mend.cs" />
     <Compile Include="orderform.cs">
       <SubType>Form</SubType>
     </Compile>
