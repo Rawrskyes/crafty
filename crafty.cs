@@ -10,20 +10,20 @@ using ff14bot.Helpers;
 
 namespace crafty
 {
-    public class crafty : BotBase
+    public class Crafty : BotBase
     {
-        private Composite root_;
-        public orderform orderform;
-        public List<order> orderlist = new List<order>();
-        public struct order
+        private Composite _root;
+        public orderform OrderForm;
+        public List<Order> OrderList = new List<Order>();
+        public struct Order
         {
-            public int item;
-            public int qty;
+            public int Item;
+            public int Qty;
 
-            public order(int item, int qty)
+            public Order(int item, int qty)
             {
-                this.item = item;
-                this.qty = qty;
+                this.Item = item;
+                this.Qty = qty;
             }
         }
 
@@ -53,17 +53,17 @@ namespace crafty
 
         public override void OnButtonPress()
         {
-            if (orderform == null || orderform.IsDisposed)
+            if (OrderForm == null || OrderForm.IsDisposed)
             {
-                orderform = new orderform();
+                OrderForm = new orderform();
             }
             try
             {
-                orderform.Show();
-                orderform.Activate();
+                OrderForm.Show();
+                OrderForm.Activate();
             } catch (ArgumentOutOfRangeException e)
             {
-                Logging.Write("Error displaying the orderform!!");
+                Logging.Write("Error displaying the OrderForm!!");
                 Logging.Write(e.ToString());
             }
         }
@@ -73,8 +73,8 @@ namespace crafty
         {
             get
             {
-                orderlist = orderform.getOrders();
-                return root_ ?? (root_ = CraftyComposite.getBase(orderlist));
+                //OrderList = OrderForm.getOrders();
+                return _root ?? (_root = CraftyComposite.GetBase());
             }
         }
 

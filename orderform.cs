@@ -23,16 +23,16 @@ namespace crafty
             orderlistview.Items.Add(new ListViewItem(row));
         }
 
-        public List<crafty.order> getOrders()
+        public List<Crafty.Order> getOrders()
         {
             int numitems = orderlistview.Items.Count;
-            List<crafty.order> o = new List<crafty.order>();
+            List<Crafty.Order> o = new List<Crafty.Order>();
             foreach (ListViewItem row in this.orderlistview.Items)
             {
                 int item, qty;
                 int.TryParse(row.SubItems[0].Text, out item);
                 int.TryParse(row.SubItems[1].Text, out qty);
-                o.Add(new crafty.order(item, qty));
+                o.Add(new Crafty.Order(item, qty));
             }
             return o;
         }
