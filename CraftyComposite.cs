@@ -7,7 +7,7 @@ using ff14bot.Enums;
 
 namespace crafty
 {
-    internal class CraftyComposite
+    internal static class CraftyComposite
     {
         public static Composite GetBase()
         {
@@ -20,7 +20,7 @@ namespace crafty
             var canCast = new Decorator(s=> CraftingManager.AnimationLocked, new Sleep(300));
             var canCraft = new Decorator(s=>CanICraftIt(), StopBot("Can't Craft the item. Stopping!"));
             var beginSynth = new Action(a=>ff14bot.RemoteWindows.CraftingLog.Synthesize());
-            var continueSynth = new Decorator(s=> CraftingManager.IsCrafting, Synth.UseSynth());
+            var continueSynth = new Decorator(s=> CraftingManager.IsCrafting, Strategy.GetComposite());
             return new PrioritySelector(new Sleep(300), canCast, continueSynth, canCraft, beginSynth);
         }
 

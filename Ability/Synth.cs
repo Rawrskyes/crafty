@@ -18,7 +18,7 @@ namespace crafty.Ability
             new ClassSynths(ClassJobType.Weaver, 100060, 100067)
             };
 
-        public struct ClassSynths
+        private struct ClassSynths
         {
             public ClassJobType Job;
             public uint Synth1;

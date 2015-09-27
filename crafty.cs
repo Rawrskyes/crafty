@@ -1,9 +1,6 @@
 ﻿using ff14bot.AClasses;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ff14bot.Behavior;
 using TreeSharp;
 using ff14bot.Helpers;
@@ -31,7 +28,7 @@ namespace crafty
         {
             get
             {
-                return "Crafty 0.1";
+                return "Crafty v0.1";
             }
         }
 
