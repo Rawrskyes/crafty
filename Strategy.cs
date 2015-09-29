@@ -13,10 +13,7 @@ namespace crafty
     {
         public static Composite GetComposite()
         {
-            var RecipeLevel = CraftingManager.CurrentRecipe.RecipeLevel;
-            var ExpectedProgress = Character.GetExpectedProgress(RecipeLevel);
-            var ProgressLeft = CraftingManager.ProgressRequired;
-            var BestSynth = Synth.GetBestBasic();
+          
           return Synth.UseSynth();
         }
     }

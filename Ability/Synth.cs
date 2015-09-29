@@ -1,4 +1,6 @@
-﻿using ff14bot.Enums;
+﻿using System;
+using System.Linq;
+using ff14bot.Enums;
 using ff14bot.Objects;
 using TreeSharp;
 using Action = TreeSharp.Action;
@@ -17,6 +19,16 @@ namespace crafty.Ability
             new ClassSynths(ClassJobType.Leatherworker, 100045, 100051),
             new ClassSynths(ClassJobType.Weaver, 100060, 100067)
             };
+
+        public static double GetFactor(uint spellID)
+        {
+            foreach (var j in Jobs)
+            {
+                if (j.Synth1 == spellID) return 1;
+                if (j.Synth2 == spellID) return 1.5;
+            }
+            return 0;
+        }
 
         private struct ClassSynths
         {
@@ -65,6 +77,18 @@ namespace crafty.Ability
 
             }
             ); 
+        }
+
+        public static bool ExpectFinish()
+        {
+            var prog = Character.GetExpectedProgress(ff14bot.Managers.CraftingManager.CurrentRecipe.RecipeLevel);
+            var factor = GetFactor(ff14bot.Managers.CraftingManager.CurrentRecipe.RecipeLevel);
+            var correctedProg = factor*prog;
+
+            if (correctedProg >=
+                (ff14bot.Managers.CraftingManager.ProgressRequired - ff14bot.Managers.CraftingManager.Progress))
+                return true;
+            return false;
         }
     }
 }
