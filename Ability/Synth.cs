@@ -1,9 +1,8 @@
-﻿using System;
-using System.Linq;
-using ff14bot.Enums;
+﻿using ff14bot.Enums;
 using ff14bot.Objects;
 using TreeSharp;
 using Action = TreeSharp.Action;
+using ff14bot.Managers;
 
 namespace crafty.Ability
 {
@@ -20,12 +19,12 @@ namespace crafty.Ability
             new ClassSynths(ClassJobType.Weaver, 100060, 100067)
             };
 
-        public static double GetFactor(uint spellID)
+        public static double GetFactor(uint spellId)
         {
             foreach (var j in Jobs)
             {
-                if (j.Synth1 == spellID) return 1;
-                if (j.Synth2 == spellID) return 1.5;
+                if (j.Synth1 == spellId) return 1;
+                if (j.Synth2 == spellId) return 1.5;
             }
             return 0;
         }
@@ -51,12 +50,12 @@ namespace crafty.Ability
             {
                 if (c.Job == ff14bot.Core.Me.CurrentJob)
                 {
-                    if (ff14bot.Managers.Actionmanager.CurrentActions.ContainsKey(c.Synth2))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Synth2) && Actionmanager.CanCast(c.Synth2, null))
                     {
                         x = c.Synth2;
                         break;
                     }
-                    if (ff14bot.Managers.Actionmanager.CurrentActions.ContainsKey(c.Synth1))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Synth1) && Actionmanager.CanCast(c.Synth1, null))
                     {
                         x = c.Synth1;
                         break;
@@ -64,7 +63,7 @@ namespace crafty.Ability
                 }
             }
             SpellData spell;
-            ff14bot.Managers.DataManager.SpellCache.TryGetValue(x, out spell);
+            DataManager.SpellCache.TryGetValue(x, out spell);
             return spell;
         }
 
@@ -73,7 +72,7 @@ namespace crafty.Ability
         {
             return new Action(r =>
             {
-                ff14bot.Managers.Actionmanager.DoAction(GetBestBasic(), null);
+                Actionmanager.DoAction(GetBestBasic(), null);
 
             }
             ); 
@@ -81,14 +80,12 @@ namespace crafty.Ability
 
         public static bool ExpectFinish()
         {
-            var prog = Character.GetExpectedProgress(ff14bot.Managers.CraftingManager.CurrentRecipe.RecipeLevel);
-            var factor = GetFactor(ff14bot.Managers.CraftingManager.CurrentRecipe.RecipeLevel);
+            var prog = Character.GetExpectedProgress(Character.CurrentRecipeLvl);
+            var factor = GetFactor(GetBestBasic().Id);
             var correctedProg = factor*prog;
 
-            if (correctedProg >=
-                (ff14bot.Managers.CraftingManager.ProgressRequired - ff14bot.Managers.CraftingManager.Progress))
-                return true;
-            return false;
+            return correctedProg >=
+                   (CraftingManager.ProgressRequired - CraftingManager.Progress);
         }
     }
 }

@@ -47,8 +47,10 @@
   <ItemGroup>
     <Compile Include="Ability\Mend.cs" />
     <Compile Include="Ability\Synth.cs" />
+    <Compile Include="Ability\Touch.cs" />
+    <Compile Include="Ability\Util.cs" />
     <Compile Include="Character.cs" />
-    <Compile Include="crafty.cs" />
+    <Compile Include="Crafty.cs" />
     <Compile Include="CraftyComposite.cs" />
     <Compile Include="orderform.cs">
       <SubType>Form</SubType>
@@ -57,13 +59,23 @@
       <DependentUpon>orderform.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recipes\recipes.cs" />
     <Compile Include="Strategy.cs" />
-    <Compile Include="util.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="orderform.resx">
       <DependentUpon>orderform.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Recipes\alchemist.txt" />
+    <Content Include="Recipes\armorer.txt" />
+    <Content Include="Recipes\blacksmith.txt" />
+    <Content Include="Recipes\carpenter.txt" />
+    <Content Include="Recipes\culinarian.txt" />
+    <Content Include="Recipes\goldsmith.txt" />
+    <Content Include="Recipes\leatherworker.txt" />
+    <Content Include="Recipes\weaver.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

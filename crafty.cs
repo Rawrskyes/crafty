@@ -24,29 +24,13 @@ namespace crafty
             }
         }
 
-        public override string Name
-        {
-            get
-            {
-                return "Crafty v0.1";
-            }
-        }
+        public override bool RequiresProfile => false;
 
-        public override PulseFlags PulseFlags
-        {
-            get
-            {
-                return PulseFlags.All;
-            }
-        }
+        public override string Name => "Crafty";
 
-        public override bool WantButton
-        {
-            get
-            {
-                return true;
-            }
-        }
+        public override PulseFlags PulseFlags => PulseFlags.All;
+
+        public override bool WantButton => true;
 
         public override void OnButtonPress()
         {

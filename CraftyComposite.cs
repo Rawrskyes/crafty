@@ -1,9 +1,7 @@
 ﻿using TreeSharp;
 using ff14bot.Managers;
 using ff14bot.Helpers;
-using System.Collections.Generic;
 using crafty.Ability;
-using ff14bot.Enums;
 
 namespace crafty
 {
@@ -17,13 +15,17 @@ namespace crafty
             //     Logging.Write("Order item: " + o.Item + ". Qty Required: " + o.Qty);
             // }
             var selectRecipe = new Action(a=>CraftingManager.SetRecipe(100));
-            var canCast = new Decorator(s=> CraftingManager.AnimationLocked, new Sleep(300));
+            var canCast = new Decorator(s=> CraftingManager.AnimationLocked, new Sleep(1000));
             var canCraft = new Decorator(s=>CanICraftIt(), StopBot("Can't Craft the item. Stopping!"));
-            var beginSynth = new Action(a=>ff14bot.RemoteWindows.CraftingLog.Synthesize());
+            var beginSynth = new Action(a =>
+            {
+                Character.CurrentRecipeLvl = ff14bot.Managers.CraftingManager.CurrentRecipe.RecipeLevel;
+                Mend.Available = true;
+                ff14bot.RemoteWindows.CraftingLog.Synthesize();
+            });
             var continueSynth = new Decorator(s=> CraftingManager.IsCrafting, Strategy.GetComposite());
-            return new PrioritySelector(new Sleep(300), canCast, continueSynth, canCraft, beginSynth);
+            return new PrioritySelector(new Sleep(350), canCast, continueSynth, canCraft, beginSynth);
         }
-
        static Composite StopBot(string reason)
         {
             return new Action(a =>
@@ -36,7 +38,7 @@ namespace crafty
 
         static bool CanICraftIt()
         {
-            return CraftingManager.CanCraft ? false : true;
+            return !CraftingManager.CanCraft;
         }
 
         static Composite WaitForAnimation()

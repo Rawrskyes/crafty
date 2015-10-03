@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ff14bot.Objects;
+﻿using ff14bot.Objects;
 using ff14bot.Enums;
-using InTheHand.Net.Bluetooth;
+using ff14bot.Managers;
+using TreeSharp;
+using Actionmanager = ff14bot.Managers.Actionmanager;
 
 namespace crafty.Ability
 {
@@ -13,9 +10,9 @@ namespace crafty.Ability
     {
         private struct ClassMends
         {
-            public ClassJobType Job;
-            public uint Mend1;
-            public uint Mend2;
+            public readonly ClassJobType Job;
+            public readonly uint Mend1;
+            public readonly uint Mend2;
 
             public ClassMends(ClassJobType j, uint mend1, uint mend2)
             {
@@ -37,6 +34,7 @@ namespace crafty.Ability
             new ClassMends(ClassJobType.Weaver, 100062, 100065)
         };
 
+        public static bool Available;
 
         public static bool ShouldMend()
         {
@@ -54,12 +52,12 @@ namespace crafty.Ability
             {
                 if (c.Job == ff14bot.Core.Me.CurrentJob)
                 {
-                    if (ff14bot.Managers.Actionmanager.CurrentActions.ContainsKey(c.Mend2))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Mend2) && CraftingManager.DurabilityCap > 40 && Actionmanager.CanCast(c.Mend2, null))
                     {
                         x = c.Mend2;
                         break;
                     }
-                    if (ff14bot.Managers.Actionmanager.CurrentActions.ContainsKey(c.Mend1))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Mend1) && Actionmanager.CanCast(c.Mend1, null));
                     {
                         x = c.Mend1;
                         break;
@@ -67,8 +65,17 @@ namespace crafty.Ability
                 }
             }
             SpellData spell;
-            ff14bot.Managers.DataManager.SpellCache.TryGetValue(x, out spell);
+            DataManager.SpellCache.TryGetValue(x, out spell);
             return spell;
+        }
+
+        public static Composite UseBestMend()
+        {
+            return new Action(a =>
+            {
+                Actionmanager.DoAction(GetBestMend(), null);
+                Mend.Available = false;
+            });
         }
     }
 }
