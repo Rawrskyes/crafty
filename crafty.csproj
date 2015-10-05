@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ability\Buff.cs" />
     <Compile Include="Ability\Mend.cs" />
     <Compile Include="Ability\Synth.cs" />
     <Compile Include="Ability\Touch.cs" />
