@@ -11,7 +11,8 @@ namespace crafty
           var mend = new Decorator(a=> (Mend.Available && CraftingManager.Durability == 10), Mend.UseBestMend());
           var increasequal = new Decorator(a=> (Synth.ExpectFinish() & (CraftingManager.Durability > 20 || Mend.Available) & CraftingManager.HQPercent < 100), Touch.UseBestTouch());
           var progress = Synth.UseSynth();
-          return new PrioritySelector(mend, increasequal, progress);
+          var buff = new Decorator(a=> Buff.SteadyRequired(), Buff.GetSteadyAction());
+          return new PrioritySelector(mend, buff, increasequal, progress);
             
         }
     }
