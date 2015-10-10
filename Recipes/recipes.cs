@@ -78,5 +78,75 @@ namespace crafty.Recipes
             }
             return filecontents;
         }
+
+        //Search for a recipe by name. Return empty recipe if not found.
+        public static Recipe getRecipe(string name, ClassJobType job)
+        {
+            foreach(Job j in jobs)
+            {
+                if(job == j.ClassJob)
+                {
+                    foreach(Recipe r in j.Recipes)
+                    {
+                        if (r.Name.ToLower().Equals(name.ToLower()))
+                        {
+                            return r;
+                        }
+                    }
+                }
+            }
+            return new Recipe();
+        }
+
+        //Search by id!
+        public static Recipe getRecipe(uint id, ClassJobType job)
+        {
+            foreach (Job j in jobs)
+            {
+                if (job == j.ClassJob)
+                {
+                    foreach (Recipe r in j.Recipes)
+                    {
+                        if (r.Id == id)
+                        {
+                            return r;
+                        }
+                    }
+                }
+            }
+            return new Recipe();
+        }
+
+        public static List<Recipe> getRecipe(string name)
+        {
+            List<Recipe> result = new List<Recipe>();
+            foreach(Job j in jobs)
+            {
+                foreach(Recipe r in j.Recipes)
+                {
+                    if (r.Name.ToLower().Equals(name.ToLower()))
+                    {
+                        result.Add(r);
+                    }
+                }
+            }
+            return result;
+        }
+
+        public static Recipe getRecipe(uint id)
+        {
+            Recipe result = new Recipe();
+            foreach (Job j in jobs)
+            {
+                foreach (Recipe r in j.Recipes)
+                {
+                    if (r.Id == id)
+                    {
+                        result = r;
+                    }
+                }
+            }
+            return result;
+        }
     }
 }

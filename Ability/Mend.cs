@@ -57,7 +57,7 @@ namespace crafty.Ability
                         x = c.Mend2;
                         break;
                     }
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Mend1) && Actionmanager.CanCast(c.Mend1, null));
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Mend1) && Actionmanager.CanCast(c.Mend1, null))
                     {
                         x = c.Mend1;
                         break;
