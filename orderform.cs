@@ -37,7 +37,7 @@ namespace crafty
                 return;
             }
 
-            string[] row = {r.Name, qtytxt.Text, jobclasscombo.Text, r.Id.ToString()};
+            string[] row = {r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text};
             orderlistview.Items.Add(new ListViewItem(row));
         }
 
@@ -63,17 +63,6 @@ namespace crafty
             e.Cancel = true;
         }
 
-        private void orderlistview_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void jobclasscombo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            /* Alchemist , Armorer, Blacksmith, Carpenter, Cullinarian, Goldsmith, Leatherworker, Weaver */
-            job = getClassJobType(this.Text);
-        }
-
         private ClassJobType getClassJobType(string j)
         {
             ClassJobType result = ClassJobType.Adventurer;
@@ -86,6 +75,11 @@ namespace crafty
             if (j == "Leatherworker") result = ClassJobType.Leatherworker;
             if (j == "Weaver") result = ClassJobType.Weaver;
             return result;
+        }
+
+        private void jobclasscombo_TextChanged(object sender, EventArgs e)
+        {
+            job = getClassJobType(jobclasscombo.SelectedItem.ToString());
         }
     }
 }

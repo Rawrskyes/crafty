@@ -17,6 +17,9 @@ namespace crafty.Recipes
             goldsmith = "goldsmith.txt",
             leatherworker = "leatherworker.txt",
             weaver = "weaver.txt";
+
+        private static string workingdir = Directory.GetCurrentDirectory();
+        private static string path = "\\BotBases\\Crafty\\Recipes\\";
         private static char[] delimiter = { ':' };
 
         //Array of our class/recipe structs
@@ -63,7 +66,7 @@ namespace crafty.Recipes
             string line;
             try
             {
-                StreamReader sr = new StreamReader(File.Open(file, FileMode.Open));
+                StreamReader sr = new StreamReader(File.Open(workingdir + path + file, FileMode.Open));
                 while((line = sr.ReadLine()) != null)
                 {
                     string[] s = line.Split(delimiter, 2);
@@ -72,7 +75,7 @@ namespace crafty.Recipes
                 }
             } catch (IOException e)
             {
-                Logging.Write("Error reading file " + file + ".");
+                Logging.Write("Error reading file " + workingdir + path + file + ".");
                 Logging.Write("Please check that the file exists and hasn't been renamed");
                 CraftyComposite.StopBot("Error loading recipes");
             }
