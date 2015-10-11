@@ -1,4 +1,5 @@
-﻿using ff14bot.Enums;
+﻿using ff14bot;
+using ff14bot.Enums;
 using ff14bot.Managers;
 using ff14bot.Objects;
 using TreeSharp;
@@ -40,19 +41,19 @@ namespace crafty.Ability
             {
                 if (c.Job == ff14bot.Core.Me.CurrentJob)
                 {
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch3) && Actionmanager.CanCast(c.Touch3, null))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch3) && (DataManager.GetSpellData(c.Touch3).Cost <= Core.Me.CurrentCP) && !ff14bot.Core.Me.HasAura("Steady Hand"))
                     {
                         x = c.Touch3;
                         break;
                     }
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch2) && Actionmanager.CanCast(c.Touch2, null))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch2) && (DataManager.GetSpellData(c.Touch2).Cost <= Core.Me.CurrentCP))
                     {
                         x = c.Touch2;
                         break;
                     }
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch2) && Actionmanager.CanCast(c.Touch1, null))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch1) && (DataManager.GetSpellData(c.Touch1).Cost <= Core.Me.CurrentCP))
                     {
-                        x = c.Touch2;
+                        x = c.Touch1;
                         break;
                     }
                 }
