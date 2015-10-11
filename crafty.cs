@@ -11,16 +11,20 @@ namespace crafty
     {
         private Composite _root;
         public orderform OrderForm;
-        public List<Order> OrderList = new List<Order>();
+        public static List<Order> OrderList = new List<Order>();
         public struct Order
         {
-            public int Item;
-            public int Qty;
+            public uint ItemId;
+            public uint Qty;
+            public string ItemName;
+            public ff14bot.Enums.ClassJobType Job;
 
-            public Order(int item, int qty)
+            public Order(uint itemid, string itemname, uint qty, ff14bot.Enums.ClassJobType job)
             {
-                this.Item = item;
+                this.ItemId = itemid;
                 this.Qty = qty;
+                this.Job = job;
+                this.ItemName = itemname;
             }
         }
 

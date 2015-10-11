@@ -26,7 +26,7 @@ namespace crafty
             var continueSynth = new Decorator(s=> CraftingManager.IsCrafting, Strategy.GetComposite());
             return new PrioritySelector(new Sleep(350), canCast, continueSynth, canCraft, beginSynth);
         }
-       static Composite StopBot(string reason)
+       public static Composite StopBot(string reason)
         {
             return new Action(a =>
             {

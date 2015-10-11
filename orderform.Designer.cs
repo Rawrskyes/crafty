@@ -37,13 +37,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.itemtxt = new System.Windows.Forms.TextBox();
             this.qtytxt = new System.Windows.Forms.TextBox();
+            this.Job = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.jobclasscombo = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.MissingItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MissingQty = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // addbtn
             // 
-            this.addbtn.Location = new System.Drawing.Point(12, 12);
+            this.addbtn.Location = new System.Drawing.Point(18, 18);
+            this.addbtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.addbtn.Name = "addbtn";
-            this.addbtn.Size = new System.Drawing.Size(122, 23);
+            this.addbtn.Size = new System.Drawing.Size(183, 35);
             this.addbtn.TabIndex = 1;
             this.addbtn.Text = "Add";
             this.addbtn.UseVisualStyleBackColor = true;
@@ -52,31 +62,38 @@
             // orderlistview
             // 
             this.orderlistview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
             this.Item,
-            this.Qty});
-            this.orderlistview.Location = new System.Drawing.Point(12, 80);
+            this.Qty,
+            this.Job});
+            this.orderlistview.Location = new System.Drawing.Point(416, 18);
+            this.orderlistview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.orderlistview.MultiSelect = false;
             this.orderlistview.Name = "orderlistview";
-            this.orderlistview.Size = new System.Drawing.Size(260, 169);
+            this.orderlistview.Size = new System.Drawing.Size(503, 542);
             this.orderlistview.TabIndex = 2;
             this.orderlistview.UseCompatibleStateImageBehavior = false;
             this.orderlistview.View = System.Windows.Forms.View.Details;
+            this.orderlistview.SelectedIndexChanged += new System.EventHandler(this.orderlistview_SelectedIndexChanged);
             // 
             // Item
             // 
+            this.Item.DisplayIndex = 0;
             this.Item.Text = "Item";
-            this.Item.Width = 177;
+            this.Item.Width = 201;
             // 
             // Qty
             // 
+            this.Qty.DisplayIndex = 1;
             this.Qty.Text = "Qty";
-            this.Qty.Width = 79;
+            this.Qty.Width = 112;
             // 
             // rembtn
             // 
-            this.rembtn.Location = new System.Drawing.Point(140, 12);
+            this.rembtn.Location = new System.Drawing.Point(210, 18);
+            this.rembtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rembtn.Name = "rembtn";
-            this.rembtn.Size = new System.Drawing.Size(132, 23);
+            this.rembtn.Size = new System.Drawing.Size(198, 35);
             this.rembtn.TabIndex = 3;
             this.rembtn.Text = "Remove";
             this.rembtn.UseVisualStyleBackColor = true;
@@ -84,40 +101,126 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 38);
+            this.label1.Location = new System.Drawing.Point(106, 58);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(41, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Item";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(219, 38);
+            this.label2.Location = new System.Drawing.Point(328, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 13);
+            this.label2.Size = new System.Drawing.Size(33, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Qty";
             // 
             // itemtxt
             // 
-            this.itemtxt.Location = new System.Drawing.Point(12, 54);
+            this.itemtxt.Location = new System.Drawing.Point(18, 83);
+            this.itemtxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.itemtxt.Name = "itemtxt";
-            this.itemtxt.Size = new System.Drawing.Size(175, 20);
+            this.itemtxt.Size = new System.Drawing.Size(260, 26);
             this.itemtxt.TabIndex = 6;
             // 
             // qtytxt
             // 
-            this.qtytxt.Location = new System.Drawing.Point(193, 54);
+            this.qtytxt.Location = new System.Drawing.Point(290, 83);
+            this.qtytxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.qtytxt.Name = "qtytxt";
-            this.qtytxt.Size = new System.Drawing.Size(79, 20);
+            this.qtytxt.Size = new System.Drawing.Size(116, 26);
             this.qtytxt.TabIndex = 7;
             // 
-            // OrderForm
+            // Job
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.Job.DisplayIndex = 2;
+            this.Job.Text = "Job";
+            this.Job.Width = 119;
+            // 
+            // jobclasscombo
+            // 
+            this.jobclasscombo.FormattingEnabled = true;
+            this.jobclasscombo.Items.AddRange(new object[] {
+            "Alchemist",
+            "Armorer",
+            "Blacksmith",
+            "Carpenter",
+            "Cullinarian",
+            "Goldsmith",
+            "Leatherworker",
+            "Weaver"});
+            this.jobclasscombo.Location = new System.Drawing.Point(194, 117);
+            this.jobclasscombo.Name = "jobclasscombo";
+            this.jobclasscombo.Size = new System.Drawing.Size(214, 28);
+            this.jobclasscombo.TabIndex = 9;
+            this.jobclasscombo.SelectedIndexChanged += new System.EventHandler(this.jobclasscombo_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(106, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Job/Class";
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.MissingItem,
+            this.MissingQty});
+            this.listView1.Location = new System.Drawing.Point(12, 292);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(396, 268);
+            this.listView1.TabIndex = 11;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(132, 269);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(130, 20);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Missing Materials";
+            // 
+            // MissingItem
+            // 
+            this.MissingItem.Text = "Item";
+            this.MissingItem.Width = 283;
+            // 
+            // MissingQty
+            // 
+            this.MissingQty.Text = "Qty";
+            this.MissingQty.Width = 105;
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Location = new System.Drawing.Point(71, 207);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(278, 43);
+            this.btnCheck.TabIndex = 13;
+            this.btnCheck.Text = "Re-check Materials";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            // 
+            // orderform
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(940, 573);
+            this.Controls.Add(this.btnCheck);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.jobclasscombo);
             this.Controls.Add(this.qtytxt);
             this.Controls.Add(this.itemtxt);
             this.Controls.Add(this.label2);
@@ -125,6 +228,7 @@
             this.Controls.Add(this.rembtn);
             this.Controls.Add(this.orderlistview);
             this.Controls.Add(this.addbtn);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "orderform";
             this.Text = "Orders";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.orderform_FormClosing);
@@ -144,5 +248,14 @@
         private System.Windows.Forms.TextBox qtytxt;
         private System.Windows.Forms.ColumnHeader Item;
         private System.Windows.Forms.ColumnHeader Qty;
+        private System.Windows.Forms.ColumnHeader Job;
+        private System.Windows.Forms.ComboBox jobclasscombo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader MissingItem;
+        private System.Windows.Forms.ColumnHeader MissingQty;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.ColumnHeader ID;
     }
 }
