@@ -21,9 +21,9 @@ namespace crafty
 
         private ClassJobType job = ClassJobType.Adventurer;
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            if(job == ClassJobType.Adventurer)
+            if (job == ClassJobType.Adventurer)
             {
                 MessageBox.Show("Please select a job!");
                 return;
@@ -31,14 +31,29 @@ namespace crafty
 
             recipes.Recipe r = recipes.getRecipe(itemtxt.Text, job);
 
-            if(r.Id == 0)
+            if (r.Id == 0)
             {
                 MessageBox.Show("Recipe not found. Please check your spelling");
                 return;
             }
 
-            string[] row = {r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text};
-            orderlistview.Items.Add(new ListViewItem(row));
+            if (uint.Parse(qtytxt.Text) == 0)
+            {
+                MessageBox.Show("Please enter a quantity.");
+                return;
+            }
+
+            string[] row = { r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text };
+            var CanCraftit = await Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text));
+            if (CanCraftit)
+            {
+                orderlistview.Items.Add(new ListViewItem(row));
+                ReloadMaterials();
+            } else
+            {
+                MessageBox.Show("We don't know that recipe!");
+            }
+
         }
 
         public List<Crafty.Order> getOrders()
@@ -80,6 +95,20 @@ namespace crafty
         private void jobclasscombo_TextChanged(object sender, EventArgs e)
         {
             job = getClassJobType(jobclasscombo.SelectedItem.ToString());
+        }
+
+        private void ReloadMaterials()
+        {
+            Materials.CountStock();
+            Materials.Material[] mats = Materials.GetList();
+            foreach(Materials.Material m in mats)
+            {
+                //Add it if we don't have enough materials.
+                if (m.qty < m.qtyreq) {
+                    uint qtyrem = m.qtyreq - m.qty;
+                    materialslist.Items.Add(new ListViewItem(m.itemname, qtyrem.ToString()));
+                }
+            }
         }
     }
 }
