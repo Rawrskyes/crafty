@@ -44,7 +44,8 @@ namespace crafty
             }
 
             string[] row = { r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text };
-            var CanCraftit = await Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text));
+            var CanCraftit = new TreeSharp.ActionRunCoroutine(a=>Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text)));
+            while(!CanCraftit.)
             if (CanCraftit)
             {
                 orderlistview.Items.Add(new ListViewItem(row));
