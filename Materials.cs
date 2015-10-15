@@ -2,8 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using Buddy.Coroutines;
+using ff14bot.Behavior;
+using ff14bot.Helpers;
+using TreeSharp;
 
 namespace crafty
 {
@@ -11,14 +17,14 @@ namespace crafty
     {
         public class Material
         {
-            public uint qty, qtyreq;
-            public string itemname;
+            public uint Qty, Qtyreq;
+            public readonly string Itemname;
 
             public Material(string name, uint qtyreq)
             {
-                this.itemname = name;
-                this.qtyreq = qtyreq;
-                this.qty = 0;
+                this.Itemname = name;
+                this.Qtyreq = qtyreq;
+                this.Qty = 0;
             }
         }
 
@@ -26,16 +32,16 @@ namespace crafty
 
         public static void AddMaterial(string itemname, uint qty)
         {
-            for(int i = 0; i < mats.Count(); i++)
-            {
-                //Check for item already existing.
-                if (mats[i].itemname.Equals(itemname))
+                for (int i = 0; i < mats.Count(); i++)
                 {
-                    mats[i].qtyreq += qty;
-                    return;
+                    //Check for item already existing.
+                    if (mats[i].Itemname.Equals(itemname))
+                    {
+                        mats[i].Qtyreq += qty;
+                        return;
+                    }
+
                 }
-                
-            }
             //Add it if it doesn't exist.
             mats.Add(new Material(itemname, qty));
             return;
@@ -51,31 +57,48 @@ namespace crafty
             return mats.ToArray();
         }
 
-        public static async Task<bool> FetchMaterials(uint craftingID, uint qty)
+        public static Coroutine FetchMaterials(uint craftingId, uint qty)
         {
-            bool isKnown = await CraftingManager.SetRecipe(craftingID);
-            if(isKnown == true)
+            bool isKnown = (CraftingManager.CurrentRecipeId == craftingId);
+            Logging.Write(CraftingManager.CurrentRecipeId);
+            if (!isKnown)
+            {
+                var coroutine = new Coroutine(() =>CraftingManager.SetRecipe(craftingId));
+                while (!coroutine.IsFinished)
+                {
+                    Thread.Sleep(20);
+                    coroutine.Resume();
+                }
+            }
+            isKnown = (CraftingManager.CurrentRecipeId == craftingId);
+            Logging.Write(isKnown);
+            if (isKnown == true)
             {
                 RecipeData recipe = CraftingManager.CurrentRecipe;
-                foreach(RecipeIngredientInfo i in recipe.Ingredients)
+                foreach (RecipeIngredientInfo i in recipe.Ingredients)
                 {
+                    Logging.Write("In the foreach loop");
                     string iname = DataManager.GetItem(i.ItemId).EnglishName;
+                    Logging.Write("Item Selected");
                     uint totalreq = i.TotalNeeded * qty;
                     AddMaterial(iname, totalreq);
+                    Logging.Write("Item Added");
                 }
                 return true;
-            } else
+            }
+            else
             {
                 return false;
             }
+
         }
 
         public static void CountStock()
         {
             for(int i = 0; i < mats.Count; i++)
             {
-                Item mat = DataManager.GetItem(mats[i].itemname);
-                mats[i].qty = InventoryManager.ItemCount(mat);
+                Item mat = DataManager.GetItem(mats[i].Itemname);
+                mats[i].Qty = InventoryManager.ItemCount(mat);
             }
         }
     }

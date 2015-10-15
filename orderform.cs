@@ -9,6 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ff14bot.Behavior;
+using ff14bot.Helpers;
+using ff14bot.Managers;
+using TreeSharp;
 
 namespace crafty
 {
@@ -19,17 +23,17 @@ namespace crafty
             InitializeComponent();
         }
 
-        private ClassJobType job = ClassJobType.Adventurer;
+        private ClassJobType _job = ClassJobType.Adventurer;
 
         private async void button1_Click(object sender, EventArgs e)
         {
-            if (job == ClassJobType.Adventurer)
+            if (_job == ClassJobType.Adventurer)
             {
                 MessageBox.Show("Please select a job!");
                 return;
             }
 
-            recipes.Recipe r = recipes.getRecipe(itemtxt.Text, job);
+            recipes.Recipe r = recipes.getRecipe(itemtxt.Text, _job);
 
             if (r.Id == 0)
             {
@@ -44,16 +48,18 @@ namespace crafty
             }
 
             string[] row = { r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text };
-            var CanCraftit = await Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text));
-            if (CanCraftit)
+            Logging.Write("Attempting to select stuff");
+            bool canCraftIt = await Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text));
+            Logging.Write("We've checked to see if we can craft.");
+            if (canCraftIt)
             {
                 orderlistview.Items.Add(new ListViewItem(row));
+                Logging.Write("We have added item to the list view.");
                 ReloadMaterials();
             } else
             {
                 MessageBox.Show("We don't know that recipe!");
             }
-
         }
 
         public List<Crafty.Order> getOrders()
@@ -94,7 +100,7 @@ namespace crafty
 
         private void jobclasscombo_TextChanged(object sender, EventArgs e)
         {
-            job = getClassJobType(jobclasscombo.SelectedItem.ToString());
+            _job = getClassJobType(jobclasscombo.SelectedItem.ToString());
         }
 
         private void ReloadMaterials()
@@ -104,11 +110,16 @@ namespace crafty
             foreach(Materials.Material m in mats)
             {
                 //Add it if we don't have enough materials.
-                if (m.qty < m.qtyreq) {
-                    uint qtyrem = m.qtyreq - m.qty;
-                    materialslist.Items.Add(new ListViewItem(m.itemname, qtyrem.ToString()));
+                if (m.Qty < m.Qtyreq) {
+                    uint qtyrem = m.Qtyreq - m.Qty;
+                    materialslist.Items.Add(new ListViewItem(m.Itemname, qtyrem.ToString()));
                 }
             }
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            Logging.Write(CraftingManager.CurrentRecipeId);
         }
     }
 }
