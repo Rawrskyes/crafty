@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Buddy.Coroutines;
+using ff14bot;
 using ff14bot.Behavior;
 using ff14bot.Helpers;
 using ff14bot.Managers;
@@ -49,7 +51,7 @@ namespace crafty
 
             string[] row = { r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text };
             Logging.Write("Attempting to select stuff");
-            bool canCraftIt = await Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text));
+            bool canCraftIt = Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text));
             Logging.Write("We've checked to see if we can craft.");
             if (canCraftIt)
             {
@@ -119,7 +121,11 @@ namespace crafty
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            Logging.Write(CraftingManager.CurrentRecipeId);
+            using (Core.Memory.TemporaryCacheState(false))
+            {
+                RaptureAtkUnitManager.Update();
+                Logging.Write(CraftingManager.CurrentRecipeId);
+            }
         }
     }
 }
