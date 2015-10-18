@@ -10,7 +10,7 @@ namespace crafty
     public class Crafty : BotBase
     {
         private Composite _root;
-        public orderform OrderForm;
+        public static Orderform OrderForm;
         public static List<Order> OrderList = new List<Order>();
         public struct Order
         {
@@ -52,7 +52,7 @@ namespace crafty
         {
             if (OrderForm == null || OrderForm.IsDisposed)
             {
-                OrderForm = new orderform();
+                OrderForm = new Orderform();
             }
             try
             {

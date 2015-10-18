@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GreyMagic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=260525fa2b0e778a" />
     <Reference Include="RebornBuddy">
       <HintPath>..\..\..\Google Drive\Rebornbuddy\RebornBuddy.exe</HintPath>
     </Reference>
@@ -78,6 +79,10 @@
     <Content Include="Recipes\goldsmith.txt" />
     <Content Include="Recipes\leatherworker.txt" />
     <Content Include="Recipes\weaver.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
