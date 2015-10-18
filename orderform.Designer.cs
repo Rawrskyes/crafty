@@ -1,6 +1,6 @@
 ﻿namespace crafty
 {
-    partial class orderform
+    partial class Orderform
     {
         /// <summary>
         /// Required designer variable.
@@ -46,6 +46,7 @@
             this.MissingQty = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
             this.btnCheck = new System.Windows.Forms.Button();
+            this.expCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // addbtn
@@ -65,11 +66,13 @@
             this.Item,
             this.Qty,
             this.Job});
+            this.orderlistview.FullRowSelect = true;
+            this.orderlistview.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.orderlistview.Location = new System.Drawing.Point(277, 12);
             this.orderlistview.MultiSelect = false;
             this.orderlistview.Name = "orderlistview";
             this.orderlistview.Size = new System.Drawing.Size(400, 409);
-            this.orderlistview.TabIndex = 2;
+            this.orderlistview.TabIndex = 8;
             this.orderlistview.UseCompatibleStateImageBehavior = false;
             this.orderlistview.View = System.Windows.Forms.View.Details;
             // 
@@ -100,6 +103,7 @@
             this.rembtn.TabIndex = 3;
             this.rembtn.Text = "Remove";
             this.rembtn.UseVisualStyleBackColor = true;
+            this.rembtn.Click += new System.EventHandler(this.rembtn_Click);
             // 
             // label1
             // 
@@ -141,7 +145,7 @@
             "Armorer",
             "Blacksmith",
             "Carpenter",
-            "Cullinarian",
+            "Culinarian",
             "Goldsmith",
             "Leatherworker",
             "Weaver"});
@@ -167,6 +171,8 @@
             this.materialslist.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.MissingItem,
             this.MissingQty});
+            this.materialslist.FullRowSelect = true;
+            this.materialslist.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.materialslist.Location = new System.Drawing.Point(8, 190);
             this.materialslist.Margin = new System.Windows.Forms.Padding(2);
             this.materialslist.Name = "materialslist";
@@ -188,7 +194,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(88, 175);
+            this.label4.Location = new System.Drawing.Point(91, 165);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 13);
@@ -206,11 +212,22 @@
             this.btnCheck.UseVisualStyleBackColor = true;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
-            // orderform
+            // expCheckBox
+            // 
+            this.expCheckBox.AutoSize = true;
+            this.expCheckBox.Location = new System.Drawing.Point(12, 108);
+            this.expCheckBox.Name = "expCheckBox";
+            this.expCheckBox.Size = new System.Drawing.Size(129, 17);
+            this.expCheckBox.TabIndex = 14;
+            this.expCheckBox.Text = "Auto-Expand Recipes";
+            this.expCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // Orderform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 428);
+            this.Controls.Add(this.expCheckBox);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.materialslist);
@@ -223,7 +240,7 @@
             this.Controls.Add(this.rembtn);
             this.Controls.Add(this.orderlistview);
             this.Controls.Add(this.addbtn);
-            this.Name = "orderform";
+            this.Name = "Orderform";
             this.Text = "Orders";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.orderform_FormClosing);
             this.ResumeLayout(false);
@@ -251,5 +268,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.CheckBox expCheckBox;
     }
 }

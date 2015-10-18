@@ -5,7 +5,7 @@ using ff14bot.Enums;
 
 namespace crafty.Recipes
 {
-    public static class recipes
+    public static class Recipes
     {
         //File information here. Including what's delimiting the IDs and the names on each line.
         private static string 
@@ -150,6 +150,29 @@ namespace crafty.Recipes
                 }
             }
             return result;
+        }
+
+        public static string GetJob(uint id)
+        {
+            foreach (var job in jobs)
+            {
+                foreach (var r in job.Recipes)
+                {
+                    if (r.Id == id)
+                    {
+                        if (job.ClassJob == ClassJobType.Alchemist) return "Alchemist";
+                        if (job.ClassJob == ClassJobType.Armorer) return "Armorer";
+                        if (job.ClassJob == ClassJobType.Blacksmith) return "Blacksmith";
+                        if (job.ClassJob == ClassJobType.Carpenter) return "Carpenter";
+                        if (job.ClassJob == ClassJobType.Culinarian) return "Culinarian";
+                        if (job.ClassJob == ClassJobType.Goldsmith) return "Goldsmith";
+                        if (job.ClassJob == ClassJobType.Leatherworker) return "Leatherworker";
+                        if (job.ClassJob == ClassJobType.Weaver) return "Weaver";
+                    }
+                }
+                
+            }
+            return null;
         }
     }
 }

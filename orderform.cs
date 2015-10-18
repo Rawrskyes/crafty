@@ -2,32 +2,21 @@
 using ff14bot.Enums;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Buddy.Coroutines;
-using ff14bot;
-using ff14bot.Behavior;
-using ff14bot.Helpers;
-using ff14bot.Managers;
-using TreeSharp;
+
 
 namespace crafty
 {
-    public partial class orderform : Form
+    public partial class Orderform : Form
     {
-        public orderform()
+        public Orderform()
         {
             InitializeComponent();
         }
 
         private ClassJobType _job = ClassJobType.Adventurer;
 
-        private async void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             if (_job == ClassJobType.Adventurer)
             {
@@ -35,7 +24,7 @@ namespace crafty
                 return;
             }
 
-            recipes.Recipe r = recipes.getRecipe(itemtxt.Text, _job);
+            Recipes.Recipes.Recipe r = Recipes.Recipes.getRecipe(itemtxt.Text, _job);
 
             if (r.Id == 0)
             {
@@ -50,13 +39,10 @@ namespace crafty
             }
 
             string[] row = { r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text };
-            Logging.Write("Attempting to select stuff");
-            bool canCraftIt = Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text));
-            Logging.Write("We've checked to see if we can craft.");
+            bool canCraftIt = Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text), ExpandMaterials());
             if (canCraftIt)
             {
                 orderlistview.Items.Add(new ListViewItem(row));
-                Logging.Write("We have added item to the list view.");
                 ReloadMaterials();
             } else
             {
@@ -64,7 +50,13 @@ namespace crafty
             }
         }
 
-        public List<Crafty.Order> getOrders()
+        public void AddOrder(uint id, string name, uint qty, string jobclass)
+        {
+            string[] row = {id.ToString(), name, qty.ToString(), jobclass};
+            orderlistview.Items.Add(new ListViewItem(row));
+        }
+
+        public List<Crafty.Order> GetOrders()
         {
             int numitems = orderlistview.Items.Count;
             List<Crafty.Order> o = new List<Crafty.Order>();
@@ -93,7 +85,7 @@ namespace crafty
             if (j == "Armorer") result = ClassJobType.Armorer;
             if (j == "Blacksmith") result = ClassJobType.Blacksmith;
             if (j == "Carpenter") result = ClassJobType.Carpenter;
-            if (j == "Cullinarian") result = ClassJobType.Culinarian;
+            if (j == "Culinarian") result = ClassJobType.Culinarian;
             if (j == "Goldsmith") result = ClassJobType.Goldsmith;
             if (j == "Leatherworker") result = ClassJobType.Leatherworker;
             if (j == "Weaver") result = ClassJobType.Weaver;
@@ -107,6 +99,7 @@ namespace crafty
 
         private void ReloadMaterials()
         {
+            materialslist.Items.Clear();
             Materials.CountStock();
             Materials.Material[] mats = Materials.GetList();
             foreach(Materials.Material m in mats)
@@ -114,18 +107,37 @@ namespace crafty
                 //Add it if we don't have enough materials.
                 if (m.Qty < m.Qtyreq) {
                     uint qtyrem = m.Qtyreq - m.Qty;
-                    materialslist.Items.Add(new ListViewItem(m.Itemname, qtyrem.ToString()));
+                    string[] row = {m.Itemname, qtyrem.ToString()};
+                    materialslist.Items.Add(new ListViewItem(row));
                 }
             }
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            using (Core.Memory.TemporaryCacheState(false))
+            ClearAndReload();
+        }
+
+        private void rembtn_Click(object sender, EventArgs e)
+        {
+            orderlistview.SelectedItems[0].Remove();
+        }
+
+        private void ClearAndReload()
+        {
+            Materials.ClearList();
+            foreach (ListViewItem row in orderlistview.Items)
             {
-                RaptureAtkUnitManager.Update();
-                Logging.Write(CraftingManager.CurrentRecipeId);
+                var itemid = uint.Parse(row.SubItems[0].Text);
+                var qty = uint.Parse(row.SubItems[2].Text);
+                Materials.FetchMaterials(itemid, qty);
             }
+            ReloadMaterials();
+        }
+
+        private bool ExpandMaterials()
+        {
+            return expCheckBox.Checked;
         }
     }
 }
