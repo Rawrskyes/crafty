@@ -1,20 +1,18 @@
-﻿using crafty.Recipes;
-using ff14bot.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-
+using ff14bot.Enums;
 
 namespace crafty
 {
     public partial class Orderform : Form
     {
+        private ClassJobType _job = ClassJobType.Adventurer;
+
         public Orderform()
         {
             InitializeComponent();
         }
-
-        private ClassJobType _job = ClassJobType.Adventurer;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -24,7 +22,7 @@ namespace crafty
                 return;
             }
 
-            Recipes.Recipes.Recipe r = Recipes.Recipes.getRecipe(itemtxt.Text, _job);
+            var r = Recipes.Recipes.getRecipe(itemtxt.Text, _job);
 
             if (r.Id == 0)
             {
@@ -38,13 +36,14 @@ namespace crafty
                 return;
             }
 
-            string[] row = { r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text };
-            bool canCraftIt = Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text), ExpandMaterials());
+            string[] row = {r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text};
+            var canCraftIt = Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text), ExpandMaterials());
             if (canCraftIt)
             {
                 orderlistview.Items.Add(new ListViewItem(row));
                 ReloadMaterials();
-            } else
+            }
+            else
             {
                 MessageBox.Show("We don't know that recipe!");
             }
@@ -58,15 +57,15 @@ namespace crafty
 
         public List<Crafty.Order> GetOrders()
         {
-            int numitems = orderlistview.Items.Count;
-            List<Crafty.Order> o = new List<Crafty.Order>();
-            foreach (ListViewItem row in this.orderlistview.Items)
+            var numitems = orderlistview.Items.Count;
+            var o = new List<Crafty.Order>();
+            foreach (ListViewItem row in orderlistview.Items)
             {
                 uint itemid, qty;
                 uint.TryParse(row.SubItems[0].Text, out itemid);
                 uint.TryParse(row.SubItems[2].Text, out qty);
-                ClassJobType j = getClassJobType(row.SubItems[3].Text);
-                string itemname = row.SubItems[1].Text;
+                var j = getClassJobType(row.SubItems[3].Text);
+                var itemname = row.SubItems[1].Text;
                 o.Add(new Crafty.Order(itemid, itemname, qty, j));
             }
             return o;
@@ -74,13 +73,13 @@ namespace crafty
 
         private void orderform_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Hide();
+            Hide();
             e.Cancel = true;
         }
 
         private ClassJobType getClassJobType(string j)
         {
-            ClassJobType result = ClassJobType.Adventurer;
+            var result = ClassJobType.Adventurer;
             if (j == "Alchemist") result = ClassJobType.Alchemist;
             if (j == "Armorer") result = ClassJobType.Armorer;
             if (j == "Blacksmith") result = ClassJobType.Blacksmith;
@@ -101,12 +100,13 @@ namespace crafty
         {
             materialslist.Items.Clear();
             Materials.CountStock();
-            Materials.Material[] mats = Materials.GetList();
-            foreach(Materials.Material m in mats)
+            var mats = Materials.GetList();
+            foreach (var m in mats)
             {
                 //Add it if we don't have enough materials.
-                if (m.Qty < m.Qtyreq) {
-                    uint qtyrem = m.Qtyreq - m.Qty;
+                if (m.Qty < m.Qtyreq)
+                {
+                    var qtyrem = m.Qtyreq - m.Qty;
                     string[] row = {m.Itemname, qtyrem.ToString()};
                     materialslist.Items.Add(new ListViewItem(row));
                 }
@@ -138,6 +138,19 @@ namespace crafty
         private bool ExpandMaterials()
         {
             return expCheckBox.Checked;
+        }
+
+        public uint CountOrders(string name)
+        {
+            uint result = 0;
+            foreach (ListViewItem i in orderlistview.Items)
+            {
+                if (i.SubItems[1].Text.Equals(name))
+                {
+                    result += uint.Parse(i.SubItems[2].Text);
+                }
+            }
+            return result;
         }
     }
 }

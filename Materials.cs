@@ -1,48 +1,28 @@
-﻿using ff14bot.Managers;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using Buddy.Coroutines;
 using ff14bot;
-using ff14bot.Behavior;
 using ff14bot.Helpers;
-using TreeSharp;
+using ff14bot.Managers;
 
 namespace crafty
 {
-    static class Materials
+    internal static class Materials
     {
-        public class Material
-        {
-            public uint Qty, Qtyreq;
-            public readonly string Itemname;
-
-            public Material(string name, uint qtyreq)
-            {
-                this.Itemname = name;
-                this.Qtyreq = qtyreq;
-                this.Qty = 0;
-            }
-        }
-
         private static readonly List<Material> Mats = new List<Material>();
 
         private static void AddMaterial(string itemname, uint qty)
         {
-                for (int i = 0; i < Mats.Count(); i++)
+            for (var i = 0; i < Mats.Count(); i++)
+            {
+                //Check for item already existing.
+                if (Mats[i].Itemname.Equals(itemname))
                 {
-                    //Check for item already existing.
-                    if (Mats[i].Itemname.Equals(itemname))
-                    {
-                        Mats[i].Qtyreq += qty;
-                        return;
-                    }
-
+                    Mats[i].Qtyreq += qty;
+                    return;
                 }
+            }
             //Add it if it doesn't exist.
             Mats.Add(new Material(itemname, qty));
         }
@@ -57,13 +37,13 @@ namespace crafty
             return Mats.ToArray();
         }
 
-        public static bool FetchMaterials(uint craftingId, uint qty, bool expand = false) 
+        public static bool FetchMaterials(uint craftingId, uint qty, bool expand = false)
         {
             using (Core.Memory.TemporaryCacheState(false))
             {
                 RaptureAtkUnitManager.Update();
                 GameObjectManager.Update();
-                bool isKnown = (CraftingManager.CurrentRecipeId == (ushort) craftingId);
+                var isKnown = (CraftingManager.CurrentRecipeId == (ushort) craftingId);
                 Logging.Write(CraftingManager.CurrentRecipeId);
                 if (!isKnown)
                 {
@@ -78,34 +58,37 @@ namespace crafty
                 GameObjectManager.Update();
                 isKnown = (CraftingManager.CurrentRecipeId == (ushort) craftingId);
                 Logging.Write(isKnown);
-                if (isKnown == true)
+                if (isKnown)
                 {
-                    RecipeData recipe = CraftingManager.CurrentRecipe;
-                    foreach (RecipeIngredientInfo i in recipe.Ingredients)
+                    var recipe = CraftingManager.CurrentRecipe;
+                    foreach (var i in recipe.Ingredients)
                     {
                         if (i.ItemId != 0) //Keep getting a 0 ID ingredient here for some reason?!
                         {
-                            string iname = DataManager.GetItem(i.ItemId).EnglishName;
-                            uint totalreq = i.TotalNeeded*qty;
-                            if (expand)
+                            var iname = DataManager.GetItem(i.ItemId).EnglishName;
+                            var totalreq = i.TotalNeeded*qty;
+                            if (expand) //Check if we're expanding the recipe
                             {
                                 var rec = Recipes.Recipes.getRecipe(iname, Core.Me.CurrentJob);
+                                //See if we know it in current job.
                                 if (rec.Id != 0)
                                 {
                                     if (FetchMaterials(rec.Id, totalreq, true))
                                     {
                                         Crafty.OrderForm.AddOrder(rec.Id, rec.Name, totalreq,
-                                            Recipes.Recipes.GetJob(rec.Id));
+                                            Recipes.Recipes.GetJob(rec.Id)); //Add it if we know it!
                                     }
-                                }else if (Recipes.Recipes.getRecipe(iname).Count > 0)
+                                }
+                                else if (Recipes.Recipes.getRecipe(iname).Count > 0)
+                                    //Check if we've got it on our other jobs
                                 {
                                     foreach (var r in Recipes.Recipes.getRecipe(iname))
                                     {
                                         if (FetchMaterials(r.Id, totalreq, true))
                                         {
-                                            Crafty.OrderForm.AddOrder(r.Id, r.Name, totalreq, Recipes.Recipes.GetJob(r.Id));
+                                            Crafty.OrderForm.AddOrder(r.Id, r.Name, totalreq,
+                                                Recipes.Recipes.GetJob(r.Id));
                                         }
-                                            
                                     }
                                 }
                             }
@@ -113,15 +96,11 @@ namespace crafty
                             {
                                 AddMaterial(iname, totalreq);
                             }
-                            
                         }
                     }
                     return true;
                 }
-                else
-                {
-                    return false;
-                }
+                return false;
             }
         }
 
@@ -130,14 +109,26 @@ namespace crafty
             using (Core.Memory.TemporaryCacheState(false))
             {
                 GameObjectManager.Update();
-                for (int i = 0; i < Mats.Count; i++)
+                for (var i = 0; i < Mats.Count; i++)
                 {
                     Logging.Write("Counting item " + Mats[i].Itemname);
-                    Item mat = DataManager.GetItem(Mats[i].Itemname);
-                    Mats[i].Qty = mat.ItemCount();
+                    var mat = DataManager.GetItem(Mats[i].Itemname);
+                    Mats[i].Qty = mat.ItemCount() + Crafty.OrderForm.CountOrders(Mats[i].Itemname);
                 }
             }
         }
 
+        public class Material
+        {
+            public readonly string Itemname;
+            public uint Qty, Qtyreq;
+
+            public Material(string name, uint qtyreq)
+            {
+                Itemname = name;
+                Qtyreq = qtyreq;
+                Qty = 0;
+            }
+        }
     }
 }
