@@ -57,20 +57,14 @@ namespace crafty
             return mats.ToArray();
         }
 
-        public static Coroutine FetchMaterials(uint craftingId, uint qty)
+        public static async Task<bool> FetchMaterials(uint craftingId, uint qty)
         {
             bool isKnown = (CraftingManager.CurrentRecipeId == craftingId);
             Logging.Write(CraftingManager.CurrentRecipeId);
             if (!isKnown)
             {
-                var coroutine = new Coroutine(() =>CraftingManager.SetRecipe(craftingId));
-                while (!coroutine.IsFinished)
-                {
-                    Thread.Sleep(20);
-                    coroutine.Resume();
-                }
+                isKnown = await CraftingManager.SetRecipe(craftingId);
             }
-            isKnown = (CraftingManager.CurrentRecipeId == craftingId);
             Logging.Write(isKnown);
             if (isKnown == true)
             {

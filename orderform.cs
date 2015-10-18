@@ -13,6 +13,7 @@ using ff14bot.Behavior;
 using ff14bot.Helpers;
 using ff14bot.Managers;
 using TreeSharp;
+using Buddy.Coroutines;
 
 namespace crafty
 {
@@ -49,10 +50,10 @@ namespace crafty
 
             string[] row = { r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text };
             Logging.Write("Attempting to select stuff");
-            bool canCraftIt = await Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text));
+            var canCraftCo = new Coroutine(()=>Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text)));
+
             Logging.Write("We've checked to see if we can craft.");
-            if (canCraftIt)
-            {
+            if (canCraftCo.Result == )          {
                 orderlistview.Items.Add(new ListViewItem(row));
                 Logging.Write("We have added item to the list view.");
                 ReloadMaterials();
