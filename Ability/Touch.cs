@@ -6,24 +6,10 @@ using TreeSharp;
 
 namespace crafty.Ability
 {
-    static class Touch
+    internal static class Touch
     {
-        private struct ClassTouch
+        private static readonly ClassTouch[] Jobs =
         {
-            public ClassJobType Job;
-            public uint Touch1;
-            public uint Touch2;
-            public uint Touch3;
-
-            public ClassTouch(ClassJobType job, uint touch1, uint touch2, uint touch3)
-            {
-                this.Job = job;
-                this.Touch1 = touch1;
-                this.Touch2 = touch2;
-                this.Touch3 = touch3;
-            }
-        }
-        static readonly ClassTouch[] Jobs = {
             new ClassTouch(ClassJobType.Armorer, 100031, 100034, 100038),
             new ClassTouch(ClassJobType.Alchemist, 100091, 100093, 100097),
             new ClassTouch(ClassJobType.Blacksmith, 100016, 100018, 100022),
@@ -32,26 +18,30 @@ namespace crafty.Ability
             new ClassTouch(ClassJobType.Goldsmith, 100076, 100078, 100081),
             new ClassTouch(ClassJobType.Leatherworker, 100046, 100048, 100052),
             new ClassTouch(ClassJobType.Weaver, 100061, 100064, 100068)
-            };
+        };
 
         public static SpellData GetBestTouch()
         {
             uint x = 0;
-            foreach (ClassTouch c in Jobs)
+            foreach (var c in Jobs)
             {
-                if (c.Job == ff14bot.Core.Me.CurrentJob)
+                if (c.Job == Core.Me.CurrentJob)
                 {
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch3) && (DataManager.GetSpellData(c.Touch3).Cost <= Core.Me.CurrentCP) && !ff14bot.Core.Me.HasAura("Steady Hand"))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch3) &&
+                        (DataManager.GetSpellData(c.Touch3).Cost <= Core.Me.CurrentCP) &&
+                        !Core.Me.HasAura("Steady Hand"))
                     {
                         x = c.Touch3;
                         break;
                     }
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch2) && (DataManager.GetSpellData(c.Touch2).Cost <= Core.Me.CurrentCP))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch2) &&
+                        (DataManager.GetSpellData(c.Touch2).Cost <= Core.Me.CurrentCP))
                     {
                         x = c.Touch2;
                         break;
                     }
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch1) && (DataManager.GetSpellData(c.Touch1).Cost <= Core.Me.CurrentCP))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch1) &&
+                        (DataManager.GetSpellData(c.Touch1).Cost <= Core.Me.CurrentCP))
                     {
                         x = c.Touch1;
                         break;
@@ -65,11 +55,23 @@ namespace crafty.Ability
 
         public static Composite UseBestTouch()
         {
-            return new TreeSharp.Action(a =>
-            {
-                Actionmanager.DoAction(GetBestTouch(), null);
-            });
+            return new Action(a => { Actionmanager.DoAction(GetBestTouch(), null); });
         }
 
+        private struct ClassTouch
+        {
+            public readonly ClassJobType Job;
+            public readonly uint Touch1;
+            public readonly uint Touch2;
+            public readonly uint Touch3;
+
+            public ClassTouch(ClassJobType job, uint touch1, uint touch2, uint touch3)
+            {
+                Job = job;
+                Touch1 = touch1;
+                Touch2 = touch2;
+                Touch3 = touch3;
+            }
+        }
     }
 }

@@ -1,29 +1,44 @@
-﻿using ff14bot.Helpers;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
 using ff14bot.Enums;
+using ff14bot.Helpers;
 
 namespace crafty.Recipes
 {
     public static class Recipes
     {
         //File information here. Including what's delimiting the IDs and the names on each line.
-        private static string 
-            alchemist = "alchemist.txt",
-            armorer = "armorer.txt",
-            blacksmith = "blacksmith.txt",
-            carpenter = "carpenter.txt",
-            cullinarian = "culinarian.txt",
-            goldsmith = "goldsmith.txt",
-            leatherworker = "leatherworker.txt",
+        private static readonly string
+            alchemist = "alchemist.txt";
+
+        private static readonly string
+            armorer = "armorer.txt";
+
+        private static readonly string
+            blacksmith = "blacksmith.txt";
+
+        private static readonly string
+            carpenter = "carpenter.txt";
+
+        private static readonly string
+            cullinarian = "culinarian.txt";
+
+        private static readonly string
+            goldsmith = "goldsmith.txt";
+
+        private static readonly string
+            leatherworker = "leatherworker.txt";
+
+        private static readonly string
             weaver = "weaver.txt";
 
-        private static string workingdir = Directory.GetCurrentDirectory();
-        private static string path = "\\BotBases\\Crafty\\Recipes\\";
-        private static char[] delimiter = { ':' };
+        private static readonly string workingdir = Directory.GetCurrentDirectory();
+        private static readonly string path = "\\BotBases\\Crafty\\Recipes\\";
+        private static readonly char[] delimiter = {':'};
 
         //Array of our class/recipe structs
-        public static Job[] jobs = {
+        public static Job[] jobs =
+        {
             new Job(ClassJobType.Alchemist, ReadFile(alchemist)),
             new Job(ClassJobType.Armorer, ReadFile(armorer)),
             new Job(ClassJobType.Blacksmith, ReadFile(blacksmith)),
@@ -34,46 +49,22 @@ namespace crafty.Recipes
             new Job(ClassJobType.Weaver, ReadFile(weaver))
         };
 
-        public struct Recipe
-        {
-            public uint Id;
-            public string Name;
-
-            public Recipe(uint id, string name)
-            {
-                this.Id = id;
-                this.Name = name;
-            }
-        }
-
-        public struct Job
-        {
-            public ClassJobType ClassJob;
-            public List<Recipe> Recipes;
-
-            public Job(ClassJobType job, List<Recipe> recipelist)
-            {
-                this.ClassJob = job;
-                this.Recipes = recipelist;
-            }
-        }
-        
-
 
         private static List<Recipe> ReadFile(string file)
         {
-            List<Recipe> filecontents = new List<Recipe>();
+            var filecontents = new List<Recipe>();
             string line;
             try
             {
-                StreamReader sr = new StreamReader(File.Open(workingdir + path + file, FileMode.Open));
-                while((line = sr.ReadLine()) != null)
+                var sr = new StreamReader(File.Open(workingdir + path + file, FileMode.Open));
+                while ((line = sr.ReadLine()) != null)
                 {
-                    string[] s = line.Split(delimiter, 2);
-                    uint id = uint.Parse(s[0]);
+                    var s = line.Split(delimiter, 2);
+                    var id = uint.Parse(s[0]);
                     filecontents.Add(new Recipe(id, s[1]));
                 }
-            } catch (IOException e)
+            }
+            catch (IOException e)
             {
                 Logging.Write("Error reading file " + workingdir + path + file + ".");
                 Logging.Write("Please check that the file exists and hasn't been renamed");
@@ -85,11 +76,11 @@ namespace crafty.Recipes
         //Search for a recipe by name. Return empty recipe if not found.
         public static Recipe getRecipe(string name, ClassJobType job)
         {
-            foreach(Job j in jobs)
+            foreach (var j in jobs)
             {
-                if(job == j.ClassJob)
+                if (job == j.ClassJob)
                 {
-                    foreach(Recipe r in j.Recipes)
+                    foreach (var r in j.Recipes)
                     {
                         if (r.Name.ToLower().Equals(name.ToLower()))
                         {
@@ -104,11 +95,11 @@ namespace crafty.Recipes
         //Search by id!
         public static Recipe getRecipe(uint id, ClassJobType job)
         {
-            foreach (Job j in jobs)
+            foreach (var j in jobs)
             {
                 if (job == j.ClassJob)
                 {
-                    foreach (Recipe r in j.Recipes)
+                    foreach (var r in j.Recipes)
                     {
                         if (r.Id == id)
                         {
@@ -122,10 +113,10 @@ namespace crafty.Recipes
 
         public static List<Recipe> getRecipe(string name)
         {
-            List<Recipe> result = new List<Recipe>();
-            foreach(Job j in jobs)
+            var result = new List<Recipe>();
+            foreach (var j in jobs)
             {
-                foreach(Recipe r in j.Recipes)
+                foreach (var r in j.Recipes)
                 {
                     if (r.Name.ToLower().Equals(name.ToLower()))
                     {
@@ -138,10 +129,10 @@ namespace crafty.Recipes
 
         public static Recipe getRecipe(uint id)
         {
-            Recipe result = new Recipe();
-            foreach (Job j in jobs)
+            var result = new Recipe();
+            foreach (var j in jobs)
             {
-                foreach (Recipe r in j.Recipes)
+                foreach (var r in j.Recipes)
                 {
                     if (r.Id == id)
                     {
@@ -170,9 +161,32 @@ namespace crafty.Recipes
                         if (job.ClassJob == ClassJobType.Weaver) return "Weaver";
                     }
                 }
-                
             }
             return null;
+        }
+
+        public struct Recipe
+        {
+            public uint Id;
+            public string Name;
+
+            public Recipe(uint id, string name)
+            {
+                Id = id;
+                Name = name;
+            }
+        }
+
+        public struct Job
+        {
+            public ClassJobType ClassJob;
+            public List<Recipe> Recipes;
+
+            public Job(ClassJobType job, List<Recipe> recipelist)
+            {
+                ClassJob = job;
+                Recipes = recipelist;
+            }
         }
     }
 }

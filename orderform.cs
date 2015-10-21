@@ -36,12 +36,10 @@ namespace crafty
                 return;
             }
 
-            string[] row = {r.Id.ToString(), r.Name, qtytxt.Text, jobclasscombo.Text};
             var canCraftIt = Materials.FetchMaterials(r.Id, uint.Parse(qtytxt.Text), ExpandMaterials());
             if (canCraftIt)
             {
-                orderlistview.Items.Add(new ListViewItem(row));
-                ReloadMaterials();
+                AddOrder(r.Id, r.Name, uint.Parse(qtytxt.Text), jobclasscombo.Text);
             }
             else
             {
@@ -53,6 +51,7 @@ namespace crafty
         {
             string[] row = {id.ToString(), name, qty.ToString(), jobclass};
             orderlistview.Items.Add(new ListViewItem(row));
+            ReloadMaterials();
         }
 
         public List<Crafty.Order> GetOrders()

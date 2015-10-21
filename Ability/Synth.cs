@@ -1,14 +1,15 @@
-﻿using ff14bot.Enums;
+﻿using ff14bot;
+using ff14bot.Enums;
+using ff14bot.Managers;
 using ff14bot.Objects;
 using TreeSharp;
-using Action = TreeSharp.Action;
-using ff14bot.Managers;
 
 namespace crafty.Ability
 {
     public static class Synth
     {
-        static readonly ClassSynths[] Jobs = {
+        private static readonly ClassSynths[] Jobs =
+        {
             new ClassSynths(ClassJobType.Armorer, 100030, 100037),
             new ClassSynths(ClassJobType.Alchemist, 100090, 100096),
             new ClassSynths(ClassJobType.Blacksmith, 100015, 100021),
@@ -17,7 +18,7 @@ namespace crafty.Ability
             new ClassSynths(ClassJobType.Goldsmith, 100075, 100080),
             new ClassSynths(ClassJobType.Leatherworker, 100045, 100051),
             new ClassSynths(ClassJobType.Weaver, 100060, 100067)
-            };
+        };
 
         public static double GetFactor(uint spellId)
         {
@@ -29,26 +30,12 @@ namespace crafty.Ability
             return 0;
         }
 
-        private struct ClassSynths
-        {
-            public ClassJobType Job;
-            public uint Synth1;
-            public uint Synth2;
-
-        public ClassSynths(ClassJobType job, uint synth1, uint synth2)
-            {
-                this.Job = job;
-                this.Synth1 = synth1;
-                this.Synth2 = synth2;
-            }
-        }
-
         public static SpellData GetBestBasic()
         {
             uint x = 0;
-            foreach (ClassSynths c in Jobs)
+            foreach (var c in Jobs)
             {
-                if (c.Job == ff14bot.Core.Me.CurrentJob)
+                if (c.Job == Core.Me.CurrentJob)
                 {
                     if (Actionmanager.CurrentActions.ContainsKey(c.Synth2) && Actionmanager.CanCast(c.Synth2, null))
                     {
@@ -70,12 +57,8 @@ namespace crafty.Ability
 
         public static Composite UseSynth()
         {
-            return new Action(r =>
-            {
-                Actionmanager.DoAction(GetBestBasic(), null);
-
-            }
-            ); 
+            return new Action(r => { Actionmanager.DoAction(GetBestBasic(), null); }
+                );
         }
 
         public static bool ExpectFinish()
@@ -86,6 +69,20 @@ namespace crafty.Ability
 
             return correctedProg >=
                    (CraftingManager.ProgressRequired - CraftingManager.Progress);
+        }
+
+        private struct ClassSynths
+        {
+            public readonly ClassJobType Job;
+            public readonly uint Synth1;
+            public readonly uint Synth2;
+
+            public ClassSynths(ClassJobType job, uint synth1, uint synth2)
+            {
+                Job = job;
+                Synth1 = synth1;
+                Synth2 = synth2;
+            }
         }
     }
 }

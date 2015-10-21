@@ -5,19 +5,21 @@ using TreeSharp;
 
 namespace crafty
 {
-    static class Strategy
+    internal static class Strategy
     {
         public static Composite GetComposite()
         {
             var mend = new Decorator(a => (Mend.Available && CraftingManager.Durability == 10), Mend.UseBestMend());
-            var increasequal = new Decorator(a => (Core.Me.CurrentCP > 18 && Synth.ExpectFinish() & (CraftingManager.Durability > 20 || Mend.Available) & CraftingManager.HQPercent < 100), Touch.UseBestTouch());
+            var increasequal =
+                new Decorator(
+                    a =>
+                        (Core.Me.CurrentCP > 18 &&
+                         Synth.ExpectFinish() & (CraftingManager.Durability > 20 || Mend.Available) &
+                         CraftingManager.HQPercent < 100), Touch.UseBestTouch());
             var progress = Synth.UseSynth();
             var steady = new Decorator(a => Buff.SteadyRequired(), Buff.GetSteadyAction());
-            var inner = new Decorator(a=> Buff.InnerQuietAvail(), Buff.GetInnerQuietAction());
+            var inner = new Decorator(a => Buff.InnerQuietAvail(), Buff.GetInnerQuietAction());
             return new PrioritySelector(inner, mend, steady, increasequal, progress);
-
         }
     }
-
-
 }

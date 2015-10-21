@@ -88,8 +88,13 @@ namespace crafty
                                         {
                                             Crafty.OrderForm.AddOrder(r.Id, r.Name, totalreq,
                                                 Recipes.Recipes.GetJob(r.Id));
+                                            break;
                                         }
                                     }
+                                }
+                                else //Add the material if we don't know how to make it.
+                                {
+                                    AddMaterial(iname, totalreq);
                                 }
                             }
                             else

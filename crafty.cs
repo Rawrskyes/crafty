@@ -1,32 +1,18 @@
-﻿using ff14bot.AClasses;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using ff14bot.AClasses;
 using ff14bot.Behavior;
-using TreeSharp;
+using ff14bot.Enums;
 using ff14bot.Helpers;
+using TreeSharp;
 
 namespace crafty
 {
     public class Crafty : BotBase
     {
-        private Composite _root;
         public static Orderform OrderForm;
         public static List<Order> OrderList = new List<Order>();
-        public struct Order
-        {
-            public uint ItemId;
-            public uint Qty;
-            public string ItemName;
-            public ff14bot.Enums.ClassJobType Job;
-
-            public Order(uint itemid, string itemname, uint qty, ff14bot.Enums.ClassJobType job)
-            {
-                this.ItemId = itemid;
-                this.Qty = qty;
-                this.Job = job;
-                this.ItemName = itemname;
-            }
-        }
+        private Composite _root;
 
         public override bool RequiresProfile
         {
@@ -48,23 +34,6 @@ namespace crafty
             get { return true; }
         }
 
-        public override void OnButtonPress()
-        {
-            if (OrderForm == null || OrderForm.IsDisposed)
-            {
-                OrderForm = new Orderform();
-            }
-            try
-            {
-                OrderForm.Show();
-                OrderForm.Activate();
-            } catch (ArgumentOutOfRangeException e)
-            {
-                Logging.Write("Error displaying the OrderForm!!");
-                Logging.Write(e.ToString());
-            }
-        }
-
 
         public override Composite Root
         {
@@ -75,5 +44,38 @@ namespace crafty
             }
         }
 
+        public override void OnButtonPress()
+        {
+            if (OrderForm == null || OrderForm.IsDisposed)
+            {
+                OrderForm = new Orderform();
+            }
+            try
+            {
+                OrderForm.Show();
+                OrderForm.Activate();
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                Logging.Write("Error displaying the OrderForm!!");
+                Logging.Write(e.ToString());
+            }
+        }
+
+        public struct Order
+        {
+            public uint ItemId;
+            public uint Qty;
+            public string ItemName;
+            public ClassJobType Job;
+
+            public Order(uint itemid, string itemname, uint qty, ClassJobType job)
+            {
+                ItemId = itemid;
+                Qty = qty;
+                Job = job;
+                ItemName = itemname;
+            }
+        }
     }
 }
