@@ -146,10 +146,37 @@ namespace crafty
             {
                 if (i.SubItems[1].Text.Equals(name))
                 {
-                    result += uint.Parse(i.SubItems[2].Text);
+                    result =+ uint.Parse(i.SubItems[2].Text);
                 }
             }
             return result;
         }
+
+        public uint GetJobGearSet(ClassJobType requiredJob)
+        {
+            switch (requiredJob)
+            {
+                case ClassJobType.Alchemist:
+                    return decimal.ToUInt32(numAlch.Value);
+                case ClassJobType.Armorer:
+                    return decimal.ToUInt32(numArm.Value);
+                case ClassJobType.Blacksmith:
+                    return decimal.ToUInt32(numBsm.Value);
+                case ClassJobType.Carpenter:
+                    return decimal.ToUInt32(numCarp.Value);
+                case ClassJobType.Culinarian:
+                    return decimal.ToUInt32(numCul.Value);
+                case ClassJobType.Goldsmith:
+                    return decimal.ToUInt32(numGold.Value);
+                case ClassJobType.Leatherworker:
+                    return decimal.ToUInt32(numLtw.Value);
+                case ClassJobType.Weaver:
+                    return decimal.ToUInt32(numWeav.Value);
+                default: //Just in case I derp out and request something I can't craft with?!?!
+                    return 0;
+
+            }
+        }
+
     }
 }

@@ -1,8 +1,11 @@
-﻿using System.Linq;
+﻿using System.Diagnostics.Eventing.Reader;
+using System.Linq;
 using ff14bot;
 using ff14bot.Enums;
 using ff14bot.Managers;
 using TreeSharp;
+using crafty;
+using ff14bot.Helpers;
 
 namespace crafty
 {
@@ -57,10 +60,26 @@ namespace crafty
             return levelCorrectedProgress;
         }
 
-        public static Composite setJob(ClassJobType job)
+        public static bool ChangeRequired(ClassJobType requiredJobType)
         {
-            ff14bot.CharacterManagement.AutoEquipper.Instance.PulseAutoEquip();
-            return null;
+            //If we're what we need to be, don't change.
+            if (Core.Me.CurrentJob == requiredJobType) return false;
+
+            //Else we need to change.
+            return true;
+
+        }
+
+        public static Composite ChangeJob(ClassJobType requiredJobType)
+        {
+            var gearnum = Crafty.OrderForm.GetJobGearSet(requiredJobType);
+            return new Action(a =>
+            {
+                Logging.Write("Changing to gearset number: " + gearnum);
+                ChatManager.SendChat("/gs change " + gearnum);
+
+            });
+            
         }
     }
 }
