@@ -75,7 +75,7 @@ namespace crafty
                                 {
                                     if (FetchMaterials(rec.Id, totalreq, true))
                                     {
-                                        Crafty.OrderForm.AddOrder(rec.Id, rec.Name, totalreq,
+                                        Crafty.OrderForm.AddOrder(rec.Id, rec.Name, totalreq, 
                                             Recipes.Recipes.GetJob(rec.Id)); //Add it if we know it!
                                     }
                                 }
