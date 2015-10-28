@@ -63,6 +63,7 @@ namespace crafty.Recipes
                     var id = uint.Parse(s[0]);
                     filecontents.Add(new Recipe(id, s[1]));
                 }
+                sr.Close();
             }
             catch (IOException e)
             {

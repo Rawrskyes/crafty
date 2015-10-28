@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ff14bot;
 using ff14bot.AClasses;
 using ff14bot.Behavior;
 using ff14bot.Enums;
@@ -10,8 +11,7 @@ namespace crafty
 {
     public class Crafty : BotBase
     {
-        public static Orderform OrderForm;
-        public static List<Order> OrderList = new List<Order>();
+        public static Orderform OrderForm = new Orderform();
         private Composite _root;
 
         public override bool RequiresProfile
@@ -34,19 +34,23 @@ namespace crafty
             get { return true; }
         }
 
-
         public override Composite Root
         {
             get
             {
-                //OrderList = OrderForm.getOrders();
                 return _root ?? (_root = CraftyComposite.GetBase());
             }
         }
 
+        public override void Start()
+        {
+            CraftyComposite.Orders = OrderForm.GetOrders();
+            base.Start();
+        }
+
         public override void OnButtonPress()
         {
-            if (OrderForm == null || OrderForm.IsDisposed)
+            if (OrderForm.IsDisposed)
             {
                 OrderForm = new Orderform();
             }
@@ -62,12 +66,13 @@ namespace crafty
             }
         }
 
-        public struct Order
+        public class Order
         {
             public uint ItemId;
             public uint Qty;
             public string ItemName;
             public ClassJobType Job;
+
 
             public Order(uint itemid, string itemname, uint qty, ClassJobType job)
             {

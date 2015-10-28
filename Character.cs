@@ -1,11 +1,13 @@
 ﻿using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Threading;
 using ff14bot;
 using ff14bot.Enums;
 using ff14bot.Managers;
 using TreeSharp;
 using crafty;
 using ff14bot.Helpers;
+using ff14bot.NeoProfiles;
 
 namespace crafty
 {
@@ -75,6 +77,12 @@ namespace crafty
             var gearnum = Crafty.OrderForm.GetJobGearSet(requiredJobType);
             return new Action(a =>
             {
+                while (CraftingManager.IsCrafting)
+                {
+                    ff14bot.NeoProfiles.StopCrafting s = new StopCrafting();
+                    s.Start();
+                    s.Done();
+                }
                 Logging.Write("Changing to gearset number: " + gearnum);
                 ChatManager.SendChat("/gs change " + gearnum);
 
