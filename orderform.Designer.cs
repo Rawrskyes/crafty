@@ -47,7 +47,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnCheck = new System.Windows.Forms.Button();
             this.expCheckBox = new System.Windows.Forms.CheckBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.maintabs = new System.Windows.Forms.TabControl();
             this.tabOrders = new System.Windows.Forms.TabPage();
             this.tabSettings = new System.Windows.Forms.TabPage();
             this.lbljobs = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.numArm = new System.Windows.Forms.NumericUpDown();
             this.numBsm = new System.Windows.Forms.NumericUpDown();
             this.numCarp = new System.Windows.Forms.NumericUpDown();
-            this.tabControl1.SuspendLayout();
+            this.maintabs.SuspendLayout();
             this.tabOrders.SuspendLayout();
             this.tabSettings.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -182,6 +182,9 @@
             // 
             // jobclasscombo
             // 
+            this.jobclasscombo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.jobclasscombo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.jobclasscombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.jobclasscombo.FormattingEnabled = true;
             this.jobclasscombo.Items.AddRange(new object[] {
             "Alchemist",
@@ -263,17 +266,17 @@
             this.expCheckBox.Text = "Auto-Expand Recipes";
             this.expCheckBox.UseVisualStyleBackColor = true;
             // 
-            // tabControl1
+            // maintabs
             // 
-            this.tabControl1.Controls.Add(this.tabOrders);
-            this.tabControl1.Controls.Add(this.tabSettings);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1040, 743);
-            this.tabControl1.TabIndex = 15;
+            this.maintabs.Controls.Add(this.tabOrders);
+            this.maintabs.Controls.Add(this.tabSettings);
+            this.maintabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.maintabs.Location = new System.Drawing.Point(0, 0);
+            this.maintabs.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.maintabs.Name = "maintabs";
+            this.maintabs.SelectedIndex = 0;
+            this.maintabs.Size = new System.Drawing.Size(1040, 743);
+            this.maintabs.TabIndex = 15;
             // 
             // tabOrders
             // 
@@ -536,12 +539,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 743);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.maintabs);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Orderform";
             this.Text = "Orders";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.orderform_FormClosing);
-            this.tabControl1.ResumeLayout(false);
+            this.maintabs.ResumeLayout(false);
             this.tabOrders.ResumeLayout(false);
             this.tabOrders.PerformLayout();
             this.tabSettings.ResumeLayout(false);
@@ -580,7 +583,7 @@
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.CheckBox expCheckBox;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl maintabs;
         private System.Windows.Forms.TabPage tabOrders;
         private System.Windows.Forms.TabPage tabSettings;
         private System.Windows.Forms.GroupBox groupBox1;
