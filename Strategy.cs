@@ -14,7 +14,7 @@ namespace crafty
                 new Decorator(
                     a =>
                         (Core.Me.CurrentCP > 18 &&
-                         Synth.ExpectFinish() & (CraftingManager.Durability > 20 || Mend.Available) &
+                         Synth.ExpectFinish() & (CraftingManager.Durability > 20 || (Mend.Available && (Core.Me.CurrentCP - Touch.GetBestTouch().Cost) > 91)) &
                          CraftingManager.HQPercent < 100), Touch.UseBestTouch());
             var progress = Synth.UseSynth();
             var steady = new Decorator(a => Buff.SteadyRequired(), Buff.GetSteadyAction());

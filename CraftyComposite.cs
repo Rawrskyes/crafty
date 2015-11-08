@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using TreeSharp;
 using Action = TreeSharp.Action;
 using Buddy.Coroutines;
+using Clio.Utilities;
 using ff14bot.Enums;
 
 namespace crafty
@@ -21,6 +22,7 @@ namespace crafty
         public static Composite GetBase()
         {
             Orders = Crafty.OrderForm.GetOrders(); // Get what we want to craft
+            
             if (Orders.Count == 0)
             {
                 Orders.Add(new Crafty.Order(0, "Orders Empty", 0, ClassJobType.Adventurer));
@@ -28,7 +30,7 @@ namespace crafty
             }
 
             //Pace the selector
-            var sleep = new Sleep(350);
+            var sleep = new Sleep(400);
             
             //Animation Locked
             var animationLocked = new Decorator(condition => CraftingManager.AnimationLocked, new Sleep(1000));
@@ -40,13 +42,13 @@ namespace crafty
             var ordersEmpty = new Decorator(condition => CheckOrdersEmpty(), StopBot("Looks like we've completed all the orders!"));
 
             //Incorrect Job
-            var correctJob = new Decorator(condition => Character.ChangeRequired(Orders[0].Job), Character.ChangeJob(Orders[0].Job));
+            var correctJob = new Decorator(condition => Character.ChangeRequired(GetJob()), Character.ChangeJob());
 
             //Recipe not Selected
-            var selectRecipe = new Decorator(condition => IsRecipeSet(Orders[0].ItemId), new ActionRunCoroutine(action => SetRecipeTask(Orders[0].ItemId)));
+            var selectRecipe = new Decorator(condition => IsRecipeSet(GetID()), new ActionRunCoroutine(action => SetRecipeTask(GetID())));
 
             //Can't Craft the item
-            var cantCraft = new Decorator(condition => CanICraftIt(), StopBot("Can't craft the item " + Orders[0].ItemName + ". Stopping!"));
+            var cantCraft = new Decorator(condition => CanICraftIt(), StopBot("Can't craft the item " + GetName() + ". Stopping!"));
 
             //Begin crafting
             var beginCrafting = BeginSynthAction();
@@ -77,7 +79,22 @@ namespace crafty
             */
         }
 
-        private static Action BeginSynthAction()
+        public static ClassJobType GetJob()
+        {
+            return Orders[0].Job;
+        }
+
+        public static String GetName()
+        {
+            return Orders[0].ItemName;
+        }
+
+        public static uint GetID()
+        {
+            return Orders[0].ItemId;
+        }
+
+        public static Action BeginSynthAction()
         {
             return new Action(act =>
             {
@@ -93,6 +110,7 @@ namespace crafty
         {
             while (Orders[0].Qty == 0)
             {
+                Logging.Write("Removed item from list");
                 Orders.RemoveAt(0);
                 if (Orders.Count == 0) return true;
             }

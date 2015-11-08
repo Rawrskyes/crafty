@@ -73,20 +73,17 @@ namespace crafty
 
         }
 
-        public static Composite ChangeJob(ClassJobType requiredJobType)
+        public static Composite ChangeJob()
         {
-            var gearnum = Crafty.OrderForm.GetJobGearSet(requiredJobType);
-            return new Action(a =>
+            var closewindow = new Action(a => CraftingLog.Close());
+            var wait = new Sleep(4000);
+            var windowcheck = new Decorator(condition => CraftingLog.IsOpen, closewindow);
+            var changegearset = new Action(a =>
             {
-                if(CraftingLog.IsOpen) CraftingLog.Close();
-                while (CraftingLog.IsOpen && CraftingManager.IsCrafting)
-                {
-                    Thread.Sleep(1000);
-                }
-                Logging.Write("Changing to gearset number: " + gearnum);
-                ChatManager.SendChat("/gs change " + gearnum);
-
+                Logging.Write("Changing to gearset number: " + Crafty.OrderForm.GetJobGearSet(CraftyComposite.GetJob()));
+                ChatManager.SendChat("/gs change " + Crafty.OrderForm.GetJobGearSet(CraftyComposite.GetJob()));
             });
+            return new Sequence(windowcheck, wait, changegearset);
             
         }
     }

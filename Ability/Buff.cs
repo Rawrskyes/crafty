@@ -37,7 +37,7 @@ namespace crafty.Ability
 
         public static bool SteadyRequired()
         {
-            if (Core.Me.GetAuraByName("Steady Hand") == null && Core.Me.CurrentCP > 90)
+            if (Core.Me.GetAuraByName("Steady Hand") == null && Core.Me.CurrentCP > 91)
             {
                 return true;
             }
