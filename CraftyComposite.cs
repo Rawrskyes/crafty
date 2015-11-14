@@ -5,11 +5,9 @@ using ff14bot.Helpers;
 using ff14bot.Managers;
 using ff14bot.RemoteWindows;
 using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
 using TreeSharp;
 using Action = TreeSharp.Action;
-using Buddy.Coroutines;
 using ff14bot.Enums;
 
 namespace crafty
@@ -21,11 +19,6 @@ namespace crafty
         public static Composite GetBase()
         {
             Orders = Crafty.OrderForm.GetOrders(); // Get what we want to craft
-            if (Orders.Count == 0)
-            {
-                Orders.Add(new Crafty.Order(0, "Orders Empty", 0, ClassJobType.Adventurer));
-                //Adding an item if it's blank.
-            }
 
             //Pace the selector
             var sleep = new Sleep(350);
@@ -50,6 +43,8 @@ namespace crafty
 
             //Begin crafting
             var beginCrafting = BeginSynthAction();
+
+            var mainrepeater = new 
 
             //Base Composite that we'll return
             return new PrioritySelector(sleep, animationLocked, continueSynth, ordersEmpty, correctJob, selectRecipe, cantCraft, beginCrafting);
@@ -97,6 +92,18 @@ namespace crafty
                 if (Orders.Count == 0) return true;
             }
             return false;
+        }
+
+        private static Composite AddBlankOrder()
+        {
+            return new Action(a =>
+            {
+                if (Orders.Count == 0)
+                {
+                    Orders.Add(new Crafty.Order(0, "Orders Empty", 0, ClassJobType.Adventurer));
+                    //Adding an item if it's blank.
+                }
+            });
         }
 
         private static bool IsRecipeSet(uint id)

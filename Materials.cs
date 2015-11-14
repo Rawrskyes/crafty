@@ -43,8 +43,10 @@ namespace crafty
             {
                 RaptureAtkUnitManager.Update();
                 GameObjectManager.Update();
-                var isKnown = (CraftingManager.CurrentRecipeId == (ushort) craftingId);
-                Logging.Write(CraftingManager.CurrentRecipeId);
+                //Check to see if we have it selected
+                var isKnown = (CraftingManager.CurrentRecipeId == (ushort) craftingId); 
+                //Logging.Write(CraftingManager.CurrentRecipeId);
+                //It's not selected. So try and select it.
                 if (!isKnown)
                 {
                     var coroutine = new Coroutine(() => CraftingManager.SetRecipe(craftingId));
@@ -56,8 +58,10 @@ namespace crafty
                 }
                 RaptureAtkUnitManager.Update();
                 GameObjectManager.Update();
+                //Check if we've selected it again
                 isKnown = (CraftingManager.CurrentRecipeId == (ushort) craftingId);
-                Logging.Write(isKnown);
+                //Logging.Write(isKnown);
+                //We know it, so we go fetch the materials
                 if (isKnown)
                 {
                     var recipe = CraftingManager.CurrentRecipe;

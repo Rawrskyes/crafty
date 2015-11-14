@@ -146,7 +146,7 @@ namespace crafty
             {
                 if (i.SubItems[1].Text.Equals(name))
                 {
-                    result =+ uint.Parse(i.SubItems[2].Text);
+                    result = result + uint.Parse(i.SubItems[2].Text);
                 }
             }
             return result;
