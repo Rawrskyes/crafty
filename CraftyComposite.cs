@@ -5,24 +5,34 @@ using ff14bot.Helpers;
 using ff14bot.Managers;
 using ff14bot.RemoteWindows;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using TreeSharp;
 using Action = TreeSharp.Action;
+using Buddy.Coroutines;
+using Clio.Utilities;
 using ff14bot.Enums;
+using ff14bot.NeoProfiles.Tags;
 
 namespace crafty
 {
     internal static class CraftyComposite
     {
         public static List<Crafty.Order> Orders = new List<Crafty.Order>();
-        
+
         public static Composite GetBase()
         {
             Orders = Crafty.OrderForm.GetOrders(); // Get what we want to craft
 
+            if (Orders.Count == 0)
+            {
+                Orders.Add(new Crafty.Order(0, "Orders Empty", 0, ClassJobType.Adventurer));
+                //Adding an item if it's blank.
+            }
+
             //Pace the selector
-            var sleep = new Sleep(350);
-            
+            var sleep = new Sleep(400);
+
             //Animation Locked
             var animationLocked = new Decorator(condition => CraftingManager.AnimationLocked, new Sleep(1000));
 
@@ -33,21 +43,19 @@ namespace crafty
             var ordersEmpty = new Decorator(condition => CheckOrdersEmpty(), StopBot("Looks like we've completed all the orders!"));
 
             //Incorrect Job
-            var correctJob = new Decorator(condition => Character.ChangeRequired(Orders[0].Job), Character.ChangeJob(Orders[0].Job));
+            var correctJob = new Decorator(condition => Character.ChangeRequired(GetJob()), Character.ChangeJob());
 
             //Recipe not Selected
-            var selectRecipe = new Decorator(condition => IsRecipeSet(Orders[0].ItemId), new ActionRunCoroutine(action => SetRecipeTask(Orders[0].ItemId)));
+            var selectRecipe = new Decorator(condition => IsRecipeSet(GetID()), new ActionRunCoroutine(action => SetRecipeTask(GetID())));
 
             //Can't Craft the item
-            var cantCraft = new Decorator(condition => CanICraftIt(), StopBot("Can't craft the item " + Orders[0].ItemName + ". Stopping!"));
+            //var cantCraft = new Decorator(condition => CanICraftIt(), StopBot("Can't craft the item " + GetName() + ". Stopping!"));
 
             //Begin crafting
             var beginCrafting = BeginSynthAction();
 
-            var mainrepeater = new 
-
             //Base Composite that we'll return
-            return new PrioritySelector(sleep, animationLocked, continueSynth, ordersEmpty, correctJob, selectRecipe, cantCraft, beginCrafting);
+            return new PrioritySelector(sleep, animationLocked, continueSynth, ordersEmpty, correctJob, selectRecipe, beginCrafting);
 
 
             /*
@@ -72,15 +80,53 @@ namespace crafty
             */
         }
 
-        private static Action BeginSynthAction()
+        public static ClassJobType GetJob()
         {
-            return new Action(act =>
+            return Orders[0].Job;
+        }
+
+        public static String GetName()
+        {
+            return Orders[0].ItemName;
+        }
+
+        public static uint GetID()
+        {
+            return Orders[0].ItemId;
+        }
+
+        public static Action BeginSynthAction()
+        {
+            return new ActionRunCoroutine(async act =>
             {
                 Character.CurrentRecipeLvl = CraftingManager.CurrentRecipe.RecipeLevel;
                 Mend.Available = true;
-                CraftingLog.Synthesize();
-                Orders[0].Qty--;
-                Logging.Write("Crafting " + Orders[0].ItemName + ". Remaining: " + Orders[0].Qty);
+                var syn = new Synthesize();
+                syn.RecipeId = CraftingManager.CurrentRecipeId;
+                var hqitemcounts = new List<int>();
+                hqitemcounts.Clear();
+                foreach (var i in CraftingManager.CurrentRecipe.Ingredients)
+                {
+                    if (i.TotalNeeded > i.NqSelected)
+                    {
+                        hqitemcounts.Add(Math.Min(i.HqInInventory, (i.TotalNeeded - i.NqSelected)));
+                    }
+                    else
+                    {
+                        hqitemcounts.Add(0);
+                    }
+                        
+                }
+                syn.HQMats = hqitemcounts.ToArray();
+                var result = await syn.StartCrafting();
+                if (result)
+                {
+                    Orders[0].Qty--;
+                    Logging.Write("Crafting " + Orders[0].ItemName + ". Remaining: " + Orders[0].Qty);
+                }else
+                {
+                    StopBot("Can't craft the item " + GetName() + ". Stopping!");
+                }
             });
         }
 
@@ -88,22 +134,11 @@ namespace crafty
         {
             while (Orders[0].Qty == 0)
             {
+                Logging.Write("Removed item from list");
                 Orders.RemoveAt(0);
                 if (Orders.Count == 0) return true;
             }
-            return false;
-        }
-
-        private static Composite AddBlankOrder()
-        {
-            return new Action(a =>
-            {
-                if (Orders.Count == 0)
-                {
-                    Orders.Add(new Crafty.Order(0, "Orders Empty", 0, ClassJobType.Adventurer));
-                    //Adding an item if it's blank.
-                }
-            });
+            return Orders.Count == 0;
         }
 
         private static bool IsRecipeSet(uint id)
