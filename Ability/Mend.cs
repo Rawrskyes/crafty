@@ -24,7 +24,7 @@ namespace crafty.Ability
 
         public static bool ShouldMend()
         {
-            if (CraftingManager.Durability == 10)
+            if (CraftingManager.Durability == 10 && Core.Me.ClassLevel >= 7)
             {
                 return true;
             }

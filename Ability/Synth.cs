@@ -37,12 +37,12 @@ namespace crafty.Ability
             {
                 if (c.Job == Core.Me.CurrentJob)
                 {
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Synth2) && Actionmanager.CanCast(c.Synth2, null))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Synth2) && Core.Me.CurrentCP >= DataManager.GetSpellData(c.Synth2).Cost)
                     {
                         x = c.Synth2;
                         break;
                     }
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Synth1) && Actionmanager.CanCast(c.Synth1, null))
+                    if (Actionmanager.CurrentActions.ContainsKey(c.Synth1) && Core.Me.CurrentCP >= DataManager.GetSpellData(c.Synth1).Cost)
                     {
                         x = c.Synth1;
                         break;

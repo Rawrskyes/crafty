@@ -37,6 +37,10 @@ namespace crafty.Ability
 
         public static bool SteadyRequired()
         {
+            //Level check first
+            if (Core.Me.ClassLevel < 9)
+                return false;
+
             if (Core.Me.GetAuraByName("Steady Hand") == null && Core.Me.CurrentCP > 91)
             {
                 return true;
@@ -48,6 +52,10 @@ namespace crafty.Ability
         {
             //If we've already got the aura. It might as well not be available.
             if (Core.Me.GetAuraByName("Inner Quiet") != null)
+                return false;
+
+            //If we're not at the right level we shouldn't cast either!
+            if (Core.Me.ClassLevel < 11)
                 return false;
 
             //We don't want inner quiet if we aren't expecting to progress the quality
