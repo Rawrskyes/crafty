@@ -32,7 +32,7 @@ namespace crafty.Ability
 
         public static Composite GetSteadyAction()
         {
-            return new Action(a => { Actionmanager.DoAction(GetJobSkills().Steady, null); });
+            return new Action(a => { ActionManager.DoAction(GetJobSkills().Steady, null); });
         }
 
         public static bool SteadyRequired()
@@ -76,7 +76,7 @@ namespace crafty.Ability
             //Above math isn't perfect. But it'll do for now. Maybe I'll scrap it altogether if it's not worth.
 
 
-            if (Actionmanager.CurrentActions.ContainsKey(GetJobSkills().Inner))
+            if (ActionManager.CurrentActions.ContainsKey(GetJobSkills().Inner))
             {
                 return true;
             }
@@ -85,7 +85,7 @@ namespace crafty.Ability
 
         public static Composite GetInnerQuietAction()
         {
-            return new Action(a => { Actionmanager.DoAction(GetJobSkills().Inner, null); });
+            return new Action(a => { ActionManager.DoAction(GetJobSkills().Inner, null); });
         }
 
         public struct ClassBuffs

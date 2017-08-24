@@ -218,9 +218,9 @@
 1380:Felt Dress Shoes
 1381:Padded Woolen Trousers
 1382:Felt Dress Gloves
-1383:Wind up Qiqirn
-1385:Wind up Aldgoat
-1386:Twinthread
+1383:Wind-up Qiqirn
+1385:Wind-up Aldgoat
+1386:Silk Thread
 1387:Vanya Silk
 1388:Vanya Silk Robe Lining
 1389:Vanya Silk Crakow Lining
@@ -405,7 +405,7 @@
 2711:Ramie Tonban of Healing
 2712:Hallowed Ramie Gaskins of Healing
 2713:Chimerical Felt Chausses of Healing
-2714:Holy Rainbow Cap of Casting
+2714:Rainbow Cap of Casting
 2715:Rainbow Robe of Casting
 2716:Holy Rainbow Shirt of Casting
 2717:Ramie Robe of Casting
@@ -430,27 +430,161 @@
 2736:Ramie Ribbon of Healing
 2737:Rainbow Ribbon of Casting
 2738:Ramie Ribbon of Casting
-2739:Rainbow Wedge Cap
+2739:Holy Rainbow Wedge Cap
 2740:Ramie Turban of Crafting
-2741:Rainbow Coatee
+2741:Holy Rainbow Coatee
 2742:Ramie Doublet of Crafting
-2743:Rainbow Gloves
-2744:Rainbow Apron
-2745:Rainbow Bottoms
+2743:Holy Rainbow Gloves
+2744:Holy Rainbow Apron
+2745:Holy Rainbow Bottoms
 2746:Ramie Skirt
-2747:Rainbow Shoes
-2748:Rainbow Hat
-2749:Rainbow Work Gloves
+2747:Holy Rainbow Shoes
+2748:Holy Rainbow Hat
+2749:Holy Rainbow Work Gloves
 2750:Ramie Trousers of Gathering
 2751:Rainbow Cloth
 2752:Holy Rainbow Cloth
 2753:Ramie Cloth
-2754:Holy Ramie Cloth
+2754:Hallowed Ramie Cloth
 2755:Chimerical Felt
 2756:Rainbow Thread
 2757:Ramie Thread
 2758:Crawler Silk
 2822:Orthodox Barding
+2837:Flat Cap
+2838:Red Beret
+2839:Green Beret
+2840:White Beret
+2847:Rainbow Justaucorps
+2848:Rainbow Breeches
+2851:Rainbow Bustle
+2853:Ramie Shirt
+2881:Ramie Kecks
+2883:Ramie Tabard
+2885:Ramie Pantalettes
+2889:Chirurgeon's Curtain
+2891:Bluesky Interior Wall
+2894:Linen Survival Shirt
+2895:Linen Survival Halfslops
+2897:Moonfire Hat
+2898:Moonfire Vest
+2899:Moonfire Trunks
+2901:Moonfire Halter
+2902:Moonfire Tanga
+2917:Combed Wool Rug
+2918:Extreme Survival Shirt
+2919:Extreme Survival Slops
+2920:Ramie Hood
+2921:Ramie Poncho
+2922:Ramie Slops
+2943:Wool Knit Cap
+2944:Wool Suspenders
+2945:Cropped Wool Slops
+2985:Bloodhempen Vest of Striking
+2986:Bloodhempen Armguards of Striking
+2987:Bloodhempen Brais of Striking
+2997:Bloodhempen Vest of Scouting
+2998:Bloodhempen Armguards of Scouting
+2999:Bloodhempen Brais of Scouting
+3003:Bloodhempen Chestwrap of Healing
+3005:Bloodhempen Culottes of Healing
+3009:Bloodhempen Chestwrap of Casting
+3011:Bloodhempen Culottes of Casting
+3062:Ruby Cotton Bandana of Striking
+3063:Ruby Cotton Gilet of Striking
+3065:Ruby Cotton Gaskins of Striking
+3069:Ruby Cotton Gambison
+3071:Ruby Cotton Sarouels
+3074:Ruby Cotton Bandana of Scouting
+3075:Ruby Cotton Gilet of Scouting
+3077:Ruby Cotton Gaskins of Scouting
+3081:Ruby Cotton Chasuble
+3083:Ruby Cotton Smalls
+3085:Ruby Cotton Sash of Healing
+3086:Ruby Cotton Hat of Casting
+3087:Ruby Cotton Robe of Casting
+3088:Ruby Cotton Fingerless Gloves of Casting
+3089:Ruby Cotton Longkilt
+3091:Ruby Cotton Sash of Casting
+3131:Kudzu Longkilt of Fending
+3137:Kudzu Longkilt of Maiming
+3141:Kudzu Tunic of Striking
+3143:Kudzu Trousers of Striking
+3147:Kudzu Tunic of Aiming
+3149:Kudzu Trousers of Aiming
+3153:Kudzu Tunic of Scouting
+3155:Kudzu Trousers of Scouting
+3158:Kudzu Hat of Healing
+3159:Kudzu Robe of Healing
+3161:Kudzu Longkilt of Healing
+3163:Kudzu Corset of Healing
+3164:Kudzu Hat of Casting
+3165:Kudzu Robe of Casting
+3167:Kudzu Longkilt of Casting
+3169:Kudzu Corset of Casting
+3223:Serge Longsash of Striking
+3224:Serge Hat of Aiming
+3225:Serge Gambison of Aiming
+3227:Serge Hose of Aiming
+3235:Serge Longsash of Scouting
+3236:Serge Hat of Healing
+3237:Serge Gambison of Healing
+3239:Serge Hose of Healing
+3242:Serge Hat of Casting
+3243:Serge Gambison of Casting
+3245:Serge Hose of Casting
+3287:Twinsilk Slops of Fending
+3296:Twinsilk Hood of Striking
+3302:Twinsilk Turban of Aiming
+3303:Twinsilk Robe of Aiming
+3305:Twinsilk Slops of Aiming
+3308:Twinsilk Turban of Scouting
+3314:Twinsilk Hood of Healing
+3317:Twinsilk Slops of Healing
+3319:Twinsilk Sash of Healing
+3320:Twinsilk Hood of Casting
+3321:Twinsilk Coat of Casting
+3323:Twinsilk Slops of Casting
+3325:Twinsilk Sash of Casting
+3351:Twinsilk Corset of Healing
+3352:Twinsilk Corset of Casting
+3457:Bloodhempen Turban of Crafting
+3458:Bloodhempen Doublet of Crafting
+3460:Bloodhempen Skirt
+3465:Bloodhempen Trousers of Gathering
+3467:Ruby Cotton Cap
+3468:Ruby Cotton Coatee
+3470:Ruby Cotton Bottoms
+3477:Kudzu Cap of Crafting
+3478:Kudzu Robe of Crafting
+3480:Kudzu Culottes of Crafting
+3483:Kudzu Coat of Gathering
+3485:Kudzu Culottes of Gathering
+3487:Serge Turban of Crafting
+3490:Serge Sarouels of Crafting
+3492:Serge Turban of Gathering
+3495:Serge Sarouels of Gathering
+3497:Serge Knit Cap
+3498:Twinsilk Suspenders
+3500:Cropped Twinsilk Slops
+3502:Serge Hood
+3503:Serge Poncho
+3504:Serge Work Gloves
+3505:Twinsilk Slops of Gathering
+3507:Ruby Cotton Apron
+3517:Serge Apron
+3527:Twinsilk Apron
+3537:Carbuncle Bed
+3634:Bloodhempen Cloth
+3635:Bloodhempen Yarn
+3636:Ruby Cotton Cloth
+3637:Ruby Cotton Yarn
+3638:Kudzu Cloth
+3639:Kudzu Thread
+3640:Dawn Serge
+3641:Worsted Yarn
+3642:Twinsilk
+3643:Twinthread
 30066:Dalamud Red Dye
 30067:Wine Red Dye
 30068:Royal Blue Dye
@@ -494,7 +628,7 @@
 30274:Cashmere Breeches of Casting
 30295:Cashmere Cloth
 30302:Silver Brocade
-30340:Grade 1 Glamour Prism (Clothcraft)
+30340:Glamour Prism (Clothcraft)
 30341:Grade 2 Glamour Prism (Clothcraft)
 30342:Grade 3 Glamour Prism (Clothcraft)
 30343:Grade 4 Glamour Prism (Clothcraft)
@@ -634,3 +768,187 @@
 31269:Galleymaster's Toque
 31270:Galleymaster's Whites
 31272:Galleymaster's Trousers
+31285:High House Justaucorps
+31286:High House Breeches
+31289:High House Bustle
+31291:Falconer's Shirt
+31292:Wind-up Illuminatus
+31293:Wind-up Ifrit
+31299:Blessed Fletchings
+31305:Sky Pirate's Gaskins of Fending
+31310:Sky Pirate's Gaskins of Maiming
+31315:Sky Pirate's Trousers of Striking
+31318:Sky Pirate's Vest of Aiming
+31320:Sky Pirate's Halfslops of Aiming
+31325:Sky Pirate's Trousers of Scouting
+31328:Sky Pirate's Coat of Healing
+31330:Sky Pirate's Bottoms of Healing
+31333:Sky Pirate's Coat of Casting
+31335:Sky Pirate's Bottoms of Casting
+31339:Cloud Cloth
+31388:Replica Allagan Trousers of Maiming
+31393:Replica Allagan Trousers of Striking
+31398:Replica Allagan Trousers of Aiming
+31401:Replica Allagan Tunic of Healing
+31403:Replica Allagan Breeches of Healing
+31406:Replica Allagan Tunic of Casting
+31408:Replica Allagan Breeches of Casting
+31440:Replica High Allagan Coat of Aiming
+31445:Replica High Allagan Coat of Healing
+31447:Replica High Allagan Pantaloons of Healing
+31450:Replica High Allagan Coat of Casting
+31455:Stuffed Onion Prince
+31456:Stuffed Eggplant Knight
+31457:Stuffed Garlic Jester
+31458:Stuffed Tomato King
+31459:Stuffed Mandragora Queen
+31461:Pudding Throw Rug
+31471:Wind-up Garuda
+31472:Wind-up Titan
+31473:Wind-up Leviathan
+31485:Eikon Cloth
+31504:Sewing Thread
+31539:Eikon Cloth Brais of Maiming
+31544:Eikon Cloth Brais of Striking
+31546:Eikon Cloth Hat of Aiming
+31547:Eikon Cloth Acton of Aiming
+31548:Eikon Cloth Sleeves of Aiming
+31549:Eikon Cloth Culottes of Aiming
+31551:Eikon Cloth Hat of Scouting
+31552:Eikon Cloth Acton of Scouting
+31553:Eikon Cloth Sleeves of Scouting
+31554:Eikon Cloth Culottes of Scouting
+31556:Eikon Cloth Hat of Healing
+31557:Eikon Cloth Acton of Healing
+31558:Eikon Cloth Sleeves of Healing
+31559:Eikon Cloth Culottes of Healing
+31564:Eikon Cloth Brais of Casting
+31571:Eikon Cloth Corset of Healing
+31572:Eikon Cloth Corset of Casting
+31574:Expeditioner's Kecks
+31576:Expeditioner's Tabard
+31578:Expeditioner's Pantalettes
+31584:Wind Silk Wedge Cap
+31585:Wind Silk Coatee
+31587:Wind Silk Bottoms
+31721:Fake Kupo Nut
+31722:Horn Component
+31723:Moogle Tool Component
+31724:Statue Supplies
+31725:Tablet Supplies
+31726:Training Supplies
+31727:Repurposed Construction Component
+31728:Foundation Component
+31729:Basket Component
+31730:Wall Repair Supplies
+31731:Gathering Tool Component
+31732:Veneer Component
+31733:Aetheric Shielding
+31734:Stonemasonry Supplies
+31735:Exploding Kupo Nut
+31736:Austere Offering
+31737:Shearing Machine Component
+31738:Water Filter Component
+31739:Mogstew Miscellany
+31740:Moogle Statuette
+31741:Makeshift Toy Airship
+31742:Dragonscale Rasp
+31743:Cloudfish Lure
+31744:Ishgardian Cuisine Miscellany
+31745:Treadwheel Crane Components
+31746:Moogle Mollifier
+31817:Replica Dreadwyrm Sarouel of Fending
+31827:Replica Dreadwyrm Slops of Striking
+31834:Replica Dreadwyrm Hood of Healing
+31835:Replica Dreadwyrm Robe of Healing
+31837:Replica Dreadwyrm Tonban of Healing
+31842:Replica Dreadwyrm Tonban of Casting
+31847:Replica Dreadwyrm Slops of Scouting
+31850:Stuffed Bear
+31859:Wind-up Ramuh
+31860:Wind-up Shiva
+31862:Survival Shirt
+31863:Survival Halfslops
+31868:Ironworks Slops of Gathering
+31873:Carbonweave Slops of Gathering
+31875:Ironworks Cap of Crafting
+31876:Ironworks Apron of Crafting
+31877:Ironworks Sleeves of Crafting
+31878:Ironworks Breeches of Crafting
+31880:Carbonweave Cap of Crafting
+31881:Carbonweave Apron of Crafting
+31882:Carbonweave Sleeves of Crafting
+31883:Carbonweave Breeches of Crafting
+31987:Star Velvet Tabard of Striking
+31993:Star Velvet Tabard of Aiming
+31999:Star Velvet Tabard of Scouting
+32004:Star Velvet Hood of Healing
+32005:Star Velvet Himation of Healing
+32006:Star Velvet Long Gloves of Healing
+32007:Star Velvet Bottoms of Healing
+32009:Star Velvet Sash of Healing
+32010:Star Velvet Hood of Casting
+32011:Star Velvet Himation of Casting
+32012:Star Velvet Long Gloves of Casting
+32013:Star Velvet Bottoms of Casting
+32015:Star Velvet Sash of Casting
+32040:Star Velvet
+32060:Stuffed Calca
+32061:Stuffed Brina
+32069:New World Headdress
+32070:New World Jacket
+32072:New World Hose
+32074:Cashmere Hood
+32075:Cashmere Poncho
+32076:Cashmere Slops
+32083:Astral Silk Robe
+32125:Fortemps Manor Interior Wall
+32127:Flannel Knit Cap
+32128:Flannel Suspenders
+32129:Cropped Flannel Slops
+32155:Sky Rat Breeches of Fending
+32160:Sky Rat Breeches of Maiming
+32165:Sky Rat Breeches of Striking
+32170:Sky Rat Breeches of Aiming
+32175:Sky Rat Breeches of Scouting
+32180:Sky Rat Breeches of Healing
+32185:Sky Rat Breeches of Casting
+32190:Stormcloud Cotton Cloth
+32217:Near Eastern Antique
+32218:Coerthan Souvenir
+32219:Maelstrom Materiel
+32220:Heartfelt Gift
+32221:Orphanage Donation
+32247:Near Eastern Antique Component
+32248:Coerthan Souvenir Component
+32249:Maelstrom Materiel Component
+32266:Heartfelt Gift Component
+32267:Orphanage Donation Component
+32292:Elegant Bustle
+32293:Winsome Spring Dress
+32294:Seductive Bustier
+32295:Tennyo Hagoromo
+32328:Taoist's Cap
+32329:Taoist's Shirt
+32331:Taoist's Slops
+32333:Non La
+32334:Ao Dai
+32335:Quan
+32360:Indigo Ramie Sash of Fending
+32366:Indigo Ramie Sash of Maiming
+32370:Indigo Ramie Sarouels of Striking
+32372:Indigo Ramie Sash of Striking
+32374:Indigo Ramie Tabard of Aiming
+32378:Indigo Ramie Sash of Aiming
+32382:Indigo Ramie Sarouels of Scouting
+32384:Indigo Ramie Sash of Scouting
+32386:Indigo Ramie Robe of Healing
+32388:Indigo Ramie Skirt of Healing
+32390:Indigo Ramie Sash of Healing
+32392:Indigo Ramie Robe of Casting
+32394:Indigo Ramie Skirt of Casting
+32396:Indigo Ramie Sash of Casting
+32429:Rhea Cloth
+32431:Wind-up Susano
+32432:Wind-up Lakshmi
+32433:Wind-up Bismarck

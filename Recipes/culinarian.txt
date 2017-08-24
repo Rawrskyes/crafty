@@ -19,7 +19,7 @@
 919:Boiled Crayfish
 920:Mutton Stew
 921:Kukuru Butter
-922:Jack o' lantern
+922:Jack-o'-lantern
 923:Mint Lassi
 924:Olive Oil
 925:Kukuru Powder
@@ -51,7 +51,7 @@
 951:Antelope Steak
 952:Grape Juice
 953:Honey Muffin
-954:Dried Prunes
+954:Dried Plums
 955:Spinach Saute
 956:Mustard Eggs
 957:Shepherd's Pie
@@ -116,7 +116,7 @@
 1504:Tomato Pie
 1505:Dagger Soup
 1506:Bouillabaisse
-1507:Pan fried Mahi Mahi
+1507:Pan-fried Mahi-Mahi
 1508:Landtrap Salad
 1509:Rolanberry Cheesecake
 1510:Apkallu Omelette
@@ -136,22 +136,23 @@
 2093:Chilled Red
 2134:Starlight Dodo
 2135:Starlight Cake
-2140:Grade 1 Feed   Speed Blend
-2141:Grade 2 Feed   Speed Blend
-2142:Grade 1 Feed   Acceleration Blend
-2143:Grade 2 Feed   Acceleration Blend
-2144:Grade 1 Feed   Balance Blend
-2145:Grade 2 Feed   Balance Blend
-2146:Grade 1 Feed   Endurance Blend
-2147:Grade 2 Feed   Endurance Blend
-2148:Grade 1 Feed   Stamina Blend
-2149:Grade 2 Feed   Stamina Blend
+2140:Grade 1 Feed - Speed Blend
+2141:Grade 2 Feed - Speed Blend
+2142:Grade 1 Feed - Acceleration Blend
+2143:Grade 2 Feed - Acceleration Blend
+2144:Grade 1 Feed - Balance Blend
+2145:Grade 2 Feed - Balance Blend
+2146:Grade 1 Feed - Endurance Blend
+2147:Grade 2 Feed - Endurance Blend
+2148:Grade 1 Feed - Stamina Blend
+2149:Grade 2 Feed - Stamina Blend
 2170:Wax Vegetables
 2172:Glade Tea Set
 2173:Riviera Supper
 2174:Oasis Breakfast
 2178:Valentione's Cake
 2181:Green Tea Set
+2790:Battered Fish
 2791:Alpine Tea Set
 2792:Cake Tray
 2793:Riviera Lunch
@@ -162,14 +163,14 @@
 2798:Marron Glace
 2799:Kaiser Roll
 2800:Ishgardian Muffin
-2801:Liver Cheese Sandwich
+2801:Liver-cheese Sandwich
 2802:Sauteed Porcini
 2803:Morel Salad
 2804:Grilled Sweetfish
 2805:Baked Pipira Pira
 2806:Cockatrice Meatballs
 2807:Royal Eggs
-2808:Deep Fried Okeanis
+2808:Deep-fried Okeanis
 2809:Baked Onion Soup
 2810:Beet Soup
 2811:Emerald Soup
@@ -184,6 +185,53 @@
 2820:Sour Cream
 2821:Fermented Butter
 2823:Vermicelli
+2827:Oriental Tea Set
+2855:Sesame Cookie
+2858:Alpine Supper Set
+2859:High House Supper Set
+2887:Alpine Breakfast
+2892:Rolanberry Shaved Ice
+2937:Riviera Breakfast
+3544:Oriental Sushi Lunch
+3545:Oriental Soba Lunch
+3546:Oriental Udon Lunch
+3547:Oriental Rice Ball Lunch
+3551:Doman Tea
+3552:Loquat Juice
+3553:Buckwheat Tea
+3554:Baklava
+3555:Jellied Compote
+3556:Persimmon Pudding
+3557:Chirashi-zushi
+3558:Persimmon Leaf Sushi
+3559:Popoto Soba
+3560:Shorlog
+3561:Jerked Jhammel
+3562:Egg Foo Young
+3563:Onigara-yaki
+3564:Grilled Turban
+3565:Boiled Amberjack Head
+3566:Steamed Grouper
+3567:Sweet and Sour Frogs' Legs
+3568:Tempura Platter
+3569:Stewed River Bream
+3570:Charred Charr
+3571:Miso Dengaku
+3572:Jhammel Moussaka
+3573:Gameni
+3574:Steppe Salad
+3575:Crab Croquette
+3576:Miso Soup with Tofu
+3577:Fish Stew
+3578:Warrior's Stew
+3579:Kasha
+3580:Nomad Meat Pie
+3581:Gyr Abanian Flour
+3582:Firm Tofu
+3583:Rice Vinegar
+3584:Beet Sugar
+3585:Cottonseed Oil
+3586:Algae Salt
 30092:Dalamud Red Dye
 30093:Wine Red Dye
 30094:Royal Blue Dye
@@ -268,7 +316,7 @@
 30865:Bacon Bread
 30866:Flint Caviar
 30867:Bacon Broth
-30923:Tailor made Eel Pie
+30923:Tailor-made Eel Pie
 30932:Duck Broth
 31217:Airship Repair Materials
 31218:Oriental Breakfast
@@ -280,3 +328,65 @@
 31224:Urchin Loaf
 31225:Seafood Stew
 31226:Snurbleberry Tart
+31300:Kingcake
+31337:Steamed Staff
+31474:Spiced Cider
+31475:Apple Strudel
+31476:Peperoncino
+31477:Boscaiola
+31478:Loaghtan Steak
+31479:Oyster Confit
+31480:Angler Stew
+31481:Sweet Gnomefish
+31773:Fake Kupo Nut
+31774:Horn Component
+31775:Moogle Tool Component
+31776:Statue Supplies
+31777:Tablet Supplies
+31778:Training Supplies
+31779:Repurposed Construction Component
+31780:Foundation Component
+31781:Basket Component
+31782:Wall Repair Supplies
+31783:Gathering Tool Component
+31784:Veneer Component
+31785:Aetheric Shielding
+31786:Stonemasonry Supplies
+31787:Exploding Kupo Nut
+31788:Austere Offering
+31789:Shearing Machine Component
+31790:Water Filter Component
+31791:Mogstew Miscellany
+31792:Moogle Statuette
+31793:Makeshift Toy Airship
+31794:Dragonscale Rasp
+31795:Cloudfish Lure
+31796:Ishgardian Cuisine Miscellany
+31797:Treadwheel Crane Components
+31798:Moogle Mollifier
+31945:Heavensegg Soup
+31946:Pasta Ortolano
+32044:Heavenly Eggnog
+32045:Flaugnarde
+32046:Spaghetti Carbonara
+32047:Wildwood Scrambled Eggs
+32048:Spaghetti Pescatore
+32049:Loaghtan Cordon Bleu
+32050:Priestly Omelette
+32227:Near Eastern Antique
+32228:Coerthan Souvenir
+32229:Maelstrom Materiel
+32230:Heartfelt Gift
+32231:Orphanage Donation
+32253:Near Eastern Antique Component
+32254:Coerthan Souvenir Component
+32255:Maelstrom Materiel Component
+32270:Heartfelt Gift Component
+32271:Orphanage Donation Component
+32300:Doman Rice Balls
+32301:Doman Udon Broth
+32302:Nigiri-zushi
+32303:Doman Sukiyaki
+32417:Steppe Tea
+32418:Pork Kakuni
+32419:Pork Stew

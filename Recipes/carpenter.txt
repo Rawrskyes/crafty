@@ -49,7 +49,7 @@
 1056:Walnut Lumber
 1057:Initiate's Grinding Wheel
 1058:Yew Fishing Rod
-1059:Viper crested Round Shield
+1059:Viper-crested Round Shield
 1060:Ash Composite Bow
 1061:Silver Battle Fork
 1062:Elm Macuahuitl
@@ -84,7 +84,7 @@
 1091:Jade Crook
 1092:Rosewood Lumber
 1093:Cobalt Cavalry Bow
-1094:Eagle crested Round Shield
+1094:Eagle-crested Round Shield
 1095:Yew Longbow
 1096:Cobalt Trident
 1097:Mahogany Pattens
@@ -241,9 +241,9 @@
 2103:Glade Stool
 2104:Oasis Stool
 2105:Armoire
-2107:Riviera Open shelf Bookcase
-2108:Glade Open shelf Bookcase
-2109:Oasis Open shelf Bookcase
+2107:Riviera Open-shelf Bookcase
+2108:Glade Open-shelf Bookcase
+2109:Oasis Open-shelf Bookcase
 2110:Shipping Crate
 2111:Wine Barrel
 2124:Glade Path Light
@@ -306,6 +306,76 @@
 2240:Dark Chestnut Lumber
 2241:Hallowed Chestnut Lumber
 2242:Birch Lumber
+2829:Manor Counter
+2830:Oriental Round Table
+2831:Funguar Chair
+2832:Mahogany Partition Door
+2835:Cob Inner Wall
+2836:Manor Flooring
+2864:Blank Grade 1 Orchestrion Roll
+2865:Blank Grade 2 Orchestrion Roll
+2866:Blank Grade 3 Orchestrion Roll
+2888:Hat Stand
+2914:Tier 1 Aquarium
+2915:Mounted Box Shelf
+2916:Mounted Bookshelf
+2933:Tier 2 Aquarium
+2934:Grade 1 Picture Frame
+2935:Grade 2 Picture Frame
+2936:Yarn Basket
+2938:Paissa Floor Lamp
+2939:Merchant's Shelf
+2959:High Steel Trident
+2960:Beech Composite Bow
+2964:Beech Rod
+3002:Beech Mask of Healing
+3008:Beech Mask of Casting
+3037:High Steel Fork
+3038:Larch Composite Bow
+3042:Larch Wand
+3115:Doman Iron Lance
+3116:Pine Composite Bow
+3120:Pine Cane
+3193:Doman Steel Halberd
+3194:Persimmon Bow
+3198:Persimmon Cane
+3271:Molybdenum Trident
+3272:Zelkova Longbow
+3276:Zelkova Cane
+3383:Muudhorn Fishing Rod
+3387:Stiperstone Grinding Wheel
+3389:Larch Spinning Wheel
+3404:Pine Fishing Rod
+3408:Slate Grinding Wheel
+3410:Pine Spinning Wheel
+3425:Gazelle Horn Fishing Rod
+3429:Polished Slate Grinding Wheel
+3431:Persimmon Spinning Wheel
+3446:Zelkova Fishing Rod
+3450:Almandine Grinding Wheel
+3452:Zelkova Spinning Wheel
+3508:Larch Earrings
+3509:Larch Necklace
+3510:Larch Bracelets
+3511:Larch Ring
+3518:Persimmon Earrings
+3519:Persimmon Necklace
+3520:Persimmon Bracelets
+3521:Persimmon Ring
+3528:Zelkova Earrings
+3529:Zelkova Necklace
+3530:Zelkova Bracelets
+3531:Zelkova Ring
+3541:Oriental Pipe Box
+3542:Oriental Dressing Case
+3543:Doman Partition
+3548:Easel
+3549:Eastern Teahouse Bench
+3608:Beech Lumber
+3609:Larch Lumber
+3610:Pine Lumber
+3611:Persimmon Lumber
+3612:Zelkova Lumber
 30001:Dalamud Red Dye
 30002:Wine Red Dye
 30003:Royal Blue Dye
@@ -330,7 +400,7 @@
 30158:Wolf Cane
 30290:Ancient Lumber
 30297:Spruce Plywood
-30305:Grade 1 Glamour Prism (Woodworking)
+30305:Glamour Prism (Woodworking)
 30306:Grade 2 Glamour Prism (Woodworking)
 30307:Grade 3 Glamour Prism (Woodworking)
 30308:Grade 4 Glamour Prism (Woodworking)
@@ -416,3 +486,126 @@
 30984:Savage Gordian Bureau
 30985:Cassia Lumber
 30986:Astral Birch Lumber
+31282:Mhachi Coffin
+31298:Dispelling Arrow
+31341:Cassia Block
+31342:The Unending Journey
+31346:Camphorwood Necklace of Fending
+31348:Camphorwood Armillae of Fending
+31350:Camphorwood Necklace of Slaying
+31352:Camphorwood Armillae of Slaying
+31354:Camphorwood Necklace of Aiming
+31356:Camphorwood Armillae of Aiming
+31358:Camphorwood Necklace of Healing
+31360:Camphorwood Armillae of Healing
+31362:Camphorwood Necklace of Casting
+31364:Camphorwood Armillae of Casting
+31454:Orchestrion
+31463:Pudding Desk
+31468:Shishi-odoshi
+31487:Treated Camphorwood Lumber
+31488:Camphorwood Lumber
+31591:Fake Kupo Nut
+31592:Horn Component
+31593:Moogle Tool Component
+31594:Statue Supplies
+31595:Tablet Supplies
+31596:Training Supplies
+31597:Repurposed Construction Component
+31598:Foundation Component
+31599:Basket Component
+31600:Wall Repair Supplies
+31601:Gathering Tool Component
+31602:Veneer Component
+31603:Aetheric Shielding
+31604:Stonemasonry Supplies
+31605:Exploding Kupo Nut
+31606:Austere Offering
+31607:Shearing Machine Component
+31608:Water Filter Component
+31609:Mogstew Miscellany
+31610:Moogle Statuette
+31611:Makeshift Toy Airship
+31612:Dragonscale Rasp
+31613:Cloudfish Lure
+31614:Ishgardian Cuisine Miscellany
+31615:Treadwheel Crane Components
+31616:Moogle Mollifier
+31849:Staggered Shelf
+31854:Beach Chair
+31856:Oriental Wood Bridge
+31857:Oriental Deck
+31885:Ironworks Necklace of Gathering
+31887:Ironworks Armillae of Gathering
+31890:Ironworks Necklace of Crafting
+31892:Ironworks Armillae of Crafting
+31905:Luminous Fiber Fishing Rod
+31909:Eikon Iron Grinding Wheel
+31911:Camphorwood Spinning Wheel
+31919:Mighty Thunderbolt
+31920:Mighty Thunderdart
+31924:High Adjudicator's Gavel
+31933:Endless Expanse Partisan
+31934:Endless Expanse Longbow
+31938:Endless Expanse Cane
+31963:Heavy Metal Lance
+31964:Teak Composite Bow
+31968:Teak Cane
+32021:Teak Choker of Fending
+32022:Teak Choker of Slaying
+32023:Teak Choker of Aiming
+32024:Teak Choker of Healing
+32025:Teak Choker of Casting
+32026:Teak Bracelet of Fending
+32027:Teak Bracelet of Slaying
+32028:Teak Bracelet of Aiming
+32029:Teak Bracelet of Healing
+32030:Teak Bracelet of Casting
+32036:Teak Lumber
+32056:Tier 3 Aquarium
+32057:Tier 4 Aquarium
+32063:Knightly Round Table
+32066:Troupe Stage
+32067:Round Stage
+32088:Dead Hive Spear
+32089:Dead Hive Bow
+32093:Dead Hive Cane
+32102:Halberd of the Round
+32103:Bow of the Round
+32107:Cane of the Round
+32114:Tiny Bronco Miniature
+32115:Invincible Miniature
+32116:Enterprise Miniature
+32117:Invincible II Miniature
+32118:Odyssey Miniature
+32119:Tatanora Miniature
+32120:Viltgance Miniature
+32121:Grade 3 Picture Frame
+32192:Near Eastern Antique
+32193:Coerthan Souvenir
+32194:Maelstrom Materiel
+32195:Heartfelt Gift
+32196:Orphanage Donation
+32232:Near Eastern Antique Component
+32233:Coerthan Souvenir Component
+32234:Maelstrom Materiel Component
+32256:Heartfelt Gift Component
+32257:Orphanage Donation Component
+32272:Lavish Dressing Case
+32273:Stylish Pipe Box
+32274:Ornate Partition
+32275:Teahouse Bench
+32342:Chromite Spear
+32343:Torreya Longbow
+32347:Torreya Cane
+32402:Torreya Choker of Fending
+32403:Torreya Choker of Slaying
+32404:Torreya Choker of Aiming
+32405:Torreya Choker of Healing
+32406:Torreya Choker of Casting
+32407:Torreya Bracelet of Fending
+32408:Torreya Bracelet of Slaying
+32409:Torreya Bracelet of Aiming
+32410:Torreya Bracelet of Healing
+32411:Torreya Bracelet of Casting
+32425:Torreya Lumber

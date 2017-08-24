@@ -27,20 +27,20 @@ namespace crafty.Ability
             {
                 if (c.Job == Core.Me.CurrentJob)
                 {
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch3) &&
+                    if (ActionManager.CurrentActions.ContainsKey(c.Touch3) &&
                         (DataManager.GetSpellData(c.Touch3).Cost <= Core.Me.CurrentCP) &&
                         !Core.Me.HasAura("Steady Hand"))
                     {
                         x = c.Touch3;
                         break;
                     }
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch2) &&
+                    if (ActionManager.CurrentActions.ContainsKey(c.Touch2) &&
                         (DataManager.GetSpellData(c.Touch2).Cost <= Core.Me.CurrentCP))
                     {
                         x = c.Touch2;
                         break;
                     }
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Touch1) &&
+                    if (ActionManager.CurrentActions.ContainsKey(c.Touch1) &&
                         (DataManager.GetSpellData(c.Touch1).Cost <= Core.Me.CurrentCP))
                     {
                         x = c.Touch1;
@@ -55,7 +55,7 @@ namespace crafty.Ability
 
         public static Composite UseBestTouch()
         {
-            return new Action(a => { Actionmanager.DoAction(GetBestTouch(), null); });
+            return new Action(a => { ActionManager.DoAction(GetBestTouch(), null); });
         }
 
         private struct ClassTouch

@@ -37,12 +37,12 @@ namespace crafty.Ability
             {
                 if (c.Job == Core.Me.CurrentJob)
                 {
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Synth2) && Core.Me.CurrentCP >= DataManager.GetSpellData(c.Synth2).Cost)
+                    if (ActionManager.CurrentActions.ContainsKey(c.Synth2) && Core.Me.CurrentCP >= DataManager.GetSpellData(c.Synth2).Cost)
                     {
                         x = c.Synth2;
                         break;
                     }
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Synth1) && Core.Me.CurrentCP >= DataManager.GetSpellData(c.Synth1).Cost)
+                    if (ActionManager.CurrentActions.ContainsKey(c.Synth1) && Core.Me.CurrentCP >= DataManager.GetSpellData(c.Synth1).Cost)
                     {
                         x = c.Synth1;
                         break;
@@ -57,7 +57,7 @@ namespace crafty.Ability
 
         public static Composite UseSynth()
         {
-            return new Action(r => { Actionmanager.DoAction(GetBestBasic(), null); }
+            return new Action(r => { ActionManager.DoAction(GetBestBasic(), null); }
                 );
         }
 

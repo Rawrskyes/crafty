@@ -8,7 +8,7 @@
 8:Amateur's Awl
 9:Bronze Saw
 10:Amateur's Claw Hammer
-11:Bronze Cross pein Hammer
+11:Bronze Cross-pein Hammer
 12:Bronze Doming Hammer
 13:Amateur's Culinary Knife
 14:Amateur's Mortar
@@ -22,7 +22,7 @@
 22:Bronze File
 23:Bronze Pliers
 24:Bronze Mortar
-25:Amateur's Cross pein Hammer
+25:Amateur's Cross-pein Hammer
 26:Amateur's Chaser Hammer
 27:Bronze Awl
 28:Bronze Scythe
@@ -49,7 +49,7 @@
 49:Iron Hatchet
 50:Iron Labrys
 51:Iron Rivets
-52:Iron Cross pein Hammer
+52:Iron Cross-pein Hammer
 53:Iron Chaser Hammer
 54:Iron Doming Hammer
 55:Iron Awl
@@ -65,7 +65,7 @@
 65:Iron Scythe
 66:Iron Mortar
 67:Inferno Axe
-68:Initiate's Cross pein Hammer
+68:Initiate's Cross-pein Hammer
 69:Initiate's Chaser Hammer
 70:Initiate's Doming Hammer
 71:Iron File
@@ -77,7 +77,7 @@
 77:Spiked Knuckles
 78:Iron Bill
 79:Brass Hatchet
-80:Bas relief Iron Saw
+80:Bas-relief Iron Saw
 81:Initiate's Claw Hammer
 82:Initiate's Mortar
 83:Iron Round Knife
@@ -105,14 +105,14 @@
 105:Steel Pickaxe
 106:Steel Sledgehammer
 107:Silver Head Knife
-108:Bas relief Steel Saw
+108:Bas-relief Steel Saw
 109:Steel Awl
 110:Steel Claw Hammer
 111:Steel Falchion
 112:Steel Culinary Knife
 113:Steel Bardiche
 114:Steel Mortar
-115:Steel Cross pein Hammer
+115:Steel Cross-pein Hammer
 116:Steel Ornamental Hammer
 117:Steel Scythe
 118:Wrapped Steel Sledgehammer
@@ -159,7 +159,7 @@
 159:Buccaneer's Bardiche
 160:Demilune Bhuj
 161:Wrapped Hawksbeak Hammer
-162:Bas relief Cobalt Saw
+162:Bas-relief Cobalt Saw
 163:Electrum Head Knife
 164:Electrum Lapidary Hammer
 165:Cobalt Raising Hammer
@@ -175,7 +175,7 @@
 1189:Mythril Round Knife
 1190:Mythril Lapidary Hammer
 1191:Goblin Scimitar
-1192:Cobalt Cross pein Hammer
+1192:Cobalt Cross-pein Hammer
 1193:Cobalt Doming Hammer
 1194:Cobalt Hatchet
 1195:Cobalt Awl
@@ -245,7 +245,7 @@
 1851:Ahriman Sideboard
 1855:Riviera Counter
 1857:Oasis Counter
-1881:Galleas Wheel
+1881:Galleass Wheel
 1886:Nymian Wall Lantern
 1947:Summoning Bell
 1949:Smithing Bench
@@ -288,12 +288,12 @@
 2246:Cobalt Claymore
 2247:Cobalt Zweihander
 2248:Subduer
-2249:Steel barreled Musketoon
-2250:Mythril barreled Carbine
-2251:Mythril barreled Musketoon
-2252:Cobalt barreled Carbine
-2253:Cobalt barreled Musketoon
-2254:Darksteel barreled Blunderbuss
+2249:Steel-barreled Musketoon
+2250:Mythril-barreled Carbine
+2251:Mythril-barreled Musketoon
+2252:Cobalt-barreled Carbine
+2253:Cobalt-barreled Musketoon
+2254:Darksteel-barreled Blunderbuss
 2255:Mythrite Katzbalger
 2256:Mythrite Flametongue
 2257:Titanium Bastard Sword
@@ -319,19 +319,19 @@
 2277:Titanium Claymore
 2278:Titanium Greatsword
 2279:Adamantite Zweihander
-2280:Mythrite barreled Arquebus
-2281:Mythrite barreled Musketoon
-2282:Titanium barreled Arquebus
-2283:Titanium barreled Snaphance
+2280:Mythrite-barreled Arquebus
+2281:Mythrite-barreled Musketoon
+2282:Titanium-barreled Arquebus
+2283:Titanium-barreled Snaphance
 2284:Adamantite Revolver
 2285:Mythrite Halfheart Saw
 2286:Hardsilver Saw
 2287:Titanium Halfheart Saw
 2288:Mythrite Lump Hammer
-2289:Titanium Cross pein Hammer
+2289:Titanium Cross-pein Hammer
 2290:Titanium Lump Hammer
 2291:Mythrite Raising Hammer
-2292:Titanium Ball pein Hammer
+2292:Titanium Ball-pein Hammer
 2293:Titanium Raising Hammer
 2294:Mythrite Lapidary Hammer
 2295:Hardsilver Texture Hammer
@@ -377,6 +377,114 @@
 2335:Mythrite Rivets
 2336:Titanium Rivets
 2337:Adamantite Rivets
+2828:Manor Oven
+2854:Iron Clapper
+2861:Alpine Chandelier
+2956:High Steel Katzbalger
+2957:High Steel Knuckles
+2958:High Steel Headsman's Axe
+2961:High Steel Main Gauches
+2962:High Steel Guillotine
+2963:High Steel Culverin
+2969:High Steel Tachi
+3034:High Steel Longsword
+3035:Folded High Steel Knuckles
+3036:High Steel Battleaxe
+3039:High Steel Kris
+3040:Folded High Steel Greatsword
+3041:High Steel-barreled Snaphance
+3047:High Steel Uchigatana
+3112:Doman Iron Longsword
+3113:Doman Iron Claws
+3114:Doman Iron War Axe
+3117:Doman Iron Daggers
+3118:Doman Iron Greatsword
+3119:Doman Iron Culverin
+3125:Doman Iron Uchigatana
+3190:Doman Steel Longsword
+3191:Doman Steel Patas
+3192:Doman Steel Battleaxe
+3195:Doman Steel Main Gauches
+3196:Doman Steel Greatsword
+3197:Doman Steel-barreled Musketoon
+3203:Doman Steel Tachi
+3268:Molybdenum Longsword
+3269:Molybdenum Knuckles
+3270:Molybdenum War Axe
+3273:Molybdenum Daggers
+3274:Molybdenum Longblade
+3275:Molybdenum Rimfire
+3281:Molybdenum Uchigatana
+3373:High Steel Saw
+3374:High Steel Cross-pein Hammer
+3375:High Steel Doming Hammer
+3376:Koppranickel Ornamental Hammer
+3377:High Steel Head Knife
+3381:High Steel Dolabra
+3382:High Steel Hatchet
+3384:High Steel Claw Hammer
+3385:High Steel File
+3386:High Steel Pliers
+3388:High Steel Awl
+3390:High Steel Mortar
+3391:High Steel Culinary Knife
+3392:High Steel Sledgehammer
+3393:High Steel Scythe
+3394:Doman Iron Halfheart Saw
+3395:Doman Iron Lump Hammer
+3396:Doman Iron Raising Hammer
+3397:Durium Texture Hammer
+3398:Doman Iron Head Knife
+3402:Doman Iron Pickaxe
+3403:Doman Iron Hatchet
+3405:Doman Iron Claw Hammer
+3406:Doman Iron File
+3407:Doman Iron Pliers
+3409:Doman Iron Awl
+3411:Doman Iron Mortar
+3412:Doman Iron Culinary Knife
+3413:Doman Iron Sledgehammer
+3414:Doman Iron Scythe
+3415:Doman Steel Saw
+3416:Doman Steel Cross-pein Hammer
+3417:Doman Steel Raising Hammer
+3418:Durium Lapidary Hammer
+3419:Doman Steel Round Knife
+3423:Plumed Doman Steel Pickaxe
+3424:Doman Steel Hatchet
+3426:Doman Steel Claw Hammer
+3427:Doman Steel File
+3428:Doman Steel Pliers
+3430:Doman Steel Awl
+3432:Doman Steel Mortar
+3433:Doman Steel Culinary Knife
+3434:Doman Steel Sledgehammer
+3435:Doman Steel Scythe
+3436:Molybdenum Halfheart Saw
+3437:Molybdenum Lump Hammer
+3438:Molybdenum Ball-pein Hammer
+3439:Palladium Texture Hammer
+3440:Molybdenum Creasing Knife
+3444:Molybdenum Pickaxe
+3445:Molybdenum Hatchet
+3447:Molybdenum Claw Hammer
+3448:Molybdenum File
+3449:Molybdenum Pliers
+3451:Molybdenum Awl
+3453:Molybdenum Mortar
+3454:Molybdenum Culinary Knife
+3455:Molybdenum Sledgehammer
+3456:Molybdenum Scythe
+3614:High Steel Nugget
+3617:High Steel Ingot
+3620:Oroshigane Ingot
+3623:Tama-hagane Ingot
+3626:Molybdenum Ingot
+3650:Mythrite Uchigatana
+3652:Mythrite Tachi
+3654:Titanium Uchigatana
+3656:Titanium Tachi
+3658:Adamantite Uchigatana
 30014:Dalamud Red Dye
 30015:Wine Red Dye
 30016:Royal Blue Dye
@@ -401,7 +509,7 @@
 30155:Wolf Labrys
 30291:Wolfram Ingot
 30298:Darksteel Hook
-30312:Grade 1 Glamour Prism (Smithing)
+30312:Glamour Prism (Smithing)
 30313:Grade 2 Glamour Prism (Smithing)
 30314:Grade 3 Glamour Prism (Smithing)
 30315:Grade 4 Glamour Prism (Smithing)
@@ -496,17 +604,17 @@
 31001:Adamantite Headsman's Axe
 31002:Adamantite Main Gauches
 31003:Adamantite Greatsword
-31004:Adamantite barreled Culverin
+31004:Adamantite-barreled Culverin
 31005:Adamantite Saw
-31006:Adamantite Cross pein Hammer
-31007:Adamantite Ball pein Hammer
+31006:Adamantite Cross-pein Hammer
+31007:Adamantite Ball-pein Hammer
 31008:Aurum Regis Texture Hammer
 31009:Aurum Regis Creasing Knife
 31010:Adamantite Dolabra
 31011:Adamantite Hatchet
 31012:Fortified Claw Hammer
 31013:Polished Adamantite File
-31014:Double jointed Adamantite Pliers
+31014:Double-jointed Adamantite Pliers
 31015:Sharpened Adamantite Awl
 31016:Heavy Adamantite Mortar
 31017:Wrapped Adamantite Culinary Knife
@@ -519,3 +627,130 @@
 31276:Hammermaster's Beetle
 31277:Gemmaster's Mallet
 31278:Hidemaster's Knife
+31294:Adamantite Francesca
+31338:Titanium Alloy Ingot
+31345:Crystal Bell
+31366:Replica Allagan Blade
+31367:Replica Allagan Baghnakhs
+31368:Replica Allagan Battleaxe
+31369:Replica Allagan Spear
+31370:Replica Allagan Composite Bow
+31375:Replica Allagan Daggers
+31376:Replica Allagan Guillotine
+31377:Replica Allagan Pistol
+31411:Replica High Allagan Blade
+31412:Replica High Allagan Baghnakhs
+31413:Replica High Allagan Battleaxe
+31414:Replica High Allagan Spear
+31415:Replica High Allagan Composite Bow
+31420:Replica High Allagan Cleavers
+31421:Replica High Allagan Guillotine
+31422:Replica High Allagan Pistol
+31460:Pudding Floor Lamp
+31482:High Mythrite Ingot
+31500:High Mythrite Nugget
+31580:Galvanized Garlond Steel
+31617:Fake Kupo Nut
+31618:Horn Component
+31619:Moogle Tool Component
+31620:Statue Supplies
+31621:Tablet Supplies
+31622:Training Supplies
+31623:Repurposed Construction Component
+31624:Foundation Component
+31625:Basket Component
+31626:Wall Repair Supplies
+31627:Gathering Tool Component
+31628:Veneer Component
+31629:Aetheric Shielding
+31630:Stonemasonry Supplies
+31631:Exploding Kupo Nut
+31632:Austere Offering
+31633:Shearing Machine Component
+31634:Water Filter Component
+31635:Mogstew Miscellany
+31636:Moogle Statuette
+31637:Makeshift Toy Airship
+31638:Dragonscale Rasp
+31639:Cloudfish Lure
+31640:Ishgardian Cuisine Miscellany
+31641:Treadwheel Crane Components
+31642:Moogle Mollifier
+31895:High Mythrite Saw
+31896:High Mythrite Cross-pein Hammer
+31897:High Mythrite Raising Hammer
+31898:Eikon Iron Lapidary Hammer
+31899:High Mythrite Round Knife
+31903:High Mythrite Pickaxe
+31904:High Mythrite Hatchet
+31906:High Mythrite Claw Hammer
+31907:High Mythrite File
+31908:High Mythrite Pliers
+31910:High Mythrite Awl
+31912:High Mythrite Mortar
+31913:High Mythrite Culinary Knife
+31914:High Mythrite Sledgehammer
+31915:High Mythrite Scythe
+31916:Mighty Thunderstrike
+31917:Mighty Thundercrack
+31918:Mighty Thunderstorm
+31921:Mighty Thundersparks
+31922:Mighty Thunderclap
+31923:Mighty Thundershower
+31930:Endless Expanse Sword
+31931:Endless Expanse Patas
+31932:Endless Expanse Battleaxe
+31935:Endless Expanse Machetes
+31936:Endless Expanse Greatsword
+31937:Endless Expanse Handgonne
+31960:Heavy Metal Longsword
+31961:Heavy Metal Claws
+31962:Heavy Metal War Axe
+31965:Heavy Metal Daggers
+31966:Heavy Metal Greatsword
+31967:Heavy Metal Culverin
+32037:Heavy Metal Ingot
+32062:Mammet Lantern
+32064:Great Gubal Floor Lamp
+32085:Dead Hive Shamshir
+32086:Dead Hive Claws
+32087:Dead Hive Battleaxe
+32090:Dead Hive Kris
+32091:Dead Hive Claymore
+32092:Dead Hive Musketoon
+32099:Sword of the Round
+32100:Knuckles of the Round
+32101:Axe of the Round
+32104:Daggers of the Round
+32105:Claymore of the Round
+32106:Fire of the Round
+32187:Cloud Mythril Ingot
+32197:Near Eastern Antique
+32198:Coerthan Souvenir
+32199:Maelstrom Materiel
+32200:Heartfelt Gift
+32201:Orphanage Donation
+32235:Near Eastern Antique Component
+32236:Coerthan Souvenir Component
+32237:Maelstrom Materiel Component
+32258:Heartfelt Gift Component
+32259:Orphanage Donation Component
+32276:Featherlight Shortsword
+32277:Heavy Uchigatana
+32278:Custom-made Hammer
+32279:Examination Uchigatana
+32310:Inferno Katana
+32312:Blood of the Vortex
+32316:Maliferous Moggle Mogtana
+32318:Mighty Thunderstroke
+32320:Endless Expanse Katana
+32322:Dead Hive Katana
+32324:Katana of the Round
+32339:Chromite Sword
+32340:Chromite Knuckles
+32341:Chromite Axe
+32344:Chromite Daggers
+32345:Chromite Greatsword
+32346:Chromite Arquebus
+32352:Chromite Uchigatana
+32427:Chromite Ingot

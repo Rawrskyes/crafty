@@ -38,13 +38,13 @@ namespace crafty.Ability
             {
                 if (c.Job == Core.Me.CurrentJob)
                 {
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Mend2) && CraftingManager.DurabilityCap > 40 &&
-                        Actionmanager.CanCast(c.Mend2, null))
+                    if (ActionManager.CurrentActions.ContainsKey(c.Mend2) && CraftingManager.DurabilityCap > 40 &&
+                        ActionManager.CanCast(c.Mend2, null))
                     {
                         x = c.Mend2;
                         break;
                     }
-                    if (Actionmanager.CurrentActions.ContainsKey(c.Mend1) && Actionmanager.CanCast(c.Mend1, null))
+                    if (ActionManager.CurrentActions.ContainsKey(c.Mend1) && ActionManager.CanCast(c.Mend1, null))
                     {
                         x = c.Mend1;
                         break;
@@ -60,7 +60,7 @@ namespace crafty.Ability
         {
             return new Action(a =>
             {
-                Actionmanager.DoAction(GetBestMend(), null);
+                ActionManager.DoAction(GetBestMend(), null);
                 Available = false;
             });
         }

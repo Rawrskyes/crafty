@@ -394,7 +394,7 @@
 2060:Mosaic Interior Wall
 2062:Marble Flooring
 2063:Ceramic Tile Flooring
-2064:Contemporary Pince nez
+2064:Contemporary Pince-nez
 2065:Rimless Glasses
 2066:Minstrel's Spectacles
 2067:Classic Spectacles
@@ -475,7 +475,7 @@
 2466:Mythrite Bangle of Aiming
 2467:Mythrite Bracelet of Aiming
 2468:Hardsilver Bangle of Aiming
-2469:Opal Bracelets of Aiming
+2469:Opal Bracelet of Aiming
 2470:Aurum Regis Bracelet of Aiming
 2471:Mythrite Earrings of Aiming
 2472:Mythrite Earblades of Aiming
@@ -493,7 +493,7 @@
 2484:Mythrite Bangle of Healing
 2485:Mythrite Bracelet of Healing
 2486:Hardsilver Bangle of Healing
-2487:Opal Bracelets of Healing
+2487:Opal Bracelet of Healing
 2488:Aurum Regis Bracelet of Healing
 2489:Mythrite Earrings of Healing
 2490:Mythrite Earblades of Healing
@@ -511,7 +511,7 @@
 2502:Mythrite Bangle of Casting
 2503:Mythrite Bracelet of Casting
 2504:Hardsilver Bangle of Casting
-2505:Opal Bracelets of Casting
+2505:Opal Bracelet of Casting
 2506:Aurum Regis Bracelet of Casting
 2507:Mythrite Earrings of Casting
 2508:Mythrite Earblades of Casting
@@ -551,6 +551,178 @@
 2542:Aurum Regis Cylinder
 2543:Goblin Jig
 2544:Bladed Steel Jig
+2841:Elegant Rimless Glasses
+2842:Reading Glasses
+2862:Alpine Flooring
+2863:Alpine Inner Wall
+2890:Sharlayan Flooring
+2940:Ivy Pillar
+2942:Pendant Lamp Planter
+2965:Koppranickel Staff
+2968:Koppranickel Planisphere
+2970:Koppranickel Foil
+2984:Koppranickel Turban of Striking
+2996:Koppranickel Turban of Scouting
+3004:Koppranickel Armlets of Healing
+3010:Koppranickel Armlets of Casting
+3014:Triphane Earrings of Fending
+3015:Triphane Earrings of Slaying
+3016:Triphane Earrings of Aiming
+3017:Triphane Earrings of Healing
+3018:Triphane Earrings of Casting
+3019:Triphane Choker of Fending
+3020:Triphane Choker of Slaying
+3021:Triphane Choker of Aiming
+3022:Triphane Choker of Healing
+3023:Triphane Choker of Casting
+3024:Triphane Bracelet of Fending
+3025:Triphane Bracelet of Slaying
+3026:Triphane Bracelet of Aiming
+3027:Triphane Bracelet of Healing
+3028:Triphane Bracelet of Casting
+3029:Triphane Ring of Fending
+3030:Triphane Ring of Slaying
+3031:Triphane Ring of Aiming
+3032:Triphane Ring of Healing
+3033:Triphane Ring of Casting
+3043:Koppranickel Pole
+3046:Dual-plated Koppranickel Planisphere
+3048:Koppranickel Rapier
+3080:Koppranickel Temple Chain
+3092:Koppranickel Earrings of Fending
+3093:Koppranickel Earrings of Slaying
+3094:Koppranickel Earrings of Aiming
+3095:Koppranickel Earrings of Healing
+3096:Koppranickel Earrings of Casting
+3097:Koppranickel Necklace of Fending
+3098:Koppranickel Necklace of Slaying
+3099:Koppranickel Necklace of Aiming
+3100:Koppranickel Necklace of Healing
+3101:Koppranickel Necklace of Casting
+3102:Koppranickel Bracelet of Fending
+3103:Koppranickel Bracelet of Slaying
+3104:Koppranickel Bracelet of Aiming
+3105:Koppranickel Bracelet of Healing
+3106:Koppranickel Bracelet of Casting
+3107:Muudhorn Ring of Fending
+3108:Muudhorn Ring of Slaying
+3109:Muudhorn Ring of Aiming
+3110:Muudhorn Ring of Healing
+3111:Muudhorn Ring of Casting
+3121:Durium Staff
+3124:Durium Astrometer
+3126:Durium Smallsword
+3128:Durium Hairpin of Fending
+3134:Durium Hairpin of Maiming
+3170:Star Spinel Earrings of Fending
+3171:Star Spinel Earrings of Slaying
+3172:Star Spinel Earrings of Aiming
+3173:Star Spinel Earrings of Healing
+3174:Star Spinel Earrings of Casting
+3175:Star Spinel Choker of Fending
+3176:Star Spinel Choker of Slaying
+3177:Star Spinel Choker of Aiming
+3178:Star Spinel Choker of Healing
+3179:Star Spinel Choker of Casting
+3180:Star Spinel Bracelet of Fending
+3181:Star Spinel Bracelet of Slaying
+3182:Star Spinel Bracelet of Aiming
+3183:Star Spinel Bracelet of Healing
+3184:Star Spinel Bracelet of Casting
+3185:Star Spinel Ring of Fending
+3186:Star Spinel Ring of Slaying
+3187:Star Spinel Ring of Aiming
+3188:Star Spinel Ring of Healing
+3189:Star Spinel Ring of Casting
+3199:Durium Rod
+3202:Dual-plated Durium Planisphere
+3204:Durium Foil
+3248:Azurite Earrings of Fending
+3249:Azurite Earrings of Slaying
+3250:Azurite Earrings of Aiming
+3251:Azurite Earrings of Healing
+3252:Azurite Earrings of Casting
+3253:Azurite Choker of Fending
+3254:Azurite Choker of Slaying
+3255:Azurite Choker of Aiming
+3256:Azurite Choker of Healing
+3257:Azurite Choker of Casting
+3258:Azurite Bracelet of Fending
+3259:Azurite Bracelet of Slaying
+3260:Azurite Bracelet of Aiming
+3261:Azurite Bracelet of Healing
+3262:Azurite Bracelet of Casting
+3263:Azurite Ring of Fending
+3264:Azurite Ring of Slaying
+3265:Azurite Ring of Aiming
+3266:Azurite Ring of Healing
+3267:Azurite Ring of Casting
+3277:Palladium Rod
+3280:Palladium Planisphere
+3282:Palladium Tuck
+3326:Molybdenum Earring of Fending
+3327:Molybdenum Earring of Slaying
+3328:Molybdenum Earring of Aiming
+3329:Molybdenum Earring of Healing
+3330:Molybdenum Earring of Casting
+3331:Palladium Choker of Fending
+3332:Palladium Choker of Slaying
+3333:Palladium Choker of Aiming
+3334:Palladium Choker of Healing
+3335:Palladium Choker of Casting
+3336:Palladium Bracelet of Fending
+3337:Palladium Bracelet of Slaying
+3338:Palladium Bracelet of Aiming
+3339:Palladium Bracelet of Healing
+3340:Palladium Bracelet of Casting
+3341:Palladium Ring of Fending
+3342:Palladium Ring of Slaying
+3343:Palladium Ring of Aiming
+3344:Palladium Ring of Healing
+3345:Palladium Ring of Casting
+3353:Imperial Jade Earrings of Fending
+3354:Imperial Jade Earrings of Slaying
+3355:Imperial Jade Earrings of Aiming
+3356:Imperial Jade Earrings of Healing
+3357:Imperial Jade Earrings of Casting
+3358:Imperial Jade Necklace of Fending
+3359:Imperial Jade Necklace of Slaying
+3360:Imperial Jade Necklace of Aiming
+3361:Imperial Jade Necklace of Healing
+3362:Imperial Jade Necklace of Casting
+3363:Imperial Jade Armillae of Fending
+3364:Imperial Jade Armillae of Slaying
+3365:Imperial Jade Armillae of Aiming
+3366:Imperial Jade Armillae of Healing
+3367:Imperial Jade Armillae of Casting
+3368:Imperial Jade Ring of Fending
+3369:Imperial Jade Ring of Slaying
+3370:Imperial Jade Ring of Aiming
+3371:Imperial Jade Ring of Healing
+3372:Imperial Jade Ring of Casting
+3378:Bombfish Needle
+3399:Dzo Horn Needle
+3420:Gazelle Horn Needle
+3441:Palladium Needle
+3479:Durium Chaplets
+3538:Mounted Flower Vase
+3613:Koppranickel Nugget
+3616:Koppranickel Ingot
+3619:Durium Nugget
+3622:Durium Ingot
+3625:Palladium Nugget
+3628:Triphane
+3629:Kyanite
+3630:Star Spinel
+3631:Azurite
+3632:Imperial Jade
+3633:Rhodonite
+3649:Slate Whetstone
+3651:Mythrite Rapier
+3653:Mythrite Foil
+3655:Hardsilver Rapier
+3657:Hardsilver Foil
+3659:Aurum Regis Rapier
 30040:Dalamud Red Dye
 30041:Wine Red Dye
 30042:Royal Blue Dye
@@ -599,7 +771,7 @@
 30292:Gold Ingot
 30293:Ruby
 30300:Rose Gold Cog
-30326:Grade 1 Glamour Prism (Goldsmithing)
+30326:Glamour Prism (Goldsmithing)
 30327:Grade 2 Glamour Prism (Goldsmithing)
 30328:Grade 3 Glamour Prism (Goldsmithing)
 30329:Grade 4 Glamour Prism (Goldsmithing)
@@ -685,7 +857,7 @@
 30664:Helm Component
 30665:Finishing Component
 30666:Figurehead Component
-30823:Thick rimmed Glasses
+30823:Thick-rimmed Glasses
 30827:Platinum Nugget
 30848:Plumes of the Vortex
 30860:Platinum Ingot
@@ -701,10 +873,10 @@
 30953:Platinum Earrings of Slaying
 30954:Platinum Scarf of Slaying
 30955:Platinum Ring of Slaying
-30956:Platinum Bangles of Ranging
-30957:Platinum Earrings of Ranging
-30958:Platinum Scarf of Ranging
-30959:Platinum Ring of Ranging
+30956:Platinum Bangles of Aiming
+30957:Platinum Earrings of Aiming
+30958:Platinum Scarf of Aiming
+30959:Platinum Ring of Aiming
 30960:Platinum Bangles of Healing
 30961:Platinum Earrings of Healing
 30962:Platinum Scarf of Healing
@@ -729,19 +901,19 @@
 31066:Chrysolite Earrings of Fending
 31067:Chrysolite Ring of Fending
 31068:Citrine Choker of Slaying
-31069:Chrysolite Bracelets of Slaying
+31069:Chrysolite Bracelet of Slaying
 31070:Chrysolite Earrings of Slaying
 31071:Chrysolite Ring of Slaying
 31072:Citrine Choker of Aiming
-31073:Chrysolite Bracelets of Aiming
+31073:Chrysolite Bracelet of Aiming
 31074:Chrysolite Earrings of Aiming
 31075:Chrysolite Ring of Aiming
 31076:Citrine Choker of Healing
-31077:Chrysolite Bracelets of Healing
+31077:Chrysolite Bracelet of Healing
 31078:Chrysolite Earrings of Healing
 31079:Chrysolite Ring of Healing
 31080:Citrine Choker of Casting
-31081:Chrysolite Bracelets of Casting
+31081:Chrysolite Bracelet of Casting
 31082:Chrysolite Earrings of Casting
 31083:Chrysolite Ring of Casting
 31084:Griffin Talon Needle
@@ -758,3 +930,153 @@
 31251:Gemmaster's Chaplets
 31264:Cauldronmaster's Spectacles
 31279:Boltmaster's Needle
+31284:Faerie Chandelier
+31301:Moogle Miniature
+31312:Sky Pirate's Mask of Striking
+31322:Sky Pirate's Mask of Scouting
+31327:Sky Pirate's Cap of Healing
+31332:Sky Pirate's Cap of Casting
+31347:Eikon Iron Earring of Fending
+31349:Eikon Iron Ring of Fending
+31351:Eikon Iron Earring of Slaying
+31353:Eikon Iron Ring of Slaying
+31355:Eikon Iron Earring of Aiming
+31357:Eikon Iron Ring of Aiming
+31359:Eikon Iron Earring of Healing
+31361:Eikon Iron Ring of Healing
+31363:Eikon Iron Earring of Casting
+31365:Eikon Iron Ring of Casting
+31371:Replica Allagan Cane
+31372:Replica Allagan Scepter
+31378:Replica Allagan Star Globe
+31400:Replica Allagan Circlet of Healing
+31405:Replica Allagan Circlet of Casting
+31416:Replica High Allagan Crook
+31417:Replica High Allagan Staff
+31423:Replica High Allagan Star Globe
+31424:Replica High Allagan Circlet of Fending
+31444:Replica High Allagan Circlet of Healing
+31464:Dinosaur Skull
+31465:Dinosaur Skeleton
+31466:Dinosaur Tailbone
+31467:Living Arch
+31484:Eikon Iron Ingot
+31502:Sewing Needle
+31590:Replica Allagan Rod
+31669:Fake Kupo Nut
+31670:Horn Component
+31671:Moogle Tool Component
+31672:Statue Supplies
+31673:Tablet Supplies
+31674:Training Supplies
+31675:Repurposed Construction Component
+31676:Foundation Component
+31677:Basket Component
+31678:Wall Repair Supplies
+31679:Gathering Tool Component
+31680:Veneer Component
+31681:Aetheric Shielding
+31682:Stonemasonry Supplies
+31683:Exploding Kupo Nut
+31684:Austere Offering
+31685:Shearing Machine Component
+31686:Water Filter Component
+31687:Mogstew Miscellany
+31688:Moogle Statuette
+31689:Makeshift Toy Airship
+31690:Dragonscale Rasp
+31691:Cloudfish Lure
+31692:Ishgardian Cuisine Miscellany
+31693:Treadwheel Crane Components
+31694:Moogle Mollifier
+31814:Replica Dreadwyrm Coronet of Fending
+31824:Replica Dreadwyrm Circlet of Striking
+31844:Replica Dreadwyrm Circlet of Scouting
+31853:Nidhogg Miniature
+31855:Large Garden Pond
+31886:Ironworks Earring of Gathering
+31888:Ironworks Ring of Gathering
+31891:Ironworks Earring of Crafting
+31893:Ironworks Ring of Crafting
+31900:Eikon Iron Needle
+31925:High Adjudicator's Staff
+31928:Mighty Thunderdome
+31939:Endless Expanse Longpole
+31942:Endless Expanse Astrometer
+31956:Heart of the Vortex
+31958:Inferno Rod
+31969:Scintillant Staff
+31972:Scintillant Planisphere
+31986:Scintillant Circlet of Striking
+31992:Scintillant Circlet of Aiming
+31998:Scintillant Circlet of Scouting
+32016:Scintillant Earring of Fending
+32017:Scintillant Earring of Slaying
+32018:Scintillant Earring of Aiming
+32019:Scintillant Earring of Healing
+32020:Scintillant Earring of Casting
+32031:Scintillant Ring of Fending
+32032:Scintillant Ring of Slaying
+32033:Scintillant Ring of Aiming
+32034:Scintillant Ring of Healing
+32035:Scintillant Ring of Casting
+32039:Scintillant Ingot
+32043:Platinum Ingot
+32058:Sophia Miniature
+32068:Crystal Chandelier
+32078:Sophic Barding
+32094:Dead Hive Longpole
+32097:Dead Hive Planisphere
+32108:Staff of the Round
+32111:Astrometer of the Round
+32123:Diabolos Miniature
+32124:Scathach Miniature
+32126:Tribunal Flooring
+32152:Sky Rat Mask of Fending
+32157:Sky Rat Mask of Maiming
+32167:Sky Rat Mask of Aiming
+32177:Sky Rat Mask of Healing
+32182:Sky Rat Mask of Casting
+32189:Cloud Mythril Ingot
+32207:Near Eastern Antique
+32208:Coerthan Souvenir
+32209:Maelstrom Materiel
+32210:Heartfelt Gift
+32211:Orphanage Donation
+32241:Near Eastern Antique Component
+32242:Coerthan Souvenir Component
+32243:Maelstrom Materiel Component
+32262:Heartfelt Gift Component
+32263:Orphanage Donation Component
+32284:Sample Silver Ring
+32285:Precision Spectacles
+32286:Sample Chronometer
+32287:Tribute Orchestrion
+32306:Table Orchestrion
+32307:Lakshmi Miniature
+32309:House Fortemps Chandelier
+32311:Inferno Rapier
+32313:Honor of the Vortex
+32317:Manipulative Moggle Mogfoil
+32319:Mighty Thunderstone
+32321:Endless Expanse Rapier
+32323:Dead Hive Rapier
+32325:Rapier of the Round
+32338:Blissful Barding
+32348:Palladium Staff
+32351:Palladium Orrery
+32353:Palladium Rapier
+32361:Palladium Circlet of Maiming
+32367:Palladium Circlet of Striking
+32379:Palladium Circlet of Scouting
+32397:Palladium Earring of Fending
+32398:Palladium Earring of Slaying
+32399:Palladium Earring of Aiming
+32400:Palladium Earring of Healing
+32401:Palladium Earring of Casting
+32412:Palladium Band of Fending
+32413:Palladium Band of Slaying
+32414:Palladium Band of Aiming
+32415:Palladium Band of Healing
+32416:Palladium Band of Casting
+32426:Palladium Ingot

@@ -39,7 +39,7 @@
 1139:Enchanted Silver Ink
 1140:Goatskin Grimoire
 1141:Natron
-1142:Hi Potion
+1142:Hi-Potion
 1143:Crab Oil
 1144:Whispering Ash Wand
 1145:Clear Glass Lens
@@ -49,15 +49,15 @@
 1149:Growth Formula Gamma
 1150:Horn Glue
 1151:Spine Drops
-1152:Hi Potion of Mind
-1153:Hi Potion of Dexterity
-1154:Hi Potion of Vitality
-1155:Hi Potion of Intelligence
+1152:Hi-Potion of Mind
+1153:Hi-Potion of Dexterity
+1154:Hi-Potion of Vitality
+1155:Hi-Potion of Intelligence
 1156:Enchanted Mythril Ink
-1157:Hi Potion of Strength
+1157:Hi-Potion of Strength
 1158:Book of Silver
 1159:Budding Yew Wand
-1160:Hi Ether
+1160:Hi-Ether
 1161:Poisoning Potion
 1162:Paralyzing Potion
 1163:Blinding Potion
@@ -69,18 +69,18 @@
 1169:Lanolin
 1170:Smelling Salts
 1171:Shark Oil
-1172:Mega Potion
-1173:Mega Potion of Mind
+1172:Mega-Potion
+1173:Mega-Potion of Mind
 1174:Wand of Gales
 1175:Wand of Storms
 1176:Wand of Flames
-1177:Mega Potion of Strength
-1178:Mega Potion of Intelligence
-1179:Mega Potion of Vitality
-1180:Mega Potion of Dexterity
+1177:Mega-Potion of Strength
+1178:Mega-Potion of Intelligence
+1179:Mega-Potion of Vitality
+1180:Mega-Potion of Dexterity
 1181:Gold Needle
 1182:Elixir
-1183:Mega Ether
+1183:Mega-Ether
 1536:Vintage Picatrix
 1537:Embossed Book of Silver
 1538:Budding Oak Wand
@@ -106,21 +106,21 @@
 1558:Alkalurops
 1559:Deus Ex Verbis
 1560:Deus Ex Gratia
-1561:Fire Ward Hi Potion
-1562:Water Ward Hi Potion
-1563:Earth Ward Hi Potion
-1564:Ice Ward Hi Potion
-1565:Wind Ward Hi Potion
-1566:Lightning Ward Hi Potion
-1567:X Ether
-1568:X Potion
-1569:Hi Elixir
-1570:Fire Ward Mega Potion
-1571:Water Ward Mega Potion
-1572:Earth Ward Mega Potion
-1573:Ice Ward Mega Potion
-1574:Wind Ward Mega Potion
-1575:Lightning Ward Mega Potion
+1561:Fire Ward Hi-Potion
+1562:Water Ward Hi-Potion
+1563:Earth Ward Hi-Potion
+1564:Ice Ward Hi-Potion
+1565:Wind Ward Hi-Potion
+1566:Lightning Ward Hi-Potion
+1567:X-Ether
+1568:X-Potion
+1569:Hi-Elixir
+1570:Fire Ward Mega-Potion
+1571:Water Ward Mega-Potion
+1572:Earth Ward Mega-Potion
+1573:Ice Ward Mega-Potion
+1574:Wind Ward Mega-Potion
+1575:Lightning Ward Mega-Potion
 1582:Firebricks
 1583:Clinker Bricks
 1584:Roof Tile
@@ -161,10 +161,10 @@
 1874:Ink & Quill
 1913:Weak Sleeping Potion
 1914:Weak Paralyzing Potion
-1915:X Potion of Strength
-1916:X Potion of Dexterity
-1917:X Potion of Vitality
-1918:X Potion of Intelligence
+1915:X-Potion of Strength
+1916:X-Potion of Dexterity
+1917:X-Potion of Vitality
+1918:X-Potion of Intelligence
 1919:Fire Ward Potion
 1920:Ice Ward Potion
 1921:Wind Ward Potion
@@ -178,7 +178,7 @@
 2005:Stone Interior Wall
 2011:Country Flooring
 2012:Stone Flooring
-2019:X Potion of Mind
+2019:X-Potion of Mind
 2026:Wall Planter
 2029:Potted Umbrella Fig
 2030:Potted Dragon Tree
@@ -188,7 +188,7 @@
 2061:Bisque Flooring
 2081:Maddening Daggers
 2086:Vamper's Knives
-2099:Potted Oliphaunt's Ear
+2099:Potted Oliphant's Ear
 2115:Stuffed Mazlaya Marlin
 2117:Stuffed Takitaro
 2122:Large Planter Box
@@ -234,7 +234,7 @@
 2779:Holy Water
 2780:Hallowed Water
 2781:Growth Formula Epsilon
-2782:Growth Formula Theta
+2782:Growth Formula Zeta
 2783:Crystal Glass
 2784:Black Firesand
 2785:Grade 1 Strength Dissolvent
@@ -242,6 +242,87 @@
 2787:Grade 1 Vitality Dissolvent
 2788:Grade 1 Intelligence Dissolvent
 2789:Grade 1 Mind Dissolvent
+2833:Topiary Chocobo
+2834:Oriental Grass Plot
+2845:Max-Potion
+2846:Max-Ether
+2860:Topiary Sabotender
+2867:Another Round Orchestrion Roll
+2868:The Only Path Orchestrion Roll
+2869:A World Apart Orchestrion Roll
+2870:Riptide Orchestrion Roll
+2871:Dark Vows Orchestrion Roll
+2872:The Dark's Embrace Orchestrion Roll
+2904:Dried Red Oldrose
+2905:Dried Blue Oldrose
+2906:Dried Yellow Oldrose
+2907:Dried Green Oldrose
+2908:Dried Orange Oldrose
+2909:Dried Purple Oldrose
+2910:Dried White Oldrose
+2911:Dried Black Oldrose
+2912:Oldrose Corsage
+2913:Watered Cordial
+2924:Red Viola Corsage
+2925:Blue Viola Corsage
+2926:Yellow Viola Corsage
+2927:Green Viola Corsage
+2928:Orange Viola Corsage
+2929:Purple Viola Corsage
+2930:White Viola Corsage
+2931:Black Viola Corsage
+2932:Rainbow Viola Corsage
+2941:Topiary Paissa
+2947:Red Cherry Blossom Corsage
+2948:Blue Cherry Blossom Corsage
+2949:Yellow Cherry Blossom Corsage
+2950:Green Cherry Blossom Corsage
+2951:Orange Cherry Blossom Corsage
+2952:Purple Cherry Blossom Corsage
+2953:White Cherry Blossom Corsage
+2954:Black Cherry Blossom Corsage
+2955:Pink Cherry Blossom Corsage
+2966:Koppranickel Index
+2967:Koppranickel Codex
+3044:Gyuki Leather Grimoire
+3045:Gyuki Leather Codex
+3122:Tigerskin Grimoire
+3123:Tigerskin Codex
+3200:Marid Leather Grimoire
+3201:Marid Leather Codex
+3278:Gazelleskin Grimoire
+3279:Gazelleskin Codex
+3550:Topiary Carbuncle
+3587:Competent Craftsman's Tea
+3588:Commanding Craftsman's Tea
+3589:Cunning Craftsman's Tea
+3590:Potent Spiritbond Potion
+3591:Infusion of Strength
+3592:Infusion of Dexterity
+3593:Infusion of Vitality
+3594:Infusion of Intelligence
+3595:Infusion of Mind
+3596:Grade 1 Reisui of Strength
+3597:Grade 1 Reisui of Dexterity
+3598:Grade 1 Reisui of Vitality
+3599:Grade 1 Reisui of Intelligence
+3600:Grade 1 Reisui of Mind
+3601:Enchanted Koppranickel Ink
+3602:Enchanted Durium Ink
+3603:Enchanted Palladium Ink
+3604:Growth Formula Eta
+3605:Growth Formula Theta
+3606:Beetle Glue
+3607:Persimmon Tannin
+3660:Red Daisy Corsage
+3661:Blue Daisy Corsage
+3662:Yellow Daisy Corsage
+3663:Green Daisy Corsage
+3664:Orange Daisy Corsage
+3665:Purple Daisy Corsage
+3666:White Daisy Corsage
+3667:Black Daisy Corsage
+3668:Rainbow Daisy Corsage
 30079:Dalamud Red Dye
 30080:Wine Red Dye
 30081:Royal Blue Dye
@@ -284,7 +365,7 @@
 30285:Medica Thavnaria
 30296:Terminus Putty
 30303:Spirits of Salt
-30347:Grade 1 Glamour Prism (Alchemy)
+30347:Glamour Prism (Alchemy)
 30348:Grade 2 Glamour Prism (Alchemy)
 30349:Grade 3 Glamour Prism (Alchemy)
 30350:Grade 4 Glamour Prism (Alchemy)
@@ -399,9 +480,147 @@
 31208:Draconian Potion of Vitality
 31209:Draconian Potion of Intelligence
 31210:Draconian Potion of Mind
-31211:Deep Red Enchanted Ink
-31212:Superior Deep Red Enchanted Ink
-31213:Deep Green Enchanted Ink
-31214:Superior Deep Green Enchanted Ink
-31215:Deep Blue Enchanted Ink
-31216:Superior Deep Blue Enchanted Ink
+31211:Deep-red Enchanted Ink
+31212:Superior Deep-red Enchanted Ink
+31213:Deep-green Enchanted Ink
+31214:Superior Deep-green Enchanted Ink
+31215:Deep-blue Enchanted Ink
+31216:Superior Deep-blue Enchanted Ink
+31283:Dravanian Down Tree
+31296:Titanium Alloy Mirror
+31373:Replica Allagan Grimoire of Casting
+31374:Replica Allagan Grimoire of Healing
+31418:Replica High Allagan Grimoire of Casting
+31419:Replica High Allagan Grimoire of Healing
+31489:Camphor
+31490:Grade 3 Strength Dissolvent
+31491:Grade 3 Dexterity Dissolvent
+31492:Grade 3 Vitality Dissolvent
+31493:Grade 3 Intelligence Dissolvent
+31494:Grade 3 Mind Dissolvent
+31495:Max-Potion of Strength
+31496:Max-Potion of Dexterity
+31497:Max-Potion of Vitality
+31498:Max-Potion of Intelligence
+31499:Max-Potion of Mind
+31505:Powdered Horn
+31506:Painted Foothills Orchestrion Roll
+31507:Lost in the Clouds Orchestrion Roll
+31508:Blood for Blood Orchestrion Roll
+31509:Starved Orchestrion Roll
+31510:A Light in the Storm Orchestrion Roll
+31511:Imagination Orchestrion Roll
+31512:Down the Up Staircase Orchestrion Roll
+31513:The Scars of Battle Orchestrion Roll
+31514:The Maker's Ruin Orchestrion Roll
+31515:Primal Judgment Orchestrion Roll
+31516:Fallen Angel Orchestrion Roll
+31517:Under the Weight Orchestrion Roll
+31518:Heroes Orchestrion Roll
+31519:Fiend Orchestrion Roll
+31520:Hubris Orchestrion Roll
+31521:Tumbling Down Orchestrion Roll
+31522:Out of the Labyrinth Orchestrion Roll
+31523:Now I Know the Truth Orchestrion Roll
+31524:Blind to the Dark Orchestrion Roll
+31525:Hunger Orchestrion Roll
+31526:Eternal Wind Orchestrion Roll
+31527:Thunderer Orchestrion Roll
+31528:Rise of the White Raven Orchestrion Roll
+31529:From the Ashes Orchestrion Roll
+31530:Answers Orchestrion Roll
+31582:Sephirot Root
+31583:Sephirot Tree
+31747:Fake Kupo Nut
+31748:Horn Component
+31749:Moogle Tool Component
+31750:Statue Supplies
+31751:Tablet Supplies
+31752:Training Supplies
+31753:Repurposed Construction Component
+31754:Foundation Component
+31755:Basket Component
+31756:Wall Repair Supplies
+31757:Gathering Tool Component
+31758:Veneer Component
+31759:Aetheric Shielding
+31760:Stonemasonry Supplies
+31761:Exploding Kupo Nut
+31762:Austere Offering
+31763:Shearing Machine Component
+31764:Water Filter Component
+31765:Mogstew Miscellany
+31766:Moogle Statuette
+31767:Makeshift Toy Airship
+31768:Dragonscale Rasp
+31769:Cloudfish Lure
+31770:Ishgardian Cuisine Miscellany
+31771:Treadwheel Crane Components
+31772:Moogle Mollifier
+31799:Cordial
+31926:Ona Ramuhda First Edition
+31927:The Law of Levin First Edition
+31940:Endless Expanse Grimoire
+31941:Endless Expanse Codex
+31944:Luminous Fiber
+31947:Against the Wind Orchestrion Roll
+31948:Landlords Orchestrion Roll
+31949:Missing Pages Orchestrion Roll
+31950:Wreck to the Seaman Orchestrion Roll
+31951:Through the Maelstrom Orchestrion Roll
+31952:Good King Moggle Mog XII Orchestrion Roll
+31953:Revenge of the Horde Orchestrion Roll
+31954:Battle on the Big Bridge Orchestrion Roll
+31955:Engage Orchestrion Roll
+31957:Mighty Moggle Mogrod
+31959:Tremor Staff
+31970:Hemiskin Grimoire
+31971:Hemiskin Codex
+32042:Tempered Glass
+32051:Supramax-Potion of Strength
+32052:Supramax-Potion of Dexterity
+32053:Supramax-Potion of Vitality
+32054:Supramax-Potion of Intelligence
+32055:Supramax-Potion of Mind
+32079:Footsteps in the Snow Orchestrion Roll
+32080:Oblivion Orchestrion Roll
+32081:Thunder Rolls Orchestrion Roll
+32082:Equilibrium Orchestrion Roll
+32095:Dead Hive Grimoire
+32096:Dead Hive Codex
+32109:Grimoire of the Round
+32110:Codex of the Round
+32113:Close to the Heavens Orchestrion Roll
+32146:The Corpse Hall Orchestrion Roll
+32147:Limitless Blue Orchestrion Roll
+32148:Woe That Is Madness Orchestrion Roll
+32149:The Hand That Gives the Rose Orchestrion Roll
+32150:Unbending Steel Orchestrion Roll
+32151:Infinity Orchestrion Roll
+32222:Near Eastern Antique
+32223:Coerthan Souvenir
+32224:Maelstrom Materiel
+32225:Heartfelt Gift
+32226:Orphanage Donation
+32250:Near Eastern Antique Component
+32251:Coerthan Souvenir Component
+32252:Maelstrom Materiel Component
+32268:Heartfelt Gift Component
+32269:Orphanage Donation Component
+32296:Intellectuary
+32297:Twice-fermented Mun-Tuy Juice
+32298:Luminol
+32299:Potent Dissolvent
+32304:Revelation Orchestrion Roll
+32305:Beauty's Wicked Wiles Orchestrion Roll
+32314:Tremor Katana
+32315:Tremor Foil
+32349:Grimoire of the True Griffin
+32350:Codex of the True Griffin
+32420:Grade 2 Reisui of Strength
+32421:Grade 2 Reisui of Dexterity
+32422:Grade 2 Reisui of Vitality
+32423:Grade 2 Reisui of Intelligence
+32424:Grade 2 Reisui of Mind
+32434:Skylords Orchestrion Roll
+32435:The Silent Regard of Stars Orchestrion Roll

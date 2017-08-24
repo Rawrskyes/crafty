@@ -41,7 +41,7 @@
 210:Iron Vambraces
 211:Iron Lantern Shield
 212:Iron Elmo
-213:Iron plated Jackboots
+213:Iron-plated Jackboots
 214:Iron Alembic
 215:Iron Scale Greaves
 216:Iron Scale Fingers
@@ -69,7 +69,7 @@
 238:Steel Cuirass
 239:Steel Sabatons
 240:Steel Celata
-241:Steel plated Jackboots
+241:Steel-plated Jackboots
 242:Steel Vambraces
 243:Steel Plate Belt
 244:Bull Hoplon
@@ -85,7 +85,7 @@
 254:Heavy Steel Gauntlets
 255:Decorated Iron Scutum
 256:Heavy Steel Flanchard
-257:Steel plated Caligae
+257:Steel-plated Caligae
 258:Steel Barbut
 259:Steel Mitt Gauntlets
 260:Mythril Ingot
@@ -97,9 +97,9 @@
 266:Horn Scale Mail
 267:Mythril Elmo
 268:Mythril Alembic
-269:Mythril plated Jackboots
+269:Mythril-plated Jackboots
 270:Mythril Barbut
-271:Mythril plated Caligae
+271:Mythril-plated Caligae
 272:Mythril Mesail
 273:Cobalt Ingot
 274:Mythril Vambraces
@@ -113,11 +113,11 @@
 282:Cobalt Rivets
 283:Reinforced Mythril Elmo
 284:Cobalt Vambraces
-285:Cobalt plated Jackboots
+285:Cobalt-plated Jackboots
 286:Cobalt Elmo
 287:Tortoiseshell Scale Mail
 288:Cobalt Barbut
-289:Cobalt plated Caligae
+289:Cobalt-plated Caligae
 290:Cobalt Mitt Gauntlets
 291:Cobalt Mesail
 292:Kite Shield
@@ -183,7 +183,7 @@
 1278:Heavy Darksteel Flanchard
 1279:Darksteel Scutum
 1280:Darksteel Buckler
-1384:Wind up Dullahan
+1384:Wind-up Dullahan
 1590:Iron Joint Plate
 1591:Steel Joint Plate
 1592:Cobalt Joint Plate
@@ -215,7 +215,7 @@
 1844:Manor Desk
 1859:Manor Fireplace
 1861:Riviera Lantern
-1877:Miniature Magitek Reaper
+1877:Magitek Reaper Miniature
 1888:Belah'dian Crystal Lantern
 1935:Light Steel Galerus
 1936:Light Steel Subligar
@@ -226,7 +226,7 @@
 1991:Manor Marching Horn
 2007:Metal Interior Wall
 2014:Metal Flooring
-2045:Cast iron Cookpot
+2045:Cast-iron Cookpot
 2112:Incensory
 2131:Iron Plate Flooring
 2176:Dead Man's Chest
@@ -242,7 +242,7 @@
 2347:Mythrite Hauberk of Fending
 2348:Titanium Mail of Fending
 2349:Titanium Cuirass of Fending
-2350:Titanium Armor of Fending
+2350:Adamantite Armor of Fending
 2351:Mythrite Gauntlets of Fending
 2352:Titanium Gauntlets of Fending
 2353:Titanium Vambraces of Fending
@@ -263,7 +263,7 @@
 2368:Mythrite Hauberk of Maiming
 2369:Titanium Cuirass of Maiming
 2370:Titanium Mail of Maiming
-2371:Titanium Armor of Maiming
+2371:Adamantite Armor of Maiming
 2372:Mythrite Gauntlets of Maiming
 2373:Titanium Mitt Gauntlets of Maiming
 2374:Titanium Vambraces of Maiming
@@ -302,6 +302,70 @@
 2824:Mythrite Rivets
 2825:Titanium Rivets
 2826:Adamantite Rivets
+2971:High Steel Hoplon
+2972:High Steel Helm of Fending
+2973:High Steel Scale Mail of Fending
+2974:High Steel Armguards of Fending
+2978:High Steel Helm of Maiming
+2979:High Steel Scale Mail of Maiming
+2980:High Steel Armguards of Maiming
+3049:High Steel Scutum
+3050:High Steel Barbut of Fending
+3051:High Steel Mail of Fending
+3052:High Steel Gauntlets of Fending
+3054:High Steel Sollerets of Fending
+3055:High Steel Plate Belt of Fending
+3056:High Steel Barbut of Maiming
+3057:High Steel Mail of Maiming
+3058:High Steel Gauntlets of Maiming
+3060:High Steel Sollerets of Maiming
+3061:High Steel Plate Belt of Maiming
+3127:Doman Iron Kite Shield
+3129:Tigerskin Coat of Fending
+3130:Doman Iron Gauntlets of Fending
+3132:Doman Iron Greaves of Fending
+3133:Doman Iron Tassets of Fending
+3135:Tigerskin Coat of Maiming
+3136:Doman Iron Gauntlets of Maiming
+3138:Doman Iron Greaves of Maiming
+3139:Doman Iron Tassets of Maiming
+3205:Doman Steel Shield
+3206:Doman Steel Armet of Fending
+3207:Doman Steel Tabard of Fending
+3208:Doman Steel Gauntlets of Fending
+3210:Doman Steel Greaves of Fending
+3212:Doman Steel Armet of Maiming
+3213:Doman Steel Tabard of Maiming
+3214:Doman Steel Gauntlets of Maiming
+3216:Doman Steel Greaves of Maiming
+3220:Doman Steel Gauntlets of Striking
+3222:Doman Steel Greaves of Striking
+3232:Doman Steel Gauntlets of Scouting
+3234:Doman Steel Greaves of Scouting
+3283:Molybdenum Kite Shield
+3284:Molybdenum Headgear of Fending
+3288:Molybdenum Greaves of Fending
+3289:Molybdenum Plate Belt of Fending
+3290:Molybdenum Headgear of Maiming
+3292:Molybdenum Armguards of Maiming
+3295:Molybdenum Plate Belt of Maiming
+3298:Molybdenum Armguards of Striking
+3310:Molybdenum Armguards of Scouting
+3346:Molybdenum Tassets of Fending
+3347:Molybdenum Tassets of Maiming
+3379:High Steel Thermal Alembic
+3380:High Steel Bomb Frypan
+3400:Doman Iron Alembic
+3401:Doman Iron Frypan
+3421:Doman Steel Alembic
+3422:Doman Steel Frypan Caliente
+3442:Molybdenum Alembic
+3443:Molybdenum Frypan
+3615:High Steel Nugget
+3618:High Steel Ingot
+3621:Oroshigane Ingot
+3624:Tama-hagane Ingot
+3627:Molybdenum Ingot
 30027:Dalamud Red Dye
 30028:Wine Red Dye
 30029:Royal Blue Dye
@@ -345,7 +409,7 @@
 30251:Wolfram Sabatons
 30252:Wolfram Tassets
 30299:Darksteel Wire
-30319:Grade 1 Glamour Prism (Armorcraft)
+30319:Glamour Prism (Armorcraft)
 30320:Grade 2 Glamour Prism (Armorcraft)
 30321:Grade 3 Glamour Prism (Armorcraft)
 30322:Grade 4 Glamour Prism (Armorcraft)
@@ -433,7 +497,7 @@
 31041:Adamantite Alembic
 31042:Adamantite Frypan
 31043:Iron Dwarf
-31044:Steam powered Gobwalker G VII
+31044:Steam-powered Gobwalker G-VII
 31046:Expanse Barding
 31047:Hive Barding
 31048:Gordian Chair
@@ -445,3 +509,147 @@
 31244:Hammermaster's Visor
 31280:Cauldronmaster's Alembic
 31281:Galleymaster's Frypan
+31297:Titanium Alloy Square
+31302:Sky Pirate's Helm of Fending
+31303:Sky Pirate's Coat of Fending
+31304:Sky Pirate's Gauntlets of Fending
+31307:Sky Pirate's Helm of Maiming
+31308:Sky Pirate's Coat of Maiming
+31309:Sky Pirate's Gauntlets of Maiming
+31379:Replica Allagan Round Shield
+31380:Replica Allagan Helm
+31381:Replica Heavy Allagan Armor
+31382:Replica Heavy Allagan Gauntlets
+31383:Replica Heavy Allagan Cuisses
+31384:Replica Heavy Allagan Flanchard
+31385:Replica Allagan Visor of Maiming
+31386:Replica Allagan Cuirass of Maiming
+31387:Replica Allagan Gauntlets of Maiming
+31389:Replica Allagan Sollerets of Maiming
+31390:Replica Allagan Visor of Striking
+31391:Replica Allagan Cuirass of Striking
+31392:Replica Allagan Gauntlets of Striking
+31394:Replica Allagan Sollerets of Striking
+31395:Replica Allagan Visor of Aiming
+31396:Replica Allagan Cuirass of Aiming
+31397:Replica Allagan Gauntlets of Aiming
+31399:Replica Allagan Sollerets of Aiming
+31410:Replica High Allagan Kite Shield
+31425:Replica Heavy High Allagan Coat
+31426:Replica High Allagan Gauntlets of Fending
+31428:Replica High Allagan Sabatons of Fending
+31429:Replica High Allagan Headgear of Maiming
+31430:Replica High Allagan Cuirass of Maiming
+31431:Replica High Allagan Gauntlets of Maiming
+31433:Replica High Allagan Sabatons of Maiming
+31434:Replica High Allagan Headgear of Striking
+31435:Replica High Allagan Cuirass of Striking
+31436:Replica High Allagan Gauntlets of Striking
+31438:Replica High Allagan Sabatons of Striking
+31469:Faust Striking Dummy
+31483:High Mythrite Ingot
+31501:High Mythrite Nugget
+31531:High Mythrite Helm of Fending
+31532:High Mythrite Cuirass of Fending
+31533:High Mythrite Gauntlets of Fending
+31535:High Mythrite Sabatons of Fending
+31566:High Mythrite Plate Belt of Fending
+31567:High Mythrite Tassets of Maiming
+31568:High Mythrite Tassets of Striking
+31581:Galvanized Garlond Steel
+31643:Fake Kupo Nut
+31644:Horn Component
+31645:Moogle Tool Component
+31646:Statue Supplies
+31647:Tablet Supplies
+31648:Training Supplies
+31649:Repurposed Construction Component
+31650:Foundation Component
+31651:Basket Component
+31652:Wall Repair Supplies
+31653:Gathering Tool Component
+31654:Veneer Component
+31655:Aetheric Shielding
+31656:Stonemasonry Supplies
+31657:Exploding Kupo Nut
+31658:Austere Offering
+31659:Shearing Machine Component
+31660:Water Filter Component
+31661:Mogstew Miscellany
+31662:Moogle Statuette
+31663:Makeshift Toy Airship
+31664:Dragonscale Rasp
+31665:Cloudfish Lure
+31666:Ishgardian Cuisine Miscellany
+31667:Treadwheel Crane Components
+31668:Moogle Mollifier
+31815:Replica Dreadwyrm Armor of Fending
+31816:Replica Dreadwyrm Gauntlets of Fending
+31818:Replica Dreadwyrm Sabatons of Fending
+31819:Replica Dreadwyrm Barbut of Maiming
+31820:Replica Dreadwyrm Mail of Maiming
+31821:Replica Dreadwyrm Vambraces of Maiming
+31823:Replica Dreadwyrm Greaves of Maiming
+31833:Replica Dreadwyrm Greaves of Aiming
+31851:Indirect Lighting
+31852:Indirect Stand Lighting
+31901:High Mythrite Alembic
+31902:High Mythrite Frypan
+31929:Mighty Thunderhead
+31943:Endless Expanse Shield
+31973:Heavy Metal Kite Shield
+31974:Heavy Metal Coif of Fending
+31975:Heavy Metal Cuirass of Fending
+31976:Heavy Metal Gauntlets of Fending
+31978:Heavy Metal Sabatons of Fending
+31979:Heavy Metal Plate Belt of Fending
+31980:Heavy Metal Coif of Maiming
+31981:Heavy Metal Cuirass of Maiming
+31982:Heavy Metal Gauntlets of Maiming
+31984:Heavy Metal Sabatons of Maiming
+31985:Heavy Metal Plate Belt of Maiming
+31991:Heavy Metal Tassets of Striking
+31997:Heavy Metal Tassets of Aiming
+32003:Heavy Metal Tassets of Scouting
+32038:Heavy Metal Ingot
+32059:Alexander Miniature
+32065:Indirect Wall Lighting
+32098:Dead Hive Scutum
+32112:Shield of the Round
+32122:Zurvan Miniature
+32131:Zurvanite Barding
+32154:Sky Rat Hook of Fending
+32159:Sky Rat Hook of Maiming
+32162:Sky Rat Mask of Striking
+32166:Sky Rat Ironclad Boots of Striking
+32171:Sky Rat Ironclad Boots of Aiming
+32172:Sky Rat Mask of Scouting
+32174:Sky Rat Hook of Scouting
+32179:Sky Rat Hook of Healing
+32186:Sky Rat Ironclad Boots of Casting
+32188:Cloud Mythril Ingot
+32202:Near Eastern Antique
+32203:Coerthan Souvenir
+32204:Maelstrom Materiel
+32205:Heartfelt Gift
+32206:Orphanage Donation
+32238:Near Eastern Antique Component
+32239:Coerthan Souvenir Component
+32240:Maelstrom Materiel Component
+32260:Heartfelt Gift Component
+32261:Orphanage Donation Component
+32280:Paladin Mail
+32281:Titanium Kote
+32282:Tournament Somen
+32283:Lominsan Hara-ate
+32308:Susano Miniature
+32337:Reveler's Barding
+32354:Chromite Shield
+32355:Chromite Helm of Fending
+32356:Chromite Armor of Fending
+32357:Chromite Gauntlets of Fending
+32359:Chromite Sabatons of Fending
+32362:Chromite Mail of Maiming
+32363:Chromite Gauntlets of Maiming
+32365:Chromite Greaves of Maiming
+32428:Chromite Ingot

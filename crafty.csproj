@@ -31,10 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GreyMagic">
-      <HintPath>..\..\..\Google Drive\Rebornbuddy\GreyMagic.dll</HintPath>
+      <HintPath>..\..\..\Desktop\Rebornbuddy64 1.0.165.0\GreyMagic.dll</HintPath>
     </Reference>
     <Reference Include="RebornBuddy">
-      <HintPath>..\..\..\Google Drive\Rebornbuddy\RebornBuddy.exe</HintPath>
+      <HintPath>..\..\..\Desktop\Rebornbuddy64 1.0.165.0\RebornBuddy.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

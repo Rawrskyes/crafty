@@ -378,7 +378,7 @@
 2637:Archaeoskin Gloves of Gathering
 2638:Dhalmelskin Gloves
 2639:Wyvernskin Field Belt
-2640:Serpentskin Belt of Gathering
+2640:Dragonskin Belt of Gathering
 2641:Archaeoskin Breeches of Gathering
 2642:Wyvernskin Culottes
 2643:Archaeoskin Jackboots of Gathering
@@ -396,6 +396,171 @@
 2655:Dhalmel Leather
 2656:Dragon Leather
 2657:Amphiptere Leather
+2843:Punching Gloves
+2849:Archaeoskin Boots
+2850:Archaeoskin Cloche
+2852:Archaeoskin Halfboots
+2856:Dragonskin Bottoms
+2857:Dragonskin Boots
+2873:Uraeus Body Armor
+2874:Uraeus Breeches
+2875:Gryphonskin Breastguard
+2876:Gryphonskin Pantalettes
+2877:Uraeus Skirt
+2878:Uraeus Coat
+2879:Dodore Boots
+2880:Dhalmelskin Coat
+2882:Dhalmelskin Moccasins
+2884:Dark Dhalmelskin Gloves
+2886:Dhalmelskin Thighboots
+2893:Boarskin Survival Hat
+2896:Boarskin Survival Boots
+2900:Moonfire Caligae
+2903:Moonfire Sandals
+2923:Ramie Boots
+2946:Raptorskin Shoes
+2975:Gaganaskin Hose of Fending
+2976:Gaganaskin Leg Guards of Fending
+2977:Gaganaskin Belt of Fending
+2981:Gaganaskin Hose of Maiming
+2982:Gaganaskin Leg Guards of Maiming
+2983:Gaganaskin Belt of Maiming
+2988:Gaganaskin Sandals of Striking
+2989:Gaganaskin Belt of Striking
+2990:Gaganaskin Hat of Aiming
+2991:Gaganaskin Jacket of Aiming
+2992:Gaganaskin Gloves of Aiming
+2993:Gaganaskin Chaps of Aiming
+2994:Gaganaskin Boots of Aiming
+2995:Gaganaskin Belt of Aiming
+3000:Gaganaskin Sandals of Scouting
+3001:Gaganaskin Belt of Scouting
+3006:Gaganaskin Sandals of Healing
+3007:Gaganaskin Belt of Healing
+3012:Gaganaskin Sandals of Casting
+3013:Gaganaskin Belt of Casting
+3053:Gyuki Leather Trousers of Fending
+3059:Gyuki Leather Trousers of Maiming
+3064:Gyuki Leather Halfgloves of Striking
+3066:Gyuki Leather Highboots of Striking
+3067:Gyuki Leather Twinbelt of Striking
+3068:Gyuki Leather Pot Helm
+3070:Gyuki Leather Gloves of Aiming
+3072:Gyuki Leather Boots of Aiming
+3073:Gyuki Leather Twinbelt of Aiming
+3076:Gyuki Leather Halfgloves of Scouting
+3078:Gyuki Leather Highboots of Scouting
+3079:Gyuki Leather Twinbelt of Scouting
+3082:Gyuki Leather Dress Gloves
+3084:Gyuki Leather Boots of Healing
+3090:Gyuki Leather Pattens
+3140:Tigerskin Tricorne of Striking
+3142:Tigerskin Wristgloves of Striking
+3144:Tigerskin Thighboots of Striking
+3145:Tigerskin Ringbelt of Striking
+3146:Tigerskin Tricorne of Aiming
+3148:Tigerskin Gloves of Aiming
+3150:Tigerskin Thighboots of Aiming
+3151:Tigerskin Ringbelt of Aiming
+3152:Tigerskin Tricorne of Scouting
+3154:Tigerskin Gloves of Scouting
+3156:Tigerskin Thighboots of Scouting
+3157:Tigerskin Ringbelt of Scouting
+3160:Tigerskin Armguards of Healing
+3162:Tigerskin Jackboots of Healing
+3166:Tigerskin Armguards of Casting
+3168:Tigerskin Jackboots of Casting
+3209:Marid Leather Breeches of Fending
+3211:Marid Leather Belt of Fending
+3215:Marid Leather Breeches of Maiming
+3217:Marid Leather Belt of Maiming
+3218:Marid Leather Hood of Striking
+3219:Marid Leather Coat of Striking
+3221:Marid Leather Breeches of Striking
+3226:Marid Leather Gloves of Aiming
+3228:Marid Leather Boots of Aiming
+3229:Marid Leather Corset of Aiming
+3230:Marid Leather Hood of Scouting
+3231:Marid Leather Coat of Scouting
+3233:Marid Leather Breeches of Scouting
+3238:Marid Leather Gloves of Healing
+3240:Marid Leather Boots of Healing
+3241:Marid Leather Corset of Healing
+3244:Marid Leather Gloves of Casting
+3246:Marid Leather Boots of Casting
+3247:Marid Leather Corset of Casting
+3285:Gazelleskin Coat of Fending
+3286:Gazelleskin Bracers of Fending
+3291:Gazelleskin Corselet of Maiming
+3293:Gazelleskin Brais of Maiming
+3294:Gazelleskin Open-toe Boots of Maiming
+3297:Gazelleskin Corselet of Striking
+3299:Gazelleskin Brais of Striking
+3300:Gazelleskin Open-toe Boots of Striking
+3301:Gazelleskin Twinbelt of Striking
+3304:Gazelleskin Armguards of Aiming
+3306:Gazelleskin Boots of Aiming
+3307:Gazelleskin Twinbelt of Aiming
+3309:Gazelleskin Corselet of Scouting
+3311:Gazelleskin Brais of Scouting
+3312:Gazelleskin Open-toe Boots of Scouting
+3313:Gazelleskin Twinbelt of Scouting
+3315:Gazelleskin Coat of Healing
+3316:Gazelleskin Bracers of Healing
+3318:Gazelleskin Boots of Healing
+3322:Gazelleskin Armguards of Casting
+3324:Gazelleskin Boots of Casting
+3348:Gazelleskin Ringbelt of Striking
+3349:Gazelleskin Ringbelt of Aiming
+3350:Gazelleskin Ringbelt of Scouting
+3459:Gaganaskin Halfgloves
+3461:Gaganaskin Shoes
+3462:Gaganaskin Bush Hat
+3463:Gaganaskin Vest
+3464:Gaganaskin Gloves
+3466:Gaganaskin Fringe Boots
+3469:Gyuki Leather Gloves of Crafting
+3471:Gyuki Leather Shoes
+3472:Gyuki Leather Hat
+3473:Gyuki Leather Jacket
+3474:Gyuki Leather Gloves of Gathering
+3475:Gyuki Leather Chaps
+3476:Gyuki Leather Boots of Gathering
+3481:Tigerskin Boots of Crafting
+3482:Tigerskin Cap of Gathering
+3484:Tigerskin Fingerless Gloves of Gathering
+3486:Tigerskin Boots of Gathering
+3488:Marid Leather Bolero of Crafting
+3489:Marid Leather Gloves of Crafting
+3491:Marid Leather Babouches of Crafting
+3493:Marid Leather Bolero of Gathering
+3494:Marid Leather Gloves of Gathering
+3496:Marid Leather Babouches of Gathering
+3499:Gazelleskin Gloves of Crafting
+3501:Gazelleskin Shoes
+3506:Fur-lined Gazelleskin Boots
+3512:Gaganaskin Belt of Gathering
+3513:Gyuki Leather Earrings
+3514:Gyuki Leather Choker
+3515:Gyuki Leather Wristband
+3516:Gyuki Leather Ring
+3522:Tigerskin Belt of Gathering
+3523:Marid Leather Earrings
+3524:Marid Leather Choker
+3525:Marid Leather Wristband
+3526:Marid Leather Ring
+3532:Gazelleskin Belt of Gathering
+3533:Gazelleskin Earrings
+3534:Gazelleskin Choker
+3535:Gazelleskin Wristband
+3536:Gazelleskin Ring
+3539:Stuffed Dhalmel
+3540:Stuffed Gagana
+3644:Gagana Leather
+3645:Gyuki Leather
+3646:Tiger Leather
+3647:Marid Leather
+3648:Gazelle Leather
 30053:Dalamud Red Dye
 30054:Wine Red Dye
 30055:Royal Blue Dye
@@ -444,7 +609,7 @@
 30276:Saurian Belt of Casting
 30294:Saurian Leather
 30301:Gryphonskin Strap
-30333:Grade 1 Glamour Prism (Leatherworking)
+30333:Glamour Prism (Leatherworking)
 30334:Grade 2 Glamour Prism (Leatherworking)
 30335:Grade 3 Glamour Prism (Leatherworking)
 30336:Grade 4 Glamour Prism (Leatherworking)
@@ -455,7 +620,7 @@
 30381:Woad Blue Dye
 30382:Void Blue Dye
 30383:Colibri Pink Dye
-30421:Water hardened Hippogryph Strap
+30421:Water-hardened Hippogryph Strap
 30477:Murderous Moggle Mogfists
 30485:Dodore Belt
 30486:Dodore Survival Belt
@@ -618,3 +783,198 @@
 31268:Cauldronmaster's Jackboots
 31271:Galleymaster's Gloves
 31273:Galleymaster's Top Boots
+31287:High House Boots
+31288:High House Cloche
+31290:High House Halfboots
+31295:Pterodactyl Strap
+31306:Sky Pirate's Boots of Fending
+31311:Sky Pirate's Boots of Maiming
+31313:Sky Pirate's Jacket of Striking
+31314:Sky Pirate's Gloves of Striking
+31316:Sky Pirate's Boots of Striking
+31317:Sky Pirate's Beret of Aiming
+31319:Sky Pirate's Gloves of Aiming
+31321:Sky Pirate's Boots of Aiming
+31323:Sky Pirate's Jacket of Scouting
+31324:Sky Pirate's Gloves of Scouting
+31326:Sky Pirate's Boots of Scouting
+31329:Sky Pirate's Gloves of Healing
+31331:Sky Pirate's Shoes of Healing
+31334:Sky Pirate's Gloves of Casting
+31336:Sky Pirate's Shoes of Casting
+31340:Pterodactyl Leather
+31343:Falconer's Bottoms
+31344:Falconer's Boots
+31402:Replica Allagan Gloves of Healing
+31404:Replica Allagan Boots of Healing
+31407:Replica Allagan Gloves of Casting
+31409:Replica Allagan Boots of Casting
+31427:Replica High Allagan Trousers of Fending
+31432:Replica High Allagan Trousers of Maiming
+31437:Replica High Allagan Trousers of Striking
+31439:Replica High Allagan Mask of Aiming
+31441:Replica High Allagan Gloves of Aiming
+31442:Replica High Allagan Breeches of Aiming
+31443:Replica High Allagan Boots of Aiming
+31446:Replica High Allagan Gloves of Healing
+31448:Replica High Allagan Thighboots of Healing
+31449:Replica High Allagan Mask of Casting
+31451:Replica High Allagan Gloves of Casting
+31452:Replica High Allagan Breeches of Casting
+31453:Replica High Allagan Boots of Casting
+31462:Pudding Settee
+31470:Sephirotic Barding
+31486:Eikon Leather
+31503:Griffin Leather Strap
+31534:Eikon Leather Breeches of Fending
+31536:Eikon Leather Headgear of Maiming
+31537:Eikon Leather Corselet of Maiming
+31538:Eikon Leather Armguards of Maiming
+31540:Eikon Leather Leg Guards of Maiming
+31541:Eikon Leather Headgear of Striking
+31542:Eikon Leather Corselet of Striking
+31543:Eikon Leather Armguards of Striking
+31545:Eikon Leather Leg Guards of Striking
+31550:Eikon Leather Thighboots of Aiming
+31555:Eikon Leather Thighboots of Scouting
+31560:Eikon Leather Thighboots of Healing
+31561:Eikon Leather Headgear of Casting
+31562:Eikon Leather Corselet of Casting
+31563:Eikon Leather Armguards of Casting
+31565:Eikon Leather Leg Guards of Casting
+31569:Eikon Leather Ringbelt of Aiming
+31570:Eikon Leather Ringbelt of Scouting
+31573:Expeditioner's Coat
+31575:Expeditioner's Moccasins
+31577:Expeditioner's Gloves
+31579:Expeditioner's Thighboots
+31586:Dinosaur Leather Gloves
+31588:Dinosaur Leather Shoes
+31695:Fake Kupo Nut
+31696:Horn Component
+31697:Moogle Tool Component
+31698:Statue Supplies
+31699:Tablet Supplies
+31700:Training Supplies
+31701:Repurposed Construction Component
+31702:Foundation Component
+31703:Basket Component
+31704:Wall Repair Supplies
+31705:Gathering Tool Component
+31706:Veneer Component
+31707:Aetheric Shielding
+31708:Stonemasonry Supplies
+31709:Exploding Kupo Nut
+31710:Austere Offering
+31711:Shearing Machine Component
+31712:Water Filter Component
+31713:Mogstew Miscellany
+31714:Moogle Statuette
+31715:Makeshift Toy Airship
+31716:Dragonscale Rasp
+31717:Cloudfish Lure
+31718:Ishgardian Cuisine Miscellany
+31719:Treadwheel Crane Components
+31720:Moogle Mollifier
+31822:Replica Dreadwyrm Breeches of Maiming
+31825:Replica Dreadwyrm Cyclas of Striking
+31826:Replica Dreadwyrm Bracers of Striking
+31828:Replica Dreadwyrm Boots of Striking
+31829:Replica Dreadwyrm Chapeau of Aiming
+31830:Replica Dreadwyrm Tabard of Aiming
+31831:Replica Dreadwyrm Bracers of Aiming
+31832:Replica Dreadwyrm Breeches of Aiming
+31836:Replica Dreadwyrm Gloves of Healing
+31838:Replica Dreadwyrm Shoes of Healing
+31839:Replica Dreadwyrm Petasos of Casting
+31840:Replica Dreadwyrm Robe of Casting
+31841:Replica Dreadwyrm Gloves of Casting
+31843:Replica Dreadwyrm Shoes of Casting
+31845:Replica Dreadwyrm Cyclas of Scouting
+31846:Replica Dreadwyrm Bracers of Scouting
+31848:Replica Dreadwyrm Boots of Scouting
+31858:Horde Barding
+31861:Survival Hat
+31864:Survival Boots
+31865:Ironworks Cap of Gathering
+31866:Ironworks Vest of Gathering
+31867:Ironworks Gloves of Gathering
+31869:Ironworks Boots of Gathering
+31870:Carbonweave Cap of Gathering
+31871:Carbonweave Vest of Gathering
+31872:Carbonweave Gloves of Gathering
+31874:Carbonweave Boots of Gathering
+31879:Ironworks Boots of Crafting
+31884:Carbonweave Boots of Crafting
+31889:Ironworks Belt of Gathering
+31894:Ironworks Belt of Crafting
+31977:Hemiskin Brais of Fending
+31983:Hemiskin Brais of Maiming
+31988:Hemiskin Gloves of Striking
+31989:Hemiskin Trousers of Striking
+31990:Hemiskin Leggings of Striking
+31994:Hemiskin Gloves of Aiming
+31995:Hemiskin Trousers of Aiming
+31996:Hemiskin Leggings of Aiming
+32000:Hemiskin Gloves of Scouting
+32001:Hemiskin Trousers of Scouting
+32002:Hemiskin Leggings of Scouting
+32008:Hemiskin Open-toed Boots of Healing
+32014:Hemiskin Open-toed Boots of Casting
+32041:Hemicyon Leather
+32071:New World Armlets
+32073:New World Moccasins
+32077:Cashmere Boots
+32084:Griffin Leather Cuffs
+32130:Pteroskin Shoes
+32153:Sky Rat Harness of Fending
+32156:Sky Rat Hookboots of Fending
+32158:Sky Rat Harness of Maiming
+32161:Sky Rat Hookboots of Maiming
+32163:Sky Rat Harness of Striking
+32164:Sky Rat Fingerless Gloves of Striking
+32168:Sky Rat Harness of Aiming
+32169:Sky Rat Fingerless Gloves of Aiming
+32173:Sky Rat Harness of Scouting
+32176:Sky Rat Hookboots of Scouting
+32178:Sky Rat Harness of Healing
+32181:Sky Rat Hookboots of Healing
+32183:Sky Rat Harness of Casting
+32184:Sky Rat Fingerless Gloves of Casting
+32191:Peteinosaur Leather
+32212:Near Eastern Antique
+32213:Coerthan Souvenir
+32214:Maelstrom Materiel
+32215:Heartfelt Gift
+32216:Orphanage Donation
+32244:Near Eastern Antique Component
+32245:Coerthan Souvenir Component
+32246:Maelstrom Materiel Component
+32264:Heartfelt Gift Component
+32265:Orphanage Donation Component
+32288:Large Dhalmel Cape
+32289:Grizzly Bear Gloves
+32290:Dashing Dhalmelskin Jacket
+32291:Large Gagana Cape
+32330:Taoist's Gloves
+32332:Taoist's Shoes
+32336:Guoc
+32358:True Griffin Breeches of Fending
+32364:True Griffin Breeches of Maiming
+32368:True Griffin Chestpiece of Striking
+32369:True Griffin Bracers of Striking
+32371:True Griffin Caligae of Striking
+32373:True Griffin Hat of Aiming
+32375:True Griffin Bracers of Aiming
+32376:True Griffin Breeches of Aiming
+32377:True Griffin Boots of Aiming
+32380:True Griffin Chestpiece of Scouting
+32381:True Griffin Bracers of Scouting
+32383:True Griffin Caligae of Scouting
+32385:True Griffin Hat of Healing
+32387:True Griffin Gloves of Healing
+32389:True Griffin Sandals of Healing
+32391:True Griffin Hat of Casting
+32393:True Griffin Gloves of Casting
+32395:True Griffin Sandals of Casting
+32430:True Griffin Leather
